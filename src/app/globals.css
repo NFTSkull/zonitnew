@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
+  /* Paleta de colores Zonit */
+  --zonit-primary: #1e1d37;
+  --zonit-secondary: #02383d;
+  --zonit-accent-blue: #74acd8;
+  --zonit-accent-lime: #d3d801;
+  --zonit-bg-light: #efeeed;
+  --zonit-text-light: #efeeed;
+  --zonit-text-dark: #1e1d37;
+  
+  /* Variables del sistema */
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -22,5 +33,58 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Transiciones suaves */
+  .transition-smooth {
+    transition: all 150ms ease-in-out;
+  }
+  
+  .transition-smooth-slow {
+    transition: all 250ms ease-in-out;
+  }
+  
+  /* Contenedores */
+  .container-zonit {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Botones */
+  .btn-primary {
+    background-color: #d3d801;
+    color: #1e1d37;
+    transition: opacity 150ms ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-secondary {
+    border: 1px solid #1e1d37;
+    color: #1e1d37;
+    background-color: transparent;
+    transition: all 150ms ease-in-out;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #1e1d37;
+    color: #efeeed;
+  }
+  
+  /* Cards */
+  .card-zonit {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-150;
+  }
+  
+  /* Separadores */
+  .divider-zonit {
+    @apply divide-y divide-gray-200;
+  }
 }

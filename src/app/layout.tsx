@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Zonit - Soluciones Inteligentes de Automatización",
   description: "Especialistas en automatización inteligente para hogares y empresas. Control de iluminación, audio distribuido, seguridad, paneles solares y más.",
   keywords: "automatización, domótica, casa inteligente, paneles solares, seguridad inteligente, Monterrey",
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: "Zonit - Soluciones Inteligentes de Automatización",
     description: "Conectamos tu hogar y empresa con el futuro",

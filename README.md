@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zonit - Sitio Web
 
-## Getting Started
+Sitio web minimalista para Zonit, especialistas en automatización inteligente y sistemas solares.
 
-First, run the development server:
+## 🚀 Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Stack Tecnológico**: Next.js 15 + TypeScript + TailwindCSS
+- **Diseño**: Minimalista y responsivo
+- **Paleta de Colores**: Personalizada según especificaciones de marca
+- **Componentes**: Arquitectura modular y reutilizable
+- **SEO**: Optimizado con metadatos y estructura semántica
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── app/
+│   ├── (components)/          # Componentes reutilizables
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── HeroMinimal.tsx
+│   │   ├── ServiceCard.tsx
+│   │   ├── SplitSection.tsx
+│   │   ├── BenefitsGrid.tsx
+│   │   ├── Steps.tsx
+│   │   ├── CTA.tsx
+│   │   └── WhatsAppButton.tsx
+│   ├── automatizacion/        # Páginas de automatización
+│   │   ├── page.tsx
+│   │   ├── control-iluminacion/
+│   │   ├── audio-distribuido/
+│   │   ├── control-accesos-seguridad/
+│   │   ├── telefonia-ip-videoconferencia/
+│   │   ├── video/
+│   │   ├── cableado-estructurado/
+│   │   └── audio-profesional/
+│   ├── paneles-solares/       # Página independiente de solares
+│   ├── nosotros/
+│   ├── proyectos/
+│   ├── blog/
+│   ├── contacto/
+│   └── page.tsx              # Página de inicio
+├── globals.css               # Estilos globales y variables CSS
+└── layout.tsx               # Layout principal
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Paleta de Colores
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Primario**: #1e1d37 (azul oscuro)
+- **Secundario**: #02383d (verde/teal oscuro)
+- **Acento Azul**: #74acd8 (azul claro)
+- **Acento Lima**: #d3d801 (verde lima)
+- **Fondo Claro**: #efeeed (gris claro)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Páginas Implementadas
 
-## Learn More
+### Página Principal
+- Hero con CTA principal
+- Sección "Nosotros"
+- Grid de beneficios (6 elementos)
+- Servicios de automatización
+- Teaser de paneles solares
+- CTA final
 
-To learn more about Next.js, take a look at the following resources:
+### Automatización
+- Página principal con grid de servicios
+- 7 subpáginas especializadas:
+  - Control e Iluminación
+  - Audio Distribuido
+  - Control de Accesos y Seguridad
+  - Telefonía IP y Videoconferencia
+  - Video
+  - Cableado Estructurado
+  - Audio Profesional
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Paneles Solares
+- Contenido específico del cliente
+- Beneficios: Energía renovable, ahorro hasta 99%, valor agregado
+- Proceso: Evaluación, Cotización, Instalación
+- Información sobre ROI (2-5 años)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Otras Páginas
+- **Nosotros**: Misión, visión, valores
+- **Proyectos**: Galería con filtros
+- **Blog**: Listado de artículos
+- **Contacto**: Formulario completo
 
-## Deploy on Vercel
+## 🛠️ Instalación y Desarrollo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Instalar dependencias
+npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Ejecutar en desarrollo
+npm run dev
+
+# Build de producción
+npm run build
+
+# Iniciar servidor de producción
+npm start
+```
+
+## 📦 Dependencias Principales
+
+- **Next.js**: Framework React
+- **TypeScript**: Tipado estático
+- **TailwindCSS**: Framework CSS
+- **Lucide React**: Iconos
+
+## 🎯 Características Técnicas
+
+- **App Router**: Next.js 13+ routing
+- **Componentes Modulares**: Reutilizables y mantenibles
+- **Responsive Design**: Mobile-first approach
+- **Accesibilidad**: Semántica correcta y contraste AA
+- **SEO**: Metadatos optimizados por página
+- **Performance**: Build estático optimizado
+
+## 📞 Contacto
+
+- **Email**: info@zonit.com
+- **Teléfono**: +52 81 1234 5678
+- **Ubicación**: Monterrey, N.L., México
+
+---
+
+Desarrollado con ❤️ para Zonit

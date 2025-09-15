@@ -135,22 +135,22 @@ export default function Home() {
         <div className="container-zonit">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-light text-textDark tracking-wide">
+              <h2 className="text-3xl md:text-4xl font-light text-accentLime tracking-wide">
                 Nosotros
               </h2>
-              <p className="text-lg text-secondary leading-relaxed">
+              <p className="text-lg text-black leading-relaxed">
                 Somos especialistas en integración domótica y automatización inteligente. 
                 Nuestro enfoque se centra en crear soluciones que mejoren el confort, 
                 la seguridad y la eficiencia energética de tu espacio.
               </p>
-              <p className="text-lg text-accentBlue leading-relaxed">
+              <p className="text-lg text-black leading-relaxed">
                 Con años de experiencia en el sector, ofrecemos control centralizado 
                 y sistemas que se adaptan a tu estilo de vida, proporcionando valor 
                 agregado a tu propiedad.
               </p>
               <a 
                 href="/nosotros" 
-                className="inline-flex items-center text-secondary font-medium hover:text-accentBlue transition-colors duration-150"
+                className="inline-flex items-center text-black font-medium hover:text-accentBlue transition-colors duration-150"
               >
                 Saber más
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

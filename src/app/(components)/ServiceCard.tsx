@@ -40,11 +40,11 @@ export default function ServiceCard({
           <Icon className="w-7 h-7 text-white" />
         </div>
         <div>
-          <h3 className="text-xl font-medium text-textDark tracking-wide">
+          <h3 className="text-xl font-medium text-accentLime tracking-wide">
             {title}
           </h3>
           {description && (
-            <p className="text-secondary font-light text-sm">
+            <p className="text-black font-light text-sm">
               {description}
             </p>
           )}
@@ -55,7 +55,7 @@ export default function ServiceCard({
       {features.length > 0 && (
         <div className="space-y-3 mb-6">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-center text-sm text-accentBlue">
+            <div key={index} className="flex items-center text-sm text-black">
               <div className="w-2 h-2 bg-zonit-accent-blue rounded-full mr-3"></div>
               <span className="font-light">{feature}</span>
             </div>
@@ -65,12 +65,12 @@ export default function ServiceCard({
       
       {/* Enlace */}
       <div className="flex justify-between items-center">
-        <div className="text-sm text-secondary font-light">
+        <div className="text-sm text-black font-light">
           Ver detalle
         </div>
         <Link 
           href={href} 
-          className="inline-flex items-center text-secondary font-medium hover:text-accentBlue transition-colors duration-150"
+          className="inline-flex items-center text-black font-medium hover:text-accentBlue transition-colors duration-150"
         >
           Ver más
           <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">

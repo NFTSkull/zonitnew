@@ -32,7 +32,7 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
                 <h3 className="text-xl font-medium text-textDark mb-4 tracking-wide">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed font-light">
+                <p className="text-secondary leading-relaxed font-light">
                   {item.text}
                 </p>
               </div>

@@ -138,19 +138,19 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-light text-textDark tracking-wide">
                 Nosotros
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-secondary leading-relaxed">
                 Somos especialistas en integración domótica y automatización inteligente. 
                 Nuestro enfoque se centra en crear soluciones que mejoren el confort, 
                 la seguridad y la eficiencia energética de tu espacio.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-accentBlue leading-relaxed">
                 Con años de experiencia en el sector, ofrecemos control centralizado 
                 y sistemas que se adaptan a tu estilo de vida, proporcionando valor 
                 agregado a tu propiedad.
               </p>
               <a 
                 href="/nosotros" 
-                className="inline-flex items-center text-primary font-medium hover:text-accentBlue transition-colors duration-150"
+                className="inline-flex items-center text-secondary font-medium hover:text-accentBlue transition-colors duration-150"
               >
                 Saber más
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -204,7 +204,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-light text-textLight mb-8 tracking-wide">
             Paneles Solares
           </h2>
-          <p className="text-lg text-gray-200 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-accentLime mb-12 max-w-2xl mx-auto leading-relaxed">
             Descubre el poder de la energía solar. Sistemas fotovoltaicos que te permiten 
             ahorrar hasta 99% en tu recibo de CFE y recuperar tu inversión en 2-5 años.
           </p>

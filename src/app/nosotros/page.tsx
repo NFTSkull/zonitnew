@@ -34,12 +34,12 @@ export default function Nosotros() {
               <h2 className="text-3xl md:text-4xl font-light text-textDark tracking-wide">
                 Quiénes somos
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-secondary leading-relaxed">
                 Zonit es una empresa especializada en automatización inteligente y sistemas 
                 fotovoltaicos, dedicada a transformar espacios en entornos tecnológicamente 
                 avanzados y energéticamente eficientes.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-accentBlue leading-relaxed">
                 Con años de experiencia en el sector, nos hemos consolidado como líderes 
                 en la implementación de soluciones tecnológicas que mejoran la calidad de vida 
                 y optimizan el consumo energético.
@@ -69,7 +69,7 @@ export default function Nosotros() {
                 </svg>
               </div>
               <h3 className="text-xl font-medium text-textDark mb-4">Misión</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-secondary leading-relaxed">
                 Transformar espacios mediante tecnología inteligente, proporcionando 
                 soluciones innovadoras que mejoren la eficiencia energética y la calidad de vida.
               </p>
@@ -83,7 +83,7 @@ export default function Nosotros() {
                 </svg>
               </div>
               <h3 className="text-xl font-medium text-textDark mb-4">Visión</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-accentBlue leading-relaxed">
                 Ser la empresa líder en automatización inteligente y energía solar, 
                 reconocida por nuestra innovación, calidad y compromiso con la sostenibilidad.
               </p>
@@ -96,7 +96,7 @@ export default function Nosotros() {
                 </svg>
               </div>
               <h3 className="text-xl font-medium text-textDark mb-4">Valores</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-accentLime leading-relaxed">
                 Innovación constante, eficiencia energética, practicidad en las soluciones 
                 y compromiso con la satisfacción del cliente.
               </p>
@@ -112,12 +112,12 @@ export default function Nosotros() {
             <h2 className="text-3xl md:text-4xl font-light text-textDark mb-8 tracking-wide">
               Nuestro Compromiso
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-lg text-secondary leading-relaxed mb-8">
               En Zonit, nos comprometemos con la innovación tecnológica, la eficiencia energética 
               y la practicidad en cada solución que implementamos. Creemos que la tecnología debe 
               simplificar la vida, no complicarla.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-accentBlue leading-relaxed">
               Nuestro enfoque se centra en crear sistemas que se adapten a tu estilo de vida, 
               proporcionando valor agregado a tu propiedad mientras contribuimos al cuidado 
               del medio ambiente.

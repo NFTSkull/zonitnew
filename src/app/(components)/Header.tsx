@@ -24,21 +24,21 @@ export default function Header() {
         <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-4">
-            <div className="text-3xl font-light text-primary tracking-wider">
+            <div className="text-3xl font-light text-black tracking-wider">
               ZONIT
             </div>
           </Link>
 
           {/* Navegación Desktop */}
           <nav className="hidden lg:flex items-center space-x-2">
-            <Link href="/" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
+            <Link href="/" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
               Inicio
             </Link>
             
             {/* Dropdown Automatización */}
             <div className="relative group">
               <button 
-                className="flex items-center space-x-2 px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary"
+                className="flex items-center space-x-2 px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black"
                 onMouseEnter={() => setIsAutomationDropdownOpen(true)}
                 onMouseLeave={() => setIsAutomationDropdownOpen(false)}
               >
@@ -57,7 +57,7 @@ export default function Header() {
                       <Link
                         key={service.href}
                         href={service.href}
-                        className="px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors duration-150 text-sm text-primary"
+                        className="px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors duration-150 text-sm text-black"
                       >
                         {service.name}
                       </Link>
@@ -67,19 +67,19 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/paneles-solares" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
+            <Link href="/paneles-solares" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
               Paneles Solares
             </Link>
-            <Link href="/nosotros" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
+            <Link href="/nosotros" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
               Nosotros
             </Link>
-            <Link href="/proyectos" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
+            <Link href="/proyectos" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
               Proyectos
             </Link>
-            <Link href="/blog" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
+            <Link href="/blog" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
               Blog
             </Link>
-            <Link href="/contacto" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
+            <Link href="/contacto" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
               Contacto
             </Link>
           </nav>
@@ -117,18 +117,18 @@ export default function Header() {
             <div className="flex flex-col items-center justify-center h-full -mt-16">
               <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4">
                 <div className="space-y-6">
-                  <Link href="/" className="block text-lg font-medium text-primary hover:text-accentBlue transition-colors">
+                  <Link href="/" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
                     Inicio
                   </Link>
                   
                   <div className="space-y-2">
-                    <div className="text-lg font-medium text-primary">Automatización</div>
+                    <div className="text-lg font-medium text-black">Automatización</div>
                     <div className="ml-4 space-y-2">
                       {automationServices.map((service) => (
                         <Link
                           key={service.href}
                           href={service.href}
-                          className="block text-sm text-gray-600 hover:text-primary transition-colors"
+                          className="block text-sm text-gray-600 hover:text-black transition-colors"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {service.name}
@@ -137,19 +137,19 @@ export default function Header() {
                     </div>
                   </div>
                   
-                  <Link href="/paneles-solares" className="block text-lg font-medium text-primary hover:text-accentBlue transition-colors">
+                  <Link href="/paneles-solares" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
                     Paneles Solares
                   </Link>
-                  <Link href="/nosotros" className="block text-lg font-medium text-primary hover:text-accentBlue transition-colors">
+                  <Link href="/nosotros" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
                     Nosotros
                   </Link>
-                  <Link href="/proyectos" className="block text-lg font-medium text-primary hover:text-accentBlue transition-colors">
+                  <Link href="/proyectos" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
                     Proyectos
                   </Link>
-                  <Link href="/blog" className="block text-lg font-medium text-primary hover:text-accentBlue transition-colors">
+                  <Link href="/blog" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
                     Blog
                   </Link>
-                  <Link href="/contacto" className="block text-lg font-medium text-primary hover:text-accentBlue transition-colors">
+                  <Link href="/contacto" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
                     Contacto
                   </Link>
                   

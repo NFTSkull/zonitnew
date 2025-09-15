@@ -24,27 +24,27 @@ export default function HeroMinimal({
   const textClass = dark ? 'text-textLight' : 'text-textDark';
 
   return (
-    <section className={`${bgClass} py-24 relative overflow-hidden`}>
+    <section className={`${bgClass} pt-32 pb-20 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 relative overflow-hidden min-h-[80vh] flex items-center`}>
       <div className="container-zonit">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Contenido */}
-          <div className={`${textClass} space-y-8`}>
-            <h1 className="text-4xl md:text-5xl font-light tracking-wide leading-tight">
+          <div className={`${textClass} space-y-10`}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide leading-tight">
               {title}
             </h1>
             
-            <p className="text-lg md:text-xl leading-relaxed opacity-90">
+            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed opacity-90 max-w-2xl">
               {subtitle}
             </p>
             
             {/* Botones */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6 pt-4">
               {ctas.map((cta, index) => (
                 <Link
                   key={index}
                   href={cta.href}
                   className={`
-                    px-8 py-4 rounded-2xl font-medium transition-smooth text-center
+                    px-10 py-5 rounded-2xl font-medium transition-smooth text-center text-lg
                     ${cta.primary 
                       ? 'btn-primary' 
                       : dark 
@@ -61,13 +61,13 @@ export default function HeroMinimal({
           
           {/* Imagen */}
           {imageSrc && (
-            <div className="relative">
+            <div className="relative order-first lg:order-last">
               <Image
                 src={imageSrc}
                 alt={title}
-                width={600}
-                height={400}
-                className="rounded-xl shadow-lg ring-1 ring-gray-200"
+                width={700}
+                height={500}
+                className="rounded-2xl shadow-2xl ring-1 ring-gray-200/50 w-full h-auto"
                 priority
               />
             </div>

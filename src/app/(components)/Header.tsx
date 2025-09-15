@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAutomationDropdownOpen, setIsAutomationDropdownOpen] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
 
   const automationServices = [
     { name: 'Control e Iluminación', href: '/automatizacion/control-iluminacion' },
@@ -17,6 +18,21 @@ export default function Header() {
     { name: 'Cableado Estructurado', href: '/automatizacion/cableado-estructurado' },
     { name: 'Audio Profesional', href: '/automatizacion/audio-profesional' },
   ];
+
+  const handleDropdownEnter = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setIsAutomationDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsAutomationDropdownOpen(false);
+    }, 150);
+    setDropdownTimeout(timeout);
+  };
 
   return (
     <header className="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-sm">
@@ -39,25 +55,25 @@ export default function Header() {
             <div className="relative group">
               <button 
                 className="flex items-center space-x-2 px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black"
-                onMouseEnter={() => setIsAutomationDropdownOpen(true)}
-                onMouseLeave={() => setIsAutomationDropdownOpen(false)}
+                onMouseEnter={handleDropdownEnter}
+                onMouseLeave={handleDropdownLeave}
               >
                 <span>Automatización</span>
-                <ChevronDown className="w-4 h-4 transition-transform duration-150 group-hover:rotate-180" />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isAutomationDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {isAutomationDropdownOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-lg border border-gray-100 py-4"
-                  onMouseEnter={() => setIsAutomationDropdownOpen(true)}
-                  onMouseLeave={() => setIsAutomationDropdownOpen(false)}
+                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-4 z-50"
+                  onMouseEnter={handleDropdownEnter}
+                  onMouseLeave={handleDropdownLeave}
                 >
-                  <div className="grid grid-cols-1 gap-2 px-4">
+                  <div className="grid grid-cols-1 gap-1 px-4">
                     {automationServices.map((service) => (
                       <Link
                         key={service.href}
                         href={service.href}
-                        className="px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors duration-150 text-sm text-black"
+                        className="px-4 py-3 rounded-lg hover:bg-primary/10 transition-colors duration-150 text-sm text-black font-medium"
                       >
                         {service.name}
                       </Link>

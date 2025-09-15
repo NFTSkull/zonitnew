@@ -14,37 +14,37 @@ export default function Proyectos() {
     {
       title: 'Casa Inteligente Residencial',
       category: 'Automatización',
-      image: '/placeholders/automation-placeholder.jpg',
+      image: '/placeholders/automation-placeholder.svg',
       description: 'Sistema completo de automatización para hogar familiar con control de iluminación, audio distribuido y seguridad.'
     },
     {
       title: 'Oficina Corporativa',
       category: 'Automatización',
-      image: '/placeholders/automation-placeholder.jpg',
+      image: '/placeholders/automation-placeholder.svg',
       description: 'Automatización empresarial con control de accesos, videoconferencias y gestión energética.'
     },
     {
       title: 'Sistema Solar Residencial',
       category: 'Solar',
-      image: '/placeholders/solar-placeholder.jpg',
+      image: '/placeholders/solar-placeholder.svg',
       description: 'Instalación fotovoltaica residencial que reduce 95% el consumo de CFE.'
     },
     {
       title: 'Complejo Industrial',
       category: 'Automatización',
-      image: '/placeholders/automation-placeholder.jpg',
+      image: '/placeholders/automation-placeholder.svg',
       description: 'Sistema de seguridad y control de accesos para instalación industrial de gran escala.'
     },
     {
       title: 'Sistema Solar Comercial',
       category: 'Solar',
-      image: '/placeholders/solar-placeholder.jpg',
+      image: '/placeholders/solar-placeholder.svg',
       description: 'Instalación solar comercial con ahorro energético del 99% en facturación eléctrica.'
     },
     {
       title: 'Auditorio Profesional',
       category: 'Automatización',
-      image: '/placeholders/automation-placeholder.jpg',
+      image: '/placeholders/automation-placeholder.svg',
       description: 'Sistema de audio profesional y video distribuido para auditorio corporativo.'
     }
   ];
@@ -158,3 +158,4 @@ export default function Proyectos() {
     </main>
   );
 }
+

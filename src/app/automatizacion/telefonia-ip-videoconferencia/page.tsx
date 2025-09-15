@@ -41,7 +41,7 @@ export default function TelefoniaIpVideoconferencia() {
       <SplitSection
         title="Comunicación Empresarial Profesional"
         text="Nuestros sistemas de telefonía IP y videoconferencia están diseñados para empresas que requieren comunicación clara, confiable y escalable. Desde pequeñas oficinas hasta grandes corporaciones, proporcionamos soluciones que mejoran la productividad y facilitan la colaboración."
-        imageSrc="/placeholders/ip-telephony.jpg"
+        imageSrc="/placeholders/ip-telephony.svg"
         reverse={false}
         features={[
           'Llamadas HD con calidad cristalina',
@@ -56,7 +56,7 @@ export default function TelefoniaIpVideoconferencia() {
       <SplitSection
         title="Colaboración Eficiente y Ágil"
         text="La videoconferencia moderna va más allá de las llamadas simples. Nuestros sistemas incluyen funciones avanzadas como compartir pantalla, grabación de sesiones, pizarras digitales y integración con herramientas de productividad, facilitando la colaboración remota y presencial."
-        imageSrc="/placeholders/automation-placeholder.jpg"
+        imageSrc="/placeholders/automation-placeholder.svg"
         reverse={true}
         features={[
           'Compartir pantalla y documentos',
@@ -83,3 +83,4 @@ export default function TelefoniaIpVideoconferencia() {
     </main>
   );
 }
+

@@ -24,7 +24,7 @@ export default function Automatizacion() {
       title: 'Control e Iluminación',
       href: '/automatizacion/control-iluminacion',
       icon: Lightbulb,
-      imageSrc: '/placeholders/control-lighting.jpg',
+      imageSrc: '/placeholders/control-lighting.svg',
       description: 'Sistemas inteligentes de iluminación',
       features: ['Control automático', 'Ahorro energético', 'Escenas personalizadas', 'Detección de presencia']
     },
@@ -32,7 +32,7 @@ export default function Automatizacion() {
       title: 'Audio Distribuido',
       href: '/automatizacion/audio-distribuido',
       icon: Volume2,
-      imageSrc: '/placeholders/audio-distributed.jpg',
+      imageSrc: '/placeholders/audio-distributed.svg',
       description: 'Sonido distribuido en múltiples zonas',
       features: ['Múltiples zonas', 'Control independiente', 'Alta calidad', 'Sincronización']
     },
@@ -40,7 +40,7 @@ export default function Automatizacion() {
       title: 'Control de Accesos y Seguridad',
       href: '/automatizacion/control-accesos-seguridad',
       icon: Shield,
-      imageSrc: '/placeholders/access-control.jpg',
+      imageSrc: '/placeholders/access-control.svg',
       description: 'Sistemas de seguridad avanzados',
       features: ['Cámaras HD', 'Sensores inteligentes', 'Monitoreo 24/7', 'Alertas instantáneas']
     },
@@ -48,7 +48,7 @@ export default function Automatizacion() {
       title: 'Telefonía IP y Videoconferencia',
       href: '/automatizacion/telefonia-ip-videoconferencia',
       icon: Phone,
-      imageSrc: '/placeholders/ip-telephony.jpg',
+      imageSrc: '/placeholders/ip-telephony.svg',
       description: 'Comunicación empresarial profesional',
       features: ['Llamadas HD', 'Videoconferencias', 'Integración empresarial', 'Escalabilidad']
     },
@@ -56,7 +56,7 @@ export default function Automatizacion() {
       title: 'Video',
       href: '/automatizacion/video',
       icon: Video,
-      imageSrc: '/placeholders/video.jpg',
+      imageSrc: '/placeholders/video.svg',
       description: 'Entretenimiento distribuido',
       features: ['Cine en casa', 'Múltiples pantallas', 'Control centralizado', 'Alta definición']
     },
@@ -64,7 +64,7 @@ export default function Automatizacion() {
       title: 'Cableado Estructurado',
       href: '/automatizacion/cableado-estructurado',
       icon: Cable,
-      imageSrc: '/placeholders/structured-cabling.jpg',
+      imageSrc: '/placeholders/structured-cabling.svg',
       description: 'Infraestructura de red robusta',
       features: ['Redes robustas', 'Escalabilidad', 'Mantenimiento fácil', 'Alta velocidad']
     },
@@ -72,7 +72,7 @@ export default function Automatizacion() {
       title: 'Audio Profesional',
       href: '/automatizacion/audio-profesional',
       icon: Mic,
-      imageSrc: '/placeholders/professional-audio.jpg',
+      imageSrc: '/placeholders/professional-audio.svg',
       description: 'Experiencias de audio inmersivas',
       features: ['Auditorios', 'Estadios', 'Eventos corporativos', 'Calidad profesional']
     }

@@ -41,7 +41,7 @@ export default function ControlAccesosSeguridad() {
       <SplitSection
         title="Seguridad Inteligente y Confiable"
         text="Nuestros sistemas de control de accesos y seguridad combinan tecnología avanzada con facilidad de uso. Desde cámaras de alta definición hasta sensores inteligentes, creamos una red de protección completa que se adapta a las necesidades específicas de cada espacio."
-        imageSrc="/placeholders/access-control.jpg"
+        imageSrc="/placeholders/access-control.svg"
         reverse={false}
         features={[
           'Cámaras HD con visión nocturna',
@@ -56,7 +56,7 @@ export default function ControlAccesosSeguridad() {
       <SplitSection
         title="Tecnología que Inspira Confianza"
         text="La seguridad moderna requiere sistemas que no solo detecten amenazas, sino que también proporcionen información valiosa para la toma de decisiones. Nuestros sistemas utilizan inteligencia artificial para distinguir entre eventos normales y situaciones que requieren atención inmediata."
-        imageSrc="/placeholders/automation-placeholder.jpg"
+        imageSrc="/placeholders/automation-placeholder.svg"
         reverse={true}
         features={[
           'Inteligencia artificial para detección precisa',
@@ -136,3 +136,4 @@ export default function ControlAccesosSeguridad() {
     </main>
   );
 }
+

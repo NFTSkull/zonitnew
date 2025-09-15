@@ -41,7 +41,7 @@ export default function Video() {
       <SplitSection
         title="Cine en Casa y Video Distribuido"
         text="Transforma cualquier espacio en una sala de cine profesional con nuestros sistemas de video distribuido. Desde una sola pantalla hasta múltiples displays sincronizados, creamos experiencias visuales inmersivas que se adaptan a tu estilo de vida y entretenimiento."
-        imageSrc="/placeholders/video.jpg"
+        imageSrc="/placeholders/video.svg"
         reverse={false}
         features={[
           'Múltiples pantallas sincronizadas',
@@ -56,7 +56,7 @@ export default function Video() {
       <SplitSection
         title="Integración Perfecta y Control Intuitivo"
         text="Nuestros sistemas de video se integran perfectamente con otros sistemas de automatización, permitiendo crear experiencias completas donde la iluminación, audio y video trabajan en armonía. El control se realiza desde dispositivos móviles o paneles táctiles con interfaces intuitivas."
-        imageSrc="/placeholders/automation-placeholder.jpg"
+        imageSrc="/placeholders/automation-placeholder.svg"
         reverse={true}
         features={[
           'Control desde dispositivos móviles',
@@ -83,3 +83,4 @@ export default function Video() {
     </main>
   );
 }
+

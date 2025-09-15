@@ -31,14 +31,14 @@ export default function Header() {
 
           {/* Navegación Desktop */}
           <nav className="hidden lg:flex items-center space-x-2">
-            <Link href="/" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150">
+            <Link href="/" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
               Inicio
             </Link>
             
             {/* Dropdown Automatización */}
             <div className="relative group">
               <button 
-                className="flex items-center space-x-2 px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150"
+                className="flex items-center space-x-2 px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary"
                 onMouseEnter={() => setIsAutomationDropdownOpen(true)}
                 onMouseLeave={() => setIsAutomationDropdownOpen(false)}
               >
@@ -57,7 +57,7 @@ export default function Header() {
                       <Link
                         key={service.href}
                         href={service.href}
-                        className="px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors duration-150 text-sm"
+                        className="px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors duration-150 text-sm text-primary"
                       >
                         {service.name}
                       </Link>
@@ -67,19 +67,19 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/paneles-solares" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150">
+            <Link href="/paneles-solares" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
               Paneles Solares
             </Link>
-            <Link href="/nosotros" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150">
+            <Link href="/nosotros" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
               Nosotros
             </Link>
-            <Link href="/proyectos" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150">
+            <Link href="/proyectos" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
               Proyectos
             </Link>
-            <Link href="/blog" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150">
+            <Link href="/blog" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
               Blog
             </Link>
-            <Link href="/contacto" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150">
+            <Link href="/contacto" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-primary">
               Contacto
             </Link>
           </nav>

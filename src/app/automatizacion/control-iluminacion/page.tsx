@@ -41,7 +41,7 @@ export default function ControlIluminacion() {
       <SplitSection
         title="Iluminación Inteligente para Cada Momento"
         text="Nuestros sistemas de control de iluminación utilizan tecnología de vanguardia para crear ambientes perfectos. Desde la automatización básica hasta configuraciones complejas, adaptamos la iluminación a tu estilo de vida y necesidades específicas."
-        imageSrc="/placeholders/control-lighting.jpg"
+        imageSrc="/placeholders/control-lighting.svg"
         reverse={false}
         features={[
           'Control centralizado desde dispositivos móviles',
@@ -56,7 +56,7 @@ export default function ControlIluminacion() {
       <SplitSection
         title="Eficiencia Energética y Ahorro"
         text="Los sistemas de iluminación inteligente no solo mejoran la comodidad, sino que también optimizan el consumo energético. Con sensores de presencia, regulación automática de intensidad y programación inteligente, puedes reducir significativamente tus costos de electricidad."
-        imageSrc="/placeholders/automation-placeholder.jpg"
+        imageSrc="/placeholders/automation-placeholder.svg"
         reverse={true}
         features={[
           'Reducción del consumo energético hasta 60%',

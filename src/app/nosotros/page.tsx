@@ -47,7 +47,7 @@ export default function Nosotros() {
             </div>
             <div className="relative">
               <Image 
-                src="/placeholders/automation-placeholder.jpg" 
+                src="/placeholders/automation-placeholder.svg" 
                 alt="Equipo Zonit" 
                 width={600}
                 height={400}

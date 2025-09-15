@@ -16,42 +16,42 @@ export default function Blog() {
       excerpt: 'Descubre cómo transformar tu hogar en una casa inteligente con los mejores sistemas de automatización.',
       date: '15 de Enero, 2024',
       category: 'Automatización',
-      image: '/placeholders/automation-placeholder.jpg'
+      image: '/placeholders/automation-placeholder.svg'
     },
     {
       title: 'Beneficios de la Energía Solar en México',
       excerpt: 'Conoce las ventajas económicas y ambientales de instalar paneles solares en tu propiedad.',
       date: '10 de Enero, 2024',
       category: 'Energía Solar',
-      image: '/placeholders/solar-placeholder.jpg'
+      image: '/placeholders/solar-placeholder.svg'
     },
     {
       title: 'Sistemas de Seguridad Inteligente',
       excerpt: 'Protege tu hogar con tecnología de vanguardia en sistemas de seguridad y control de accesos.',
       date: '5 de Enero, 2024',
       category: 'Seguridad',
-      image: '/placeholders/automation-placeholder.jpg'
+      image: '/placeholders/automation-placeholder.svg'
     },
     {
       title: 'Ahorro Energético con Iluminación Inteligente',
       excerpt: 'Reduce hasta 60% tu consumo energético con sistemas de iluminación automatizada.',
       date: '28 de Diciembre, 2023',
       category: 'Eficiencia',
-      image: '/placeholders/automation-placeholder.jpg'
+      image: '/placeholders/automation-placeholder.svg'
     },
     {
       title: 'ROI de Sistemas Solares: ¿Cuándo se Paga?',
       excerpt: 'Análisis detallado sobre el retorno de inversión en sistemas fotovoltaicos residenciales.',
       date: '20 de Diciembre, 2023',
       category: 'Energía Solar',
-      image: '/placeholders/solar-placeholder.jpg'
+      image: '/placeholders/solar-placeholder.svg'
     },
     {
       title: 'Integración de Audio Distribuido en el Hogar',
       excerpt: 'Crea experiencias sonoras únicas con sistemas de audio distribuido profesional.',
       date: '15 de Diciembre, 2023',
       category: 'Audio',
-      image: '/placeholders/automation-placeholder.jpg'
+      image: '/placeholders/automation-placeholder.svg'
     }
   ];
 
@@ -171,3 +171,4 @@ export default function Blog() {
     </main>
   );
 }
+

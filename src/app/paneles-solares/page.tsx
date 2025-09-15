@@ -69,7 +69,7 @@ export default function PanelesSolares() {
         ctas={[
           { label: 'Cotiza ahora', href: '/contacto', primary: true }
         ]}
-        imageSrc="/placeholders/solar-placeholder.jpg"
+        imageSrc="/placeholders/solar-placeholder.svg"
         dark={false}
       />
 
@@ -199,3 +199,4 @@ export default function PanelesSolares() {
     </main>
   );
 }
+

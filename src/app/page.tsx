@@ -27,7 +27,7 @@ export default function Home() {
       title: 'Control e Iluminación',
       href: '/automatizacion/control-iluminacion',
       icon: Lightbulb,
-      imageSrc: '/placeholders/control-lighting.jpg',
+      imageSrc: '/placeholders/control-lighting.svg',
       description: 'Sistemas inteligentes',
       features: ['Control automático', 'Ahorro energético', 'Escenas personalizadas']
     },
@@ -35,7 +35,7 @@ export default function Home() {
       title: 'Audio Distribuido',
       href: '/automatizacion/audio-distribuido',
       icon: Volume2,
-      imageSrc: '/placeholders/audio-distributed.jpg',
+      imageSrc: '/placeholders/audio-distributed.svg',
       description: 'Sonido en toda la casa',
       features: ['Múltiples zonas', 'Control independiente', 'Alta calidad']
     },
@@ -43,7 +43,7 @@ export default function Home() {
       title: 'Control de Accesos y Seguridad',
       href: '/automatizacion/control-accesos-seguridad',
       icon: Shield,
-      imageSrc: '/placeholders/access-control.jpg',
+      imageSrc: '/placeholders/access-control.svg',
       description: 'Seguridad avanzada',
       features: ['Cámaras HD', 'Sensores inteligentes', 'Monitoreo 24/7']
     },
@@ -51,7 +51,7 @@ export default function Home() {
       title: 'Telefonía IP y Videoconferencia',
       href: '/automatizacion/telefonia-ip-videoconferencia',
       icon: Phone,
-      imageSrc: '/placeholders/ip-telephony.jpg',
+      imageSrc: '/placeholders/ip-telephony.svg',
       description: 'Comunicación profesional',
       features: ['Llamadas HD', 'Videoconferencias', 'Integración empresarial']
     },
@@ -59,7 +59,7 @@ export default function Home() {
       title: 'Video',
       href: '/automatizacion/video',
       icon: Video,
-      imageSrc: '/placeholders/video.jpg',
+      imageSrc: '/placeholders/video.svg',
       description: 'Entretenimiento distribuido',
       features: ['Cine en casa', 'Múltiples pantallas', 'Control centralizado']
     },
@@ -67,7 +67,7 @@ export default function Home() {
       title: 'Cableado Estructurado',
       href: '/automatizacion/cableado-estructurado',
       icon: Cable,
-      imageSrc: '/placeholders/structured-cabling.jpg',
+      imageSrc: '/placeholders/structured-cabling.svg',
       description: 'Infraestructura sólida',
       features: ['Redes robustas', 'Escalabilidad', 'Mantenimiento fácil']
     },
@@ -75,7 +75,7 @@ export default function Home() {
       title: 'Audio Profesional',
       href: '/automatizacion/audio-profesional',
       icon: Mic,
-      imageSrc: '/placeholders/professional-audio.jpg',
+      imageSrc: '/placeholders/professional-audio.svg',
       description: 'Experiencias inmersivas',
       features: ['Auditorios', 'Estadios', 'Eventos corporativos']
     }
@@ -126,7 +126,7 @@ export default function Home() {
           { label: 'Conoce nuestras soluciones', href: '/automatizacion', primary: true },
           { label: 'Cotiza ahora', href: '/contacto', primary: false }
         ]}
-        imageSrc="/placeholders/hero-placeholder.jpg"
+        imageSrc="/placeholders/hero-placeholder.svg"
         dark={true}
       />
 
@@ -160,7 +160,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <Image 
-                src="/placeholders/automation-placeholder.jpg" 
+                src="/placeholders/automation-placeholder.svg" 
                 alt="Equipo Zonit" 
                 width={600}
                 height={400}

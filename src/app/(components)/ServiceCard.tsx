@@ -40,7 +40,7 @@ export default function ServiceCard({
           <Icon className="w-7 h-7 text-white" />
         </div>
         <div>
-          <h3 className="text-xl font-medium text-primary tracking-wide">
+          <h3 className="text-xl font-medium text-accentLime tracking-wide">
             {title}
           </h3>
           {description && (

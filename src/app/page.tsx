@@ -135,7 +135,7 @@ export default function Home() {
         <div className="container-zonit">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-light text-primary tracking-wide">
+              <h2 className="text-3xl md:text-4xl font-light text-accentLime tracking-wide">
                 Nosotros
               </h2>
               <p className="text-lg text-black leading-relaxed">

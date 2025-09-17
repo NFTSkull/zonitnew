@@ -41,7 +41,7 @@ export default function AudioDistribuido() {
       <SplitSection
         title="Sonido Perfecto en Cada Ambiente"
         text="Nuestros sistemas de audio distribuido permiten disfrutar de música de alta calidad en múltiples zonas de manera independiente. Desde ambientes residenciales hasta espacios comerciales, creamos experiencias auditivas excepcionales que se adaptan a cada momento y actividad."
-        imageSrc="/placeholders/audio-distributed.svg"
+        imageSrc="/placeholders/audio-distributed.png"
         reverse={false}
         features={[
           'Múltiples zonas de audio independientes',
@@ -56,7 +56,7 @@ export default function AudioDistribuido() {
       <SplitSection
         title="Flexibilidad y Control Total"
         text="Con nuestros sistemas de audio distribuido, cada habitación puede reproducir contenido diferente simultáneamente, o todas pueden sincronizarse para crear una experiencia envolvente. El control se realiza desde dispositivos móviles, paneles táctiles o comandos de voz."
-        imageSrc="/placeholders/automation-placeholder.svg"
+        imageSrc="/placeholders/automation-placeholder.png"
         reverse={true}
         features={[
           'Control desde dispositivos móviles',

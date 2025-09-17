@@ -41,7 +41,7 @@ export default function AudioProfesional() {
       <SplitSection
         title="Experiencias Sonoras Inmersivas"
         text="Nuestros sistemas de audio profesional están diseñados para crear experiencias sonoras excepcionales en espacios grandes y especializados. Desde auditorios corporativos hasta estadios deportivos, proporcionamos soluciones que garantizan claridad, cobertura uniforme y calidad de nivel profesional."
-        imageSrc="/placeholders/professional-audio.svg"
+        imageSrc="/placeholders/professional-audio.png"
         reverse={false}
         features={[
           'Equipos de audio de nivel profesional',
@@ -56,7 +56,7 @@ export default function AudioProfesional() {
       <SplitSection
         title="Aplicaciones para Cada Necesidad"
         text="Cada espacio tiene requerimientos únicos de audio. Nuestros sistemas se adaptan a diferentes aplicaciones: presentaciones corporativas, eventos deportivos, conciertos, conferencias y más. Cada solución se personaliza según las características acústicas del espacio y las necesidades específicas del cliente."
-        imageSrc="/placeholders/automation-placeholder.svg"
+        imageSrc="/placeholders/automation-placeholder.png"
         reverse={true}
         features={[
           'Auditorios y salas de conferencias',

@@ -41,7 +41,7 @@ export default function CableadoEstructurado() {
       <SplitSection
         title="Infraestructura Sólida y Escalable"
         text="El cableado estructurado es la base fundamental de cualquier sistema tecnológico moderno. Nuestros sistemas están diseñados para proporcionar conectividad confiable, alta velocidad y facilidad de mantenimiento, preparando tu espacio para las tecnologías del presente y futuro."
-        imageSrc="/placeholders/structured-cabling.svg"
+        imageSrc="/placeholders/structured-cabling.png"
         reverse={false}
         features={[
           'Cableado categoría 6A y superior',
@@ -56,7 +56,7 @@ export default function CableadoEstructurado() {
       <SplitSection
         title="Estabilidad, Velocidad y Soporte Completo"
         text="Una infraestructura de red bien diseñada garantiza estabilidad en las conexiones, velocidades óptimas y facilidad de mantenimiento. Nuestros sistemas incluyen soporte técnico completo, documentación detallada y planes de mantenimiento preventivo para asegurar el funcionamiento óptimo a largo plazo."
-        imageSrc="/placeholders/automation-placeholder.svg"
+        imageSrc="/placeholders/automation-placeholder.png"
         reverse={true}
         features={[
           'Velocidades hasta 10 Gbps',

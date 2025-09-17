@@ -15,15 +15,12 @@ import {
   Video, 
   Cable, 
   Mic,
-  Zap,
   Smartphone,
-  Leaf,
-  Users,
   Battery,
   Camera,
   Wifi,
   TrendingUp,
-  Home
+  Home as HomeIcon
 } from 'lucide-react';
 
 export default function Home() {
@@ -113,7 +110,7 @@ export default function Home() {
       text: 'Automatización inteligente que optimiza recursos y mejora la productividad.'
     },
     {
-      icon: Home,
+      icon: HomeIcon,
       title: 'Valor Agregado',
       text: 'Incrementa el valor de tu propiedad con tecnología de vanguardia integrada.'
     }

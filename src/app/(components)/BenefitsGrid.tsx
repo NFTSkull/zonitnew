@@ -18,21 +18,21 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
     4: 'lg:grid-cols-4'
   };
 
-  // Colores específicos para cada tipo de ícono
+  // Colores minimalistas usando la paleta de la página web
   const getIconColor = (title: string) => {
     switch (title) {
       case 'Ahorro Energético':
-        return 'text-green-500';
+        return 'text-primary';
       case 'Seguridad':
-        return 'text-red-500';
+        return 'text-secondary';
       case 'Comodidad':
-        return 'text-blue-500';
+        return 'text-accentBlue';
       case 'Conectividad Confiable':
-        return 'text-purple-500';
+        return 'text-primary';
       case 'Eficiencia':
-        return 'text-orange-500';
+        return 'text-secondary';
       case 'Valor Agregado':
-        return 'text-indigo-500';
+        return 'text-accentBlue';
       default:
         return 'text-primary';
     }
@@ -41,19 +41,19 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
   const getBackgroundColor = (title: string) => {
     switch (title) {
       case 'Ahorro Energético':
-        return 'bg-green-50 border-green-200';
+        return 'bg-primary/5 border-primary/20';
       case 'Seguridad':
-        return 'bg-red-50 border-red-200';
+        return 'bg-secondary/5 border-secondary/20';
       case 'Comodidad':
-        return 'bg-blue-50 border-blue-200';
+        return 'bg-accentBlue/5 border-accentBlue/20';
       case 'Conectividad Confiable':
-        return 'bg-purple-50 border-purple-200';
+        return 'bg-primary/5 border-primary/20';
       case 'Eficiencia':
-        return 'bg-orange-50 border-orange-200';
+        return 'bg-secondary/5 border-secondary/20';
       case 'Valor Agregado':
-        return 'bg-indigo-50 border-indigo-200';
+        return 'bg-accentBlue/5 border-accentBlue/20';
       default:
-        return 'bg-gray-50 border-gray-200';
+        return 'bg-primary/5 border-primary/20';
     }
   };
 
@@ -65,8 +65,8 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
             const Icon = item.icon;
             return (
               <div key={index} className="card-zonit p-8 text-center group hover:scale-105 transition-transform duration-150">
-                <div className={`w-20 h-20 ${getBackgroundColor(item.title)} border-2 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-150 shadow-lg`}>
-                  <Icon className={`w-10 h-10 ${getIconColor(item.title)}`} />
+                <div className={`w-16 h-16 ${getBackgroundColor(item.title)} border rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-150`}>
+                  <Icon className={`w-7 h-7 ${getIconColor(item.title)}`} />
                 </div>
                 <h3 className="text-xl font-medium mb-4 tracking-wide" style={{color: '#74acd8'}}>
                   {item.title}

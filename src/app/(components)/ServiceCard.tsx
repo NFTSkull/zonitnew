@@ -35,7 +35,7 @@ export default function ServiceCard({
           
           {/* Ícono flotante minimalista */}
           <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-            <Icon className="w-5 h-5 text-primary" />
+            <Icon className="w-5 h-5" style={{ color: '#1e1d37' }} />
           </div>
         </div>
       )}
@@ -44,11 +44,17 @@ export default function ServiceCard({
       <div className="p-8">
         {/* Header con ícono */}
         <div className="flex items-start space-x-4 mb-6">
-          <div className="w-12 h-12 bg-gradient-to-br from-primary/15 to-secondary/15 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200 border border-primary/20">
-            <Icon className="w-6 h-6 text-primary" />
+          <div 
+            className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200 border"
+            style={{ 
+              background: 'linear-gradient(135deg, #1e1d3715, #02383d15)', 
+              borderColor: '#1e1d3720' 
+            }}
+          >
+            <Icon className="w-6 h-6" style={{ color: '#1e1d37' }} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-semibold text-primary mb-2 tracking-wide group-hover:text-secondary transition-colors duration-200">
+            <h3 className="text-xl font-semibold mb-2 tracking-wide transition-colors duration-200" style={{ color: '#74acd8' }}>
               {title}
             </h3>
             {description && (
@@ -80,7 +86,8 @@ export default function ServiceCard({
           </div>
           <Link 
             href={href} 
-            className="inline-flex items-center space-x-2 text-primary font-semibold text-sm hover:text-secondary transition-all duration-200 group/link"
+            className="inline-flex items-center space-x-2 font-semibold text-sm transition-all duration-200 group/link"
+            style={{ color: '#1e1d37' }}
           >
             <span>Explorar</span>
             <svg className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

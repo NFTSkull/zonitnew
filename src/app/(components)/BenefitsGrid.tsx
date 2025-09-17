@@ -18,42 +18,42 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
     4: 'lg:grid-cols-4'
   };
 
-      // Colores contrastantes usando la paleta de la página web
+      // Colores directos usando la paleta de la página web
       const getIconColor = (title: string) => {
         switch (title) {
           case 'Ahorro Energético':
-            return 'text-primary';
+            return '#1e1d37';
           case 'Seguridad':
-            return 'text-secondary';
+            return '#02383d';
           case 'Comodidad':
-            return 'text-accentBlue';
+            return '#74acd8';
           case 'Conectividad Confiable':
-            return 'text-accentLime';
+            return '#d3d801';
           case 'Eficiencia':
-            return 'text-primary';
+            return '#1e1d37';
           case 'Valor Agregado':
-            return 'text-secondary';
+            return '#02383d';
           default:
-            return 'text-primary';
+            return '#1e1d37';
         }
       };
 
       const getBackgroundColor = (title: string) => {
         switch (title) {
           case 'Ahorro Energético':
-            return 'bg-primary/10 border-primary/30';
+            return { backgroundColor: '#1e1d3710', borderColor: '#1e1d3730' };
           case 'Seguridad':
-            return 'bg-secondary/10 border-secondary/30';
+            return { backgroundColor: '#02383d10', borderColor: '#02383d30' };
           case 'Comodidad':
-            return 'bg-accentBlue/10 border-accentBlue/30';
+            return { backgroundColor: '#74acd810', borderColor: '#74acd830' };
           case 'Conectividad Confiable':
-            return 'bg-accentLime/10 border-accentLime/30';
+            return { backgroundColor: '#d3d80110', borderColor: '#d3d80130' };
           case 'Eficiencia':
-            return 'bg-primary/10 border-primary/30';
+            return { backgroundColor: '#1e1d3710', borderColor: '#1e1d3730' };
           case 'Valor Agregado':
-            return 'bg-secondary/10 border-secondary/30';
+            return { backgroundColor: '#02383d10', borderColor: '#02383d30' };
           default:
-            return 'bg-primary/10 border-primary/30';
+            return { backgroundColor: '#1e1d3710', borderColor: '#1e1d3730' };
         }
       };
 
@@ -65,8 +65,11 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
             const Icon = item.icon;
             return (
               <div key={index} className="card-zonit p-8 text-center group hover:scale-105 transition-transform duration-150">
-                <div className={`w-16 h-16 ${getBackgroundColor(item.title)} border rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-150`}>
-                  <Icon className={`w-7 h-7 ${getIconColor(item.title)}`} />
+                <div 
+                  className="w-16 h-16 border rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-150"
+                  style={getBackgroundColor(item.title)}
+                >
+                  <Icon className="w-7 h-7" style={{ color: getIconColor(item.title) }} />
                 </div>
                 <h3 className="text-xl font-medium mb-4 tracking-wide" style={{color: '#74acd8'}}>
                   {item.title}

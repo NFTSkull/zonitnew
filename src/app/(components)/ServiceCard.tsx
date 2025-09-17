@@ -40,7 +40,7 @@ export default function ServiceCard({
           <Icon className="w-7 h-7 text-white" />
         </div>
         <div>
-          <h3 className="text-xl font-medium tracking-wide" style={{color: '#d3d801'}}>
+          <h3 className="text-xl font-medium tracking-wide" style={{color: '#74acd8'}}>
             {title}
           </h3>
           {description && (

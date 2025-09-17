@@ -29,7 +29,7 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
                 <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-150">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-medium mb-4 tracking-wide" style={{color: '#d3d801'}}>
+                <h3 className="text-xl font-medium mb-4 tracking-wide" style={{color: '#74acd8'}}>
                   {item.title}
                 </h3>
                 <p className="text-black leading-relaxed font-light">

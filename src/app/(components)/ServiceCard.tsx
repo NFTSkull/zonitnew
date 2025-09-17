@@ -20,64 +20,78 @@ export default function ServiceCard({
   features = []
 }: ServiceCardProps) {
   return (
-    <div className="card-zonit p-8 group hover:scale-105 transition-transform duration-150">
-      {/* Imagen */}
+    <div className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100/50 hover:border-primary/20">
+      {/* Imagen con overlay elegante */}
       {imageSrc && (
-        <div className="mb-6">
+        <div className="relative h-48 overflow-hidden">
           <Image
             src={imageSrc}
             alt={title}
             width={400}
             height={250}
-            className="w-full h-48 object-cover rounded-lg"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          
+          {/* Ícono flotante minimalista */}
+          <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+            <Icon className="w-5 h-5 text-primary" />
+          </div>
         </div>
       )}
       
-      {/* Contenido */}
-      <div className="flex items-center mb-6">
-        <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mr-6 group-hover:scale-105 transition-transform duration-150">
-          <Icon className="w-7 h-7 text-white" />
+      {/* Contenido elegante */}
+      <div className="p-8">
+        {/* Header con ícono */}
+        <div className="flex items-start space-x-4 mb-6">
+          <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+            <Icon className="w-6 h-6 text-primary" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="text-xl font-semibold text-primary mb-2 tracking-wide group-hover:text-secondary transition-colors duration-200">
+              {title}
+            </h3>
+            {description && (
+              <p className="text-gray-600 text-sm font-medium leading-relaxed">
+                {description}
+              </p>
+            )}
+          </div>
         </div>
-        <div>
-          <h3 className="text-xl font-medium tracking-wide" style={{color: '#74acd8'}}>
-            {title}
-          </h3>
-          {description && (
-            <p className="text-black font-light text-sm">
-              {description}
-            </p>
-          )}
-        </div>
-      </div>
-      
-      {/* Características */}
-      {features.length > 0 && (
-        <div className="space-y-3 mb-6">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-center text-sm text-black">
-              <div className="w-2 h-2 bg-zonit-accent-blue rounded-full mr-3"></div>
-              <span className="font-light">{feature}</span>
+        
+        {/* Características con diseño minimalista */}
+        {features.length > 0 && (
+          <div className="mb-8">
+            <div className="space-y-3">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <div className="w-1.5 h-1.5 bg-accentBlue rounded-full flex-shrink-0" />
+                  <span className="text-gray-700 text-sm font-medium">{feature}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+        )}
+        
+        {/* Footer con enlaces elegantes */}
+        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+          <div className="text-xs text-gray-500 font-medium tracking-wide uppercase">
+            Ver detalles
+          </div>
+          <Link 
+            href={href} 
+            className="inline-flex items-center space-x-2 text-primary font-semibold text-sm hover:text-secondary transition-all duration-200 group/link"
+          >
+            <span>Explorar</span>
+            <svg className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
-      )}
-      
-      {/* Enlace */}
-      <div className="flex justify-between items-center">
-        <div className="text-sm text-black font-light">
-          Ver detalle
-        </div>
-        <Link 
-          href={href} 
-          className="inline-flex items-center text-black font-medium hover:text-accentBlue transition-colors duration-150"
-        >
-          Ver más
-          <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
       </div>
+      
+      {/* Efecto de hover sutil */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-secondary/0 group-hover:from-primary/2 group-hover:to-secondary/2 transition-all duration-500 pointer-events-none" />
     </div>
   );
 }

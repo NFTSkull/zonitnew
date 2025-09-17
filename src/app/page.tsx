@@ -177,7 +177,7 @@ export default function Home() {
       <BenefitsGrid items={benefits} columns={3} />
 
       {/* Servicios Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container-zonit">
           <SectionTitle 
             title="Servicios" 

@@ -18,44 +18,44 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
     4: 'lg:grid-cols-4'
   };
 
-  // Colores minimalistas usando la paleta de la página web
-  const getIconColor = (title: string) => {
-    switch (title) {
-      case 'Ahorro Energético':
-        return 'text-primary';
-      case 'Seguridad':
-        return 'text-secondary';
-      case 'Comodidad':
-        return 'text-accentBlue';
-      case 'Conectividad Confiable':
-        return 'text-primary';
-      case 'Eficiencia':
-        return 'text-secondary';
-      case 'Valor Agregado':
-        return 'text-accentBlue';
-      default:
-        return 'text-primary';
-    }
-  };
+      // Colores contrastantes usando la paleta de la página web
+      const getIconColor = (title: string) => {
+        switch (title) {
+          case 'Ahorro Energético':
+            return 'text-primary';
+          case 'Seguridad':
+            return 'text-secondary';
+          case 'Comodidad':
+            return 'text-accentBlue';
+          case 'Conectividad Confiable':
+            return 'text-accentLime';
+          case 'Eficiencia':
+            return 'text-primary';
+          case 'Valor Agregado':
+            return 'text-secondary';
+          default:
+            return 'text-primary';
+        }
+      };
 
-  const getBackgroundColor = (title: string) => {
-    switch (title) {
-      case 'Ahorro Energético':
-        return 'bg-primary/5 border-primary/20';
-      case 'Seguridad':
-        return 'bg-secondary/5 border-secondary/20';
-      case 'Comodidad':
-        return 'bg-accentBlue/5 border-accentBlue/20';
-      case 'Conectividad Confiable':
-        return 'bg-primary/5 border-primary/20';
-      case 'Eficiencia':
-        return 'bg-secondary/5 border-secondary/20';
-      case 'Valor Agregado':
-        return 'bg-accentBlue/5 border-accentBlue/20';
-      default:
-        return 'bg-primary/5 border-primary/20';
-    }
-  };
+      const getBackgroundColor = (title: string) => {
+        switch (title) {
+          case 'Ahorro Energético':
+            return 'bg-primary/10 border-primary/30';
+          case 'Seguridad':
+            return 'bg-secondary/10 border-secondary/30';
+          case 'Comodidad':
+            return 'bg-accentBlue/10 border-accentBlue/30';
+          case 'Conectividad Confiable':
+            return 'bg-accentLime/10 border-accentLime/30';
+          case 'Eficiencia':
+            return 'bg-primary/10 border-primary/30';
+          case 'Valor Agregado':
+            return 'bg-secondary/10 border-secondary/30';
+          default:
+            return 'bg-primary/10 border-primary/30';
+        }
+      };
 
   return (
     <section className="py-20 bg-bgLight">

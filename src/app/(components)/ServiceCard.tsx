@@ -44,7 +44,7 @@ export default function ServiceCard({
       <div className="p-8">
         {/* Header con ícono */}
         <div className="flex items-start space-x-4 mb-6">
-          <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+          <div className="w-12 h-12 bg-gradient-to-br from-primary/15 to-secondary/15 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200 border border-primary/20">
             <Icon className="w-6 h-6 text-primary" />
           </div>
           <div className="flex-1 min-w-0">

@@ -4,6 +4,7 @@ import SplitSection from '../../(components)/SplitSection';
 import CTA from '../../(components)/CTA';
 import WhatsAppButton from '../../(components)/WhatsAppButton';
 import Link from 'next/link';
+import { Home, Building2, ShoppingBag } from 'lucide-react';
 
 export const metadata = {
   title: 'Audio Distribuido - Zonit',
@@ -81,38 +82,50 @@ export default function AudioDistribuido() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card-zonit p-8 text-center">
-              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
-                </svg>
+            <div className="card-zonit p-8 text-center group hover:scale-105 transition-transform duration-200">
+              <div 
+                className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6 border"
+                style={{ 
+                  background: 'linear-gradient(135deg, #1e1d3715, #02383d15)', 
+                  borderColor: '#1e1d3720' 
+                }}
+              >
+                <Home className="w-8 h-8" style={{ color: '#1e1d37' }} />
               </div>
-              <h3 className="text-xl font-medium text-textDark mb-4">Hogares</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-medium mb-4" style={{ color: '#74acd8' }}>Hogares</h3>
+              <p className="text-black leading-relaxed font-light">
                 Música ambiente en toda la casa con control independiente por habitación.
               </p>
             </div>
             
-            <div className="card-zonit p-8 text-center">
-              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+            <div className="card-zonit p-8 text-center group hover:scale-105 transition-transform duration-200">
+              <div 
+                className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6 border"
+                style={{ 
+                  background: 'linear-gradient(135deg, #02383d15, #74acd815)', 
+                  borderColor: '#02383d20' 
+                }}
+              >
+                <Building2 className="w-8 h-8" style={{ color: '#02383d' }} />
               </div>
-              <h3 className="text-xl font-medium text-textDark mb-4">Oficinas</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-medium mb-4" style={{ color: '#74acd8' }}>Oficinas</h3>
+              <p className="text-black leading-relaxed font-light">
                 Ambientes sonoros que mejoran la productividad y el bienestar laboral.
               </p>
             </div>
             
-            <div className="card-zonit p-8 text-center">
-              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V1a1 1 0 011 1v18a1 1 0 01-1 1H6a1 1 0 01-1-1V2a1 1 0 011-1h8v3z" />
-                </svg>
+            <div className="card-zonit p-8 text-center group hover:scale-105 transition-transform duration-200">
+              <div 
+                className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6 border"
+                style={{ 
+                  background: 'linear-gradient(135deg, #74acd815, #d3d80115)', 
+                  borderColor: '#74acd820' 
+                }}
+              >
+                <ShoppingBag className="w-8 h-8" style={{ color: '#74acd8' }} />
               </div>
-              <h3 className="text-xl font-medium text-textDark mb-4">Retail</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-medium mb-4" style={{ color: '#74acd8' }}>Retail</h3>
+              <p className="text-black leading-relaxed font-light">
                 Experiencias de compra mejoradas con audio ambiente personalizado.
               </p>
             </div>

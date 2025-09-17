@@ -37,81 +37,83 @@ export default function Header() {
   return (
     <header className="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-sm">
       <div className="container-zonit">
-        <div className="flex justify-between items-center py-6">
+        <div className="flex justify-between items-center py-5">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-4">
+          <Link href="/" className="flex items-center">
             <div className="text-3xl font-light text-black tracking-wider">
               ZONIT
             </div>
           </Link>
 
           {/* Navegación Desktop */}
-          <nav className="hidden lg:flex items-center space-x-2">
-            <Link href="/" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
-              Inicio
-            </Link>
-            
-            {/* Dropdown Automatización */}
-            <div className="relative group">
-              <button 
-                className="flex items-center space-x-2 px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black"
-                onMouseEnter={handleDropdownEnter}
-                onMouseLeave={handleDropdownLeave}
-              >
-                <span>Automatización</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isAutomationDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
+          <nav className="hidden lg:flex items-center">
+            <div className="flex items-center space-x-1">
+              <Link href="/" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+                Inicio
+              </Link>
               
-              {isAutomationDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-4 z-50"
+              {/* Dropdown Automatización */}
+              <div className="relative group">
+                <button 
+                  className="flex items-center space-x-1 px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm"
                   onMouseEnter={handleDropdownEnter}
                   onMouseLeave={handleDropdownLeave}
                 >
-                  <div className="grid grid-cols-1 gap-1 px-4">
-                    {automationServices.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="px-4 py-3 rounded-lg hover:bg-primary/10 transition-colors duration-150 text-sm text-black font-medium"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
+                  <span>Automatización</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isAutomationDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isAutomationDropdownOpen && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-4 z-50"
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
+                  >
+                    <div className="grid grid-cols-1 gap-1 px-4">
+                      {automationServices.map((service) => (
+                        <Link
+                          key={service.href}
+                          href={service.href}
+                          className="px-4 py-3 rounded-lg hover:bg-primary/10 transition-colors duration-150 text-sm text-black font-medium"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
 
-            <Link href="/paneles-solares" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
-              Paneles Solares
-            </Link>
-            <Link href="/nosotros" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
-              Nosotros
-            </Link>
-            <Link href="/proyectos" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
-              Proyectos
-            </Link>
-            <Link href="/blog" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
-              Blog
-            </Link>
-            <Link href="/contacto" className="px-6 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black">
-              Contacto
-            </Link>
+              <Link href="/paneles-solares" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+                Paneles Solares
+              </Link>
+              <Link href="/nosotros" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+                Nosotros
+              </Link>
+              <Link href="/proyectos" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+                Proyectos
+              </Link>
+              <Link href="/blog" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+                Blog
+              </Link>
+              <Link href="/contacto" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+                Contacto
+              </Link>
+            </div>
           </nav>
 
           {/* CTA Button */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <Link 
               href="/contacto" 
-              className="btn-primary px-8 py-4 rounded-2xl font-medium transition-smooth"
+              className="btn-primary px-6 py-3 rounded-xl font-medium text-sm transition-smooth"
             >
               Cotiza ahora
             </Link>
             
             {/* Botón móvil */}
             <button 
-              className="lg:hidden p-3 rounded-xl hover:bg-primary/5 transition-colors"
+              className="lg:hidden ml-3 p-3 rounded-xl hover:bg-primary/5 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

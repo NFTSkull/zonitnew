@@ -202,20 +202,33 @@ export default function Home() {
 
       {/* Teaser Paneles Solares */}
       <section className="py-20 bg-secondary">
-        <div className="container-zonit text-center">
-          <h2 className="text-3xl md:text-4xl font-light text-textLight mb-8 tracking-wide">
-            Paneles Solares
-          </h2>
-          <p className="text-lg text-accentLime mb-12 max-w-2xl mx-auto leading-relaxed">
-            Descubre el poder de la energía solar. Sistemas fotovoltaicos que te permiten 
-            ahorrar hasta 99% en tu recibo de CFE y recuperar tu inversión en 2-5 años.
-          </p>
-          <a 
-            href="/paneles-solares" 
-            className="btn-primary px-10 py-5 rounded-2xl text-lg font-medium transition-smooth inline-block"
-          >
-            Descúbrelo
-          </a>
+        <div className="container-zonit">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-light text-textLight mb-8 tracking-wide">
+                Paneles Solares
+              </h2>
+              <p className="text-lg text-accentLime mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Descubre el poder de la energía solar. Sistemas fotovoltaicos que te permiten 
+                ahorrar hasta 99% en tu recibo de CFE y recuperar tu inversión en 2-5 años.
+              </p>
+              <a 
+                href="/paneles-solares" 
+                className="btn-primary px-10 py-5 rounded-2xl text-lg font-medium transition-smooth inline-block"
+              >
+                Descúbrelo
+              </a>
+            </div>
+            <div className="relative order-first lg:order-last">
+              <Image 
+                src="/placeholders/solar-placeholder.svg" 
+                alt="Paneles Solares Zonit" 
+                width={600}
+                height={400}
+                className="rounded-xl shadow-lg ring-1 ring-gray-200/50 w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

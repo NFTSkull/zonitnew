@@ -221,7 +221,7 @@ export default function Home() {
             </div>
             <div className="relative order-first lg:order-last">
               <Image 
-                src="/placeholders/solar-placeholder.svg" 
+                src="/placeholders/solar-placeholder.png" 
                 alt="Paneles Solares Zonit" 
                 width={600}
                 height={400}

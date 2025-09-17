@@ -18,7 +18,12 @@ import {
   Zap,
   Smartphone,
   Leaf,
-  Users
+  Users,
+  Battery,
+  Camera,
+  Wifi,
+  TrendingUp,
+  Home
 } from 'lucide-react';
 
 export default function Home() {
@@ -83,12 +88,12 @@ export default function Home() {
 
   const benefits = [
     {
-      icon: Zap,
+      icon: Battery,
       title: 'Ahorro Energético',
       text: 'Reduce hasta un 45% tu consumo energético con sistemas inteligentes de control automático.'
     },
     {
-      icon: Shield,
+      icon: Camera,
       title: 'Seguridad',
       text: 'Protección 24/7 con cámaras HD, sensores inteligentes y monitoreo en tiempo real.'
     },
@@ -98,17 +103,17 @@ export default function Home() {
       text: 'Control total desde tu dispositivo móvil con una interfaz intuitiva y fácil de usar.'
     },
     {
-      icon: Cable,
+      icon: Wifi,
       title: 'Conectividad Confiable',
       text: 'Infraestructura robusta que garantiza conexión estable y rendimiento óptimo.'
     },
     {
-      icon: Leaf,
+      icon: TrendingUp,
       title: 'Eficiencia',
       text: 'Automatización inteligente que optimiza recursos y mejora la productividad.'
     },
     {
-      icon: Users,
+      icon: Home,
       title: 'Valor Agregado',
       text: 'Incrementa el valor de tu propiedad con tecnología de vanguardia integrada.'
     }

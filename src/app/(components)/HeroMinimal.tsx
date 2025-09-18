@@ -23,7 +23,7 @@ export default function HeroMinimal({
     <section 
       className="relative pt-32 pb-20 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center"
       style={{
-        backgroundImage: `url('/placeholders/hero-placeholder.png')`,
+        backgroundImage: `url('/placeholders/hero-section.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',

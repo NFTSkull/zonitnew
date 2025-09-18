@@ -23,33 +23,32 @@ export default function HeroMinimal({
     <section 
       className="relative pt-32 pb-20 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center"
       style={{
-        backgroundImage: `url('/placeholders/hero-section.png')`,
+        backgroundImage: `url('/placeholders/hero-placeholder.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Overlay muy sutil para legibilidad */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      {/* Sin overlay para mostrar la imagen completa */}
       
       {/* Contenido centrado con animaciones */}
       <div className="container-zonit relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge superior con animación */}
-          <div className="inline-flex items-center px-8 py-4 bg-black/30 backdrop-blur-md rounded-full border border-white/50 mb-12 animate-fade-in-up">
+          <div className="inline-flex items-center px-8 py-4 bg-black/70 backdrop-blur-md rounded-full border border-white/80 mb-12 animate-fade-in-up">
             <span className="text-white text-sm font-semibold tracking-wider uppercase">
               Tecnología Inteligente
             </span>
           </div>
           
           {/* Título principal con animación escalonada */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 animate-fade-in-up-delay-1 drop-shadow-2xl">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 animate-fade-in-up-delay-1 drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
             {title}
           </h1>
           
           {/* Subtítulo con animación */}
-          <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-16 animate-fade-in-up-delay-2 drop-shadow-xl">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-16 animate-fade-in-up-delay-2 drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)]">
             {subtitle}
           </p>
           

@@ -30,7 +30,8 @@ export default function HeroMinimal({
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Sin overlay para mostrar la imagen completa */}
+      {/* Overlay profesional con opacidad */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/50 to-black/60"></div>
       
       {/* Contenido centrado con animaciones */}
       <div className="container-zonit relative z-10">
@@ -43,12 +44,12 @@ export default function HeroMinimal({
           </div>
           
           {/* Título principal con animación escalonada */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 animate-fade-in-up-delay-1 drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 animate-fade-in-up-delay-1 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
             {title}
           </h1>
           
           {/* Subtítulo con animación */}
-          <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-16 animate-fade-in-up-delay-2 drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)]">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-16 animate-fade-in-up-delay-2 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
             {subtitle}
           </p>
           
@@ -61,8 +62,8 @@ export default function HeroMinimal({
                 className={`
                   px-12 py-6 rounded-2xl font-bold transition-all duration-500 text-center text-lg relative overflow-hidden group
                   ${cta.primary 
-                    ? 'bg-white text-primary hover:bg-white/95 hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1' 
-                    : 'border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1'
+                    ? 'bg-white text-black hover:bg-white/95 hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1' 
+                    : 'border-2 border-white text-white hover:bg-white hover:text-black hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1'
                   }
                 `}
               >

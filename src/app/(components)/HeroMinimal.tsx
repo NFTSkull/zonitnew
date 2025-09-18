@@ -62,10 +62,11 @@ export default function HeroMinimal({
                 className={`
                   px-12 py-6 rounded-2xl font-bold transition-all duration-500 text-center text-lg relative overflow-hidden group
                   ${cta.primary 
-                    ? 'bg-white text-black hover:bg-white/95 hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1' 
-                    : 'border-2 border-white text-white hover:bg-white hover:text-black hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1'
+                    ? 'text-primary hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1' 
+                    : 'border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1'
                   }
                 `}
+                style={cta.primary ? { backgroundColor: '#d3d801' } : {}}
               >
                 {/* Efecto de brillo en hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

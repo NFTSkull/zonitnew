@@ -30,26 +30,26 @@ export default function HeroMinimal({
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Overlay con gradiente más sutil */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/50"></div>
+      {/* Overlay muy sutil para legibilidad */}
+      <div className="absolute inset-0 bg-black/20"></div>
       
       {/* Contenido centrado con animaciones */}
       <div className="container-zonit relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge superior con animación */}
-          <div className="inline-flex items-center px-8 py-4 bg-white/15 backdrop-blur-md rounded-full border border-white/30 mb-12 animate-fade-in-up">
+          <div className="inline-flex items-center px-8 py-4 bg-black/30 backdrop-blur-md rounded-full border border-white/50 mb-12 animate-fade-in-up">
             <span className="text-white text-sm font-semibold tracking-wider uppercase">
               Tecnología Inteligente
             </span>
           </div>
           
           {/* Título principal con animación escalonada */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 animate-fade-in-up-delay-1">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 animate-fade-in-up-delay-1 drop-shadow-2xl">
             {title}
           </h1>
           
           {/* Subtítulo con animación */}
-          <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 leading-relaxed max-w-4xl mx-auto mb-16 animate-fade-in-up-delay-2">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-16 animate-fade-in-up-delay-2 drop-shadow-xl">
             {subtitle}
           </p>
           
@@ -76,15 +76,6 @@ export default function HeroMinimal({
         </div>
       </div>
       
-      {/* Efecto de partículas mejorado */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-2.5 h-2.5 bg-white/25 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-white/35 rounded-full animate-ping delay-500"></div>
-        <div className="absolute top-1/2 left-1/6 w-1 h-1 bg-white/40 rounded-full animate-ping delay-750"></div>
-        <div className="absolute bottom-1/2 right-1/6 w-1.5 h-1.5 bg-white/30 rounded-full animate-pulse delay-1250"></div>
-      </div>
     </section>
   );
 }

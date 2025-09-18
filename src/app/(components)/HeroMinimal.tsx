@@ -37,24 +37,24 @@ export default function HeroMinimal({
       <div className="container-zonit relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge superior con animación */}
-          <div className="inline-flex items-center px-8 py-4 bg-white/15 backdrop-blur-md rounded-full border border-white/30 mb-12 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
+          <div className="inline-flex items-center px-8 py-4 bg-white/15 backdrop-blur-md rounded-full border border-white/30 mb-12 animate-fade-in-up">
             <span className="text-white text-sm font-semibold tracking-wider uppercase">
               Tecnología Inteligente
             </span>
           </div>
           
           {/* Título principal con animación escalonada */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 opacity-0 animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 animate-fade-in-up-delay-1">
             {title}
           </h1>
           
           {/* Subtítulo con animación */}
-          <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 leading-relaxed max-w-4xl mx-auto mb-16 opacity-0 animate-[fadeInUp_1.2s_ease-out_0.6s_forwards]">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 leading-relaxed max-w-4xl mx-auto mb-16 animate-fade-in-up-delay-2">
             {subtitle}
           </p>
           
           {/* Botones CTA con animación */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center opacity-0 animate-[fadeInUp_1.4s_ease-out_0.8s_forwards]">
+          <div className="flex flex-col sm:flex-row gap-8 justify-center animate-fade-in-up-delay-3">
             {ctas.map((cta, index) => (
               <Link
                 key={index}
@@ -85,19 +85,6 @@ export default function HeroMinimal({
         <div className="absolute top-1/2 left-1/6 w-1 h-1 bg-white/40 rounded-full animate-ping delay-750"></div>
         <div className="absolute bottom-1/2 right-1/6 w-1.5 h-1.5 bg-white/30 rounded-full animate-pulse delay-1250"></div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 }

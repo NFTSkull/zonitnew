@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface HeroMinimalProps {
   title: string;
@@ -20,59 +19,82 @@ export default function HeroMinimal({
   imageSrc, 
   dark = false 
 }: HeroMinimalProps) {
-  const bgClass = dark ? 'bg-primary' : 'bg-bgLight';
-  const textClass = dark ? 'text-textLight' : 'text-textDark';
-
   return (
-    <section className={`${bgClass} pt-32 pb-20 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 relative overflow-hidden min-h-[80vh] flex items-center`}>
-      <div className="container-zonit">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Contenido */}
-          <div className={`${textClass} space-y-10`}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide leading-tight">
-              {title}
-            </h1>
-            
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed opacity-90 max-w-2xl">
-              {subtitle}
-            </p>
-            
-            {/* Botones */}
-            <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              {ctas.map((cta, index) => (
-                <Link
-                  key={index}
-                  href={cta.href}
-                  className={`
-                    px-10 py-5 rounded-2xl font-medium transition-smooth text-center text-lg
-                    ${cta.primary 
-                      ? 'btn-primary' 
-                      : dark 
-                        ? 'border border-zonit-text-light text-textLight hover:bg-zonit-text-light hover:text-zonit-primary' 
-                        : 'btn-secondary'
-                    }
-                  `}
-                >
-                  {cta.label}
-                </Link>
-              ))}
+    <section 
+      className="relative pt-32 pb-20 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center"
+      style={{
+        backgroundImage: `url('/placeholders/hero-section.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay oscuro para mejor legibilidad */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+      
+      {/* Contenido centrado */}
+      <div className="container-zonit relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge superior */}
+          <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8">
+            <span className="text-white/90 text-sm font-medium tracking-wide uppercase">
+              Tecnología Inteligente
+            </span>
+          </div>
+          
+          {/* Título principal */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-wide leading-tight mb-8">
+            {title}
+          </h1>
+          
+          {/* Subtítulo */}
+          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-12">
+            {subtitle}
+          </p>
+          
+          {/* Información adicional */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="text-3xl font-light text-white mb-2">15+</div>
+              <div className="text-white/80 text-sm uppercase tracking-wide">Años de Experiencia</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-light text-white mb-2">500+</div>
+              <div className="text-white/80 text-sm uppercase tracking-wide">Proyectos Completados</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-light text-white mb-2">24/7</div>
+              <div className="text-white/80 text-sm uppercase tracking-wide">Soporte Técnico</div>
             </div>
           </div>
           
-          {/* Imagen */}
-          {imageSrc && (
-            <div className="relative order-first lg:order-last">
-              <Image
-                src={imageSrc}
-                alt={title}
-                width={700}
-                height={500}
-                className="rounded-2xl shadow-2xl ring-1 ring-gray-200/50 w-full h-auto"
-                priority
-              />
-            </div>
-          )}
+          {/* Botones CTA */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            {ctas.map((cta, index) => (
+              <Link
+                key={index}
+                href={cta.href}
+                className={`
+                  px-10 py-5 rounded-2xl font-semibold transition-all duration-300 text-center text-lg
+                  ${cta.primary 
+                    ? 'bg-white text-primary hover:bg-white/90 hover:scale-105 shadow-xl' 
+                    : 'border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105'
+                  }
+                `}
+              >
+                {cta.label}
+              </Link>
+            ))}
+          </div>
         </div>
+      </div>
+      
+      {/* Efecto de partículas sutiles */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white/30 rounded-full animate-ping"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white/25 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-white/35 rounded-full animate-ping delay-500"></div>
       </div>
     </section>
   );

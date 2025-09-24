@@ -20,7 +20,7 @@ export default function ServiceCard({
   features = []
 }: ServiceCardProps) {
   return (
-    <div className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl hover-lift transition-elegant overflow-hidden border border-gray-100/50 hover:border-primary/20 border-animated">
+    <div className="group relative bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100/60 hover:border-primary/30 hover:-translate-y-1">
       {/* Imagen con overlay elegante */}
       {imageSrc && (
         <div className="relative h-48 overflow-hidden">
@@ -29,13 +29,13 @@ export default function ServiceCard({
             alt={title}
             width={400}
             height={250}
-            className="w-full h-full object-cover transition-elegant-slow group-hover:scale-105"
+            className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-elegant" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
           
           {/* Ícono flotante minimalista */}
-          <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-bounce-subtle transform translate-y-2 group-hover:translate-y-0">
-            <Icon className="w-5 h-5" style={{ color: '#1e1d37' }} />
+          <div className="absolute top-4 right-4 w-9 h-9 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+            <Icon className="w-4 h-4 text-primary" />
           </div>
         </div>
       )}
@@ -45,20 +45,20 @@ export default function ServiceCard({
         {/* Header con ícono */}
         <div className="flex items-start space-x-4 mb-6">
           <div 
-            className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 hover-scale-subtle transition-elegant border hover-glow"
+            className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-200 group-hover:scale-105"
             style={{ 
-              background: 'linear-gradient(135deg, #1e1d3715, #02383d15)', 
+              background: 'linear-gradient(135deg, #1e1d3710, #02383d10)', 
               borderColor: '#1e1d3720' 
             }}
           >
-            <Icon className="w-6 h-6" style={{ color: '#1e1d37' }} />
+            <Icon className="w-5 h-5 text-primary" />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-semibold mb-2 tracking-wide transition-elegant gradient-text-animated">
+            <h3 className="text-lg font-semibold mb-2 text-primary tracking-wide">
               {title}
             </h3>
             {description && (
-              <p className="text-gray-600 text-sm font-medium leading-relaxed transition-elegant">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {description}
               </p>
             )}
@@ -70,9 +70,9 @@ export default function ServiceCard({
           <div className="mb-8">
             <div className="space-y-3">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3 hover-scale-subtle transition-elegant">
-                  <div className="w-1.5 h-1.5 bg-accentBlue rounded-full flex-shrink-0 pulse-subtle" />
-                  <span className="text-gray-700 text-sm font-medium">{feature}</span>
+                <div key={index} className="flex items-center space-x-3 transition-all duration-200 hover:translate-x-1">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 opacity-60"></div>
+                  <span className="text-gray-700 text-sm tracking-wide">{feature}</span>
                 </div>
               ))}
             </div>
@@ -81,16 +81,15 @@ export default function ServiceCard({
         
         {/* Footer con enlaces elegantes */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <div className="text-xs text-gray-500 font-medium tracking-wide uppercase transition-elegant">
+          <div className="text-xs text-gray-500 font-medium tracking-wide uppercase">
             Ver detalles
           </div>
           <Link 
             href={href} 
-            className="inline-flex items-center space-x-2 font-semibold text-sm transition-bounce-subtle hover-scale-subtle group/link"
-            style={{ color: '#1e1d37' }}
+            className="inline-flex items-center space-x-2 font-medium text-sm transition-all duration-200 hover:text-primary group/link"
           >
-            <span>Explorar</span>
-            <svg className="w-4 h-4 transition-elegant group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span className="tracking-wide">Explorar</span>
+            <svg className="w-4 h-4 transition-all duration-200 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
@@ -98,7 +97,7 @@ export default function ServiceCard({
       </div>
       
       {/* Efecto de hover sutil */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-secondary/0 group-hover:from-primary/2 group-hover:to-secondary/2 transition-elegant-slow pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-secondary/0 group-hover:from-primary/2 group-hover:to-secondary/2 transition-all duration-500 pointer-events-none" />
     </div>
   );
 }

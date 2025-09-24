@@ -65,7 +65,7 @@ export default function Header() {
                 
                 {isAutomationDropdownOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-xl border border-gray-100 py-6 z-50 fade-in-on-scroll"
+                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-xl border border-gray-100 py-6 z-50"
                     onMouseEnter={handleDropdownEnter}
                     onMouseLeave={handleDropdownLeave}
                   >
@@ -76,12 +76,11 @@ export default function Header() {
                           <Link
                             key={service.href}
                             href={service.href}
-                            className="flex items-center px-4 py-3 rounded-lg hover:bg-primary/10 hover-scale-subtle transition-elegant text-sm text-black font-medium group"
-                            style={{ animationDelay: `${index * 30}ms` }}
+                            className="flex items-center px-4 py-3 rounded-lg hover:bg-primary/10 transition-colors duration-150 text-sm text-black font-medium group"
                           >
-                            <div className="w-2 h-2 bg-accentBlue rounded-full mr-3 opacity-60 group-hover:opacity-100 transition-elegant"></div>
+                            <div className="w-2 h-2 bg-accentBlue rounded-full mr-3 opacity-60 group-hover:opacity-100 transition-colors duration-150"></div>
                             <span className="flex-1">{service.name}</span>
-                            <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-elegant" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-colors duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
                           </Link>
@@ -125,7 +124,7 @@ export default function Header() {
 
         {/* Menú Móvil */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm fade-in-on-scroll">
+          <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm">
             <div className="flex justify-end p-4">
               <button 
                 className="text-white text-2xl hover:text-gray-300 hover-scale-subtle transition-elegant"
@@ -135,44 +134,43 @@ export default function Header() {
               </button>
             </div>
             <div className="flex flex-col items-center justify-center h-full -mt-16">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4 hover-lift">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4">
                 <div className="space-y-6">
-                  <Link href="/" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
+                  <Link href="/" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors duration-150">
                     Inicio
                   </Link>
                   
                   <div className="space-y-3">
-                    <div className="text-lg font-semibold text-black transition-elegant border-b border-gray-200 pb-2">Automatización</div>
+                    <div className="text-lg font-semibold text-black border-b border-gray-200 pb-2">Automatización</div>
                     <div className="space-y-2">
                       {automationServices.map((service, index) => (
                         <Link
                           key={service.href}
                           href={service.href}
-                          className="flex items-center text-sm text-gray-600 hover:text-black hover-scale-subtle transition-elegant group"
+                          className="flex items-center text-sm text-gray-600 hover:text-black transition-colors duration-150 group"
                           onClick={() => setIsMobileMenuOpen(false)}
-                          style={{ animationDelay: `${index * 30}ms` }}
                         >
-                          <div className="w-1.5 h-1.5 bg-accentBlue rounded-full mr-3 opacity-60 group-hover:opacity-100 transition-elegant"></div>
+                          <div className="w-1.5 h-1.5 bg-accentBlue rounded-full mr-3 opacity-60 group-hover:opacity-100 transition-colors duration-150"></div>
                           <span className="flex-1">{service.name}</span>
                         </Link>
                       ))}
                     </div>
                   </div>
                   
-                  <Link href="/paneles-solares" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
+                  <Link href="/paneles-solares" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors duration-150">
                     Paneles Solares
                   </Link>
-                  <Link href="/blog" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
+                  <Link href="/blog" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors duration-150">
                     Blog
                   </Link>
-                  <Link href="/contacto" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
+                  <Link href="/contacto" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors duration-150">
                     Contacto
                   </Link>
                   
                   <div className="pt-4 border-t border-gray-200">
                     <Link 
                       href="/contacto" 
-                      className="w-full btn-primary py-3 px-6 rounded-xl font-semibold text-center block transition-bounce-subtle hover-lift hover-glow"
+                      className="w-full btn-primary py-3 px-6 rounded-xl font-semibold text-center block transition-smooth"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Cotiza ahora

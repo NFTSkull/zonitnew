@@ -17,7 +17,7 @@ export default function AudioDistribuido() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary py-20">
+      <section className="bg-primary pt-24 pb-16">
         <div className="container-zonit">
           <div className="text-center">
             <nav className="text-sm text-gray-300 mb-6">

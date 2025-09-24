@@ -16,17 +16,17 @@ export default function AudioProfesional() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary py-24">
+      <section className="bg-primary pt-24 pb-16">
         <div className="container-zonit">
           <div className="text-center">
-            <nav className="text-sm text-gray-300 mb-8">
-              <Link href="/" className="hover:text-textLight transition-colors">Inicio</Link>
+            <nav className="text-sm text-gray-300 mb-6">
+              <Link href="/" className="hover:text-textLight transition-colors duration-150">Inicio</Link>
               <span className="mx-2">/</span>
-              <Link href="/automatizacion" className="hover:text-textLight transition-colors">Automatización</Link>
+              <Link href="/automatizacion" className="hover:text-textLight transition-colors duration-150">Automatización</Link>
               <span className="mx-2">/</span>
               <span className="text-textLight">Audio Profesional</span>
             </nav>
-            <h1 className="text-4xl md:text-5xl font-light text-textLight mb-8 tracking-wide">
+            <h1 className="text-4xl md:text-5xl font-light text-textLight mb-6 tracking-wide">
               Audio Profesional
             </h1>
             <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">

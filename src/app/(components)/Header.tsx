@@ -65,21 +65,28 @@ export default function Header() {
                 
                 {isAutomationDropdownOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-4 z-50 fade-in-on-scroll"
+                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-xl border border-gray-100 py-6 z-50 fade-in-on-scroll"
                     onMouseEnter={handleDropdownEnter}
                     onMouseLeave={handleDropdownLeave}
                   >
-                    <div className="grid grid-cols-1 gap-1 px-4">
-                      {automationServices.map((service, index) => (
-                        <Link
-                          key={service.href}
-                          href={service.href}
-                          className="px-4 py-3 rounded-lg hover:bg-primary/10 hover-scale-subtle transition-elegant text-sm text-black font-medium"
-                          style={{ animationDelay: `${index * 50}ms` }}
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
+                    <div className="px-6">
+                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Servicios de Automatización</h3>
+                      <div className="grid grid-cols-1 gap-2">
+                        {automationServices.map((service, index) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            className="flex items-center px-4 py-3 rounded-lg hover:bg-primary/10 hover-scale-subtle transition-elegant text-sm text-black font-medium group"
+                            style={{ animationDelay: `${index * 30}ms` }}
+                          >
+                            <div className="w-2 h-2 bg-accentBlue rounded-full mr-3 opacity-60 group-hover:opacity-100 transition-elegant"></div>
+                            <span className="flex-1">{service.name}</span>
+                            <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-elegant" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -87,12 +94,6 @@ export default function Header() {
 
               <Link href="/paneles-solares" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Paneles Solares
-              </Link>
-              <Link href="/nosotros" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
-                Nosotros
-              </Link>
-              <Link href="/proyectos" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
-                Proyectos
               </Link>
               <Link href="/blog" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Blog
@@ -140,18 +141,19 @@ export default function Header() {
                     Inicio
                   </Link>
                   
-                  <div className="space-y-2">
-                    <div className="text-lg font-medium text-black transition-elegant">Automatización</div>
-                    <div className="ml-4 space-y-2">
+                  <div className="space-y-3">
+                    <div className="text-lg font-semibold text-black transition-elegant border-b border-gray-200 pb-2">Automatización</div>
+                    <div className="space-y-2">
                       {automationServices.map((service, index) => (
                         <Link
                           key={service.href}
                           href={service.href}
-                          className="block text-sm text-gray-600 hover:text-black hover-scale-subtle transition-elegant"
+                          className="flex items-center text-sm text-gray-600 hover:text-black hover-scale-subtle transition-elegant group"
                           onClick={() => setIsMobileMenuOpen(false)}
-                          style={{ animationDelay: `${index * 50}ms` }}
+                          style={{ animationDelay: `${index * 30}ms` }}
                         >
-                          {service.name}
+                          <div className="w-1.5 h-1.5 bg-accentBlue rounded-full mr-3 opacity-60 group-hover:opacity-100 transition-elegant"></div>
+                          <span className="flex-1">{service.name}</span>
                         </Link>
                       ))}
                     </div>
@@ -159,12 +161,6 @@ export default function Header() {
                   
                   <Link href="/paneles-solares" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
                     Paneles Solares
-                  </Link>
-                  <Link href="/nosotros" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
-                    Nosotros
-                  </Link>
-                  <Link href="/proyectos" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
-                    Proyectos
                   </Link>
                   <Link href="/blog" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
                     Blog

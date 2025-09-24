@@ -19,7 +19,7 @@ export function useScrollReveal(options: UseScrollRevealOptions = {}) {
 
   const [isVisible, setIsVisible] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -55,7 +55,7 @@ export function useScrollReveal(options: UseScrollRevealOptions = {}) {
 // Hook para efectos de hover con micro-interacciones
 export function useHoverEffects() {
   const [isHovered, setIsHovered] = useState(false);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
@@ -73,12 +73,11 @@ export function useHoverEffects() {
 // Hook para efectos de parallax sutil
 export function useParallax(speed: number = 0.5) {
   const [offset, setOffset] = useState(0);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (elementRef.current) {
-        const rect = elementRef.current.getBoundingClientRect();
         const scrolled = window.pageYOffset;
         const rate = scrolled * -speed;
         setOffset(rate);

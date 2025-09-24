@@ -201,14 +201,14 @@ export default function Home() {
       </section>
 
       {/* Teaser Paneles Solares */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20" style={{ backgroundColor: '#2d5a3d' }}>
         <div className="container-zonit">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl font-light text-textLight mb-8 tracking-wide">
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-8 tracking-wide">
                 Paneles Solares
               </h2>
-              <p className="text-lg text-accentLime mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-lg text-green-200 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Descubre el poder de la energía solar. Sistemas fotovoltaicos que te permiten 
                 ahorrar hasta 99% en tu recibo de CFE y recuperar tu inversión en 2-5 años.
               </p>

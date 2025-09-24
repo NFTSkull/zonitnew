@@ -38,76 +38,92 @@ export default function AudioDistribuido() {
         </div>
       </section>
 
-      {/* Sección 1: Visión General */}
-      <SplitSection
-        title="Sonido Perfecto en Cada Ambiente"
-        text="Nuestros sistemas de audio distribuido permiten disfrutar de música de alta calidad en múltiples zonas de manera independiente. Desde ambientes residenciales hasta espacios comerciales, creamos experiencias auditivas excepcionales que se adaptan a cada momento y actividad."
-        imageSrc="/placeholders/audio-distributed.png"
-        reverse={false}
-        features={[
-          'Múltiples zonas de audio independientes',
-          'Control individual por zona',
-          'Sincronización perfecta entre espacios',
-          'Integración con sistemas de automatización',
-          'Calidad de audio profesional'
-        ]}
-      />
+      {/* Sección Principal */}
+      <section className="py-20 bg-white">
+        <div className="container-zonit">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+                Audio Distribuido Inteligente
+              </h2>
+              <p className="text-lg text-black leading-relaxed">
+                Nuestros sistemas de audio distribuido permiten disfrutar de música de alta calidad en múltiples zonas de manera independiente. 
+                Desde ambientes residenciales hasta espacios comerciales, creamos experiencias auditivas excepcionales que se adaptan a cada momento y actividad.
+              </p>
+              <p className="text-lg text-black leading-relaxed">
+                Con control desde dispositivos móviles, integración con asistentes de voz, programación automática por horarios, 
+                fácil expansión del sistema y mantenimiento mínimo requerido.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                  <span className="text-black">Múltiples zonas de audio independientes</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                  <span className="text-black">Control individual por zona</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                  <span className="text-black">Sincronización perfecta entre espacios</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                  <span className="text-black">Integración con sistemas de automatización</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="/placeholders/audio-distributed.png" 
+                alt="Audio Distribuido Inteligente" 
+                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Sección 2: Beneficios Prácticos */}
-      <SplitSection
-        title="Flexibilidad y Control Total"
-        text="Con nuestros sistemas de audio distribuido, cada habitación puede reproducir contenido diferente simultáneamente, o todas pueden sincronizarse para crear una experiencia envolvente. El control se realiza desde dispositivos móviles, paneles táctiles o comandos de voz."
-        imageSrc="/placeholders/automation-placeholder.png"
-        reverse={true}
-        features={[
-          'Control desde dispositivos móviles',
-          'Integración con asistentes de voz',
-          'Programación automática por horarios',
-          'Fácil expansión del sistema',
-          'Mantenimiento mínimo requerido'
-        ]}
-      />
-
-      {/* Sección 3: Aplicaciones */}
-      <section className="py-16 bg-bgLight">
+      {/* Sección de Aplicaciones */}
+      <section className="py-20 bg-white">
         <div className="container-zonit">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-textDark mb-6 tracking-wide">
+            <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
               Aplicaciones Especializadas
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-black max-w-3xl mx-auto leading-relaxed">
               Nuestros sistemas de audio distribuido se adaptan a diferentes entornos 
               y necesidades específicas.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="card-zonit p-6 text-center hover-lift transition-elegant">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Home className="w-7 h-7 text-white" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="card-zonit p-8 text-center hover-lift transition-elegant">
+              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Home className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-medium text-textDark mb-3">Hogares</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-medium text-black mb-4">Hogares</h3>
+              <p className="text-black leading-relaxed">
                 Música ambiente en toda la casa con control independiente por habitación.
               </p>
             </div>
             
-            <div className="card-zonit p-6 text-center hover-lift transition-elegant">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Building2 className="w-7 h-7 text-white" />
+            <div className="card-zonit p-8 text-center hover-lift transition-elegant">
+              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Building2 className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-medium text-textDark mb-3">Oficinas</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-medium text-black mb-4">Oficinas</h3>
+              <p className="text-black leading-relaxed">
                 Ambientes sonoros que mejoran la productividad y el bienestar laboral.
               </p>
             </div>
             
-            <div className="card-zonit p-6 text-center hover-lift transition-elegant">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <ShoppingBag className="w-7 h-7 text-white" />
+            <div className="card-zonit p-8 text-center hover-lift transition-elegant">
+              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                <ShoppingBag className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-medium text-textDark mb-3">Retail</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-medium text-black mb-4">Retail</h3>
+              <p className="text-black leading-relaxed">
                 Experiencias de compra mejoradas con audio ambiente personalizado.
               </p>
             </div>

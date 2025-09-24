@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-700 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zonit. Todos los derechos reservados. | <Link href="/aviso-privacidad" className="hover:text-textLight transition-colors duration-150">Aviso de Privacidad</Link></p>
+          <p>&copy; 2025 Zonit. Todos los derechos reservados. | <Link href="/aviso-privacidad" className="hover:text-textLight transition-colors duration-150">Aviso de Privacidad</Link></p>
         </div>
       </div>
     </footer>

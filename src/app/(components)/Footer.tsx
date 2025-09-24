@@ -77,25 +77,20 @@ export default function Footer() {
         </div>
         
         {/* Socio Comercial */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="text-center mb-6">
-            <h4 className="text-lg font-semibold text-textLight mb-4">Nuestro Socio Comercial</h4>
-            <div className="bg-gray-800 rounded-lg p-6 max-w-md mx-auto">
-              <h5 className="text-lg font-semibold text-textLight mb-2">Tu Casa Inteligente</h5>
-              <p className="text-gray-300 text-sm mb-4">
-                Especialistas en domótica y tecnología para el hogar en México
-              </p>
+        <div className="border-t border-gray-700 mt-8 pt-6">
+          <div className="text-center">
+            <div className="inline-flex items-center space-x-2 text-gray-300 text-sm">
+              <span>Socio comercial:</span>
               <a 
                 href="https://tucasainteligente.net/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-primary hover:text-textLight transition-colors duration-150 font-medium"
+                className="text-primary hover:text-textLight transition-colors duration-150 font-medium"
               >
-                Visitar sitio web
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+                Tu Casa Inteligente
               </a>
+              <span className="text-gray-500">•</span>
+              <span className="text-gray-400 text-xs">Domótica México</span>
             </div>
           </div>
         </div>

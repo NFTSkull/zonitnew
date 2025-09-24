@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { Home, Building2, ShoppingBag } from 'lucide-react';
 
 export const metadata = {
-  title: 'Audio Distribuido - Zonit',
-  description: 'Sistemas de audio distribuido para hogares y empresas. Múltiples zonas, control independiente y alta calidad de sonido.',
+  title: 'Audio Distribuido - Zonit | Automatización Inteligente',
+  description: 'Sistemas de audio distribuido para hogares y empresas. Múltiples zonas, control independiente, alta calidad de sonido y control total desde cualquier dispositivo.',
 };
 
 export default function AudioDistribuido() {
@@ -17,22 +17,22 @@ export default function AudioDistribuido() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary py-24">
+      <section className="bg-primary py-20">
         <div className="container-zonit">
           <div className="text-center">
-            <nav className="text-sm text-gray-300 mb-8">
-              <Link href="/" className="hover:text-textLight transition-colors">Inicio</Link>
+            <nav className="text-sm text-gray-300 mb-6">
+              <Link href="/" className="hover:text-textLight transition-colors duration-150">Inicio</Link>
               <span className="mx-2">/</span>
-              <Link href="/automatizacion" className="hover:text-textLight transition-colors">Automatización</Link>
+              <Link href="/automatizacion" className="hover:text-textLight transition-colors duration-150">Automatización</Link>
               <span className="mx-2">/</span>
               <span className="text-textLight">Audio Distribuido</span>
             </nav>
-            <h1 className="text-4xl md:text-5xl font-light text-textLight mb-8 tracking-wide">
+            <h1 className="text-4xl md:text-5xl font-light text-textLight mb-6 tracking-wide">
               Audio Distribuido
             </h1>
             <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Lleva la música a cada rincón de tu espacio con sistemas de audio distribuido 
-              de alta calidad y control independiente.
+              de alta calidad y control independiente. Control total desde cualquier dispositivo.
             </p>
           </div>
         </div>
@@ -69,10 +69,10 @@ export default function AudioDistribuido() {
       />
 
       {/* Sección 3: Aplicaciones */}
-      <section className="py-20 bg-bgLight">
+      <section className="py-16 bg-bgLight">
         <div className="container-zonit">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-textDark mb-8 tracking-wide">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-textDark mb-6 tracking-wide">
               Aplicaciones Especializadas
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -81,51 +81,33 @@ export default function AudioDistribuido() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card-zonit p-8 text-center group hover:scale-105 transition-transform duration-200">
-              <div 
-                className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6 border"
-                style={{ 
-                  background: 'linear-gradient(135deg, #1e1d3715, #02383d15)', 
-                  borderColor: '#1e1d3720' 
-                }}
-              >
-                <Home className="w-8 h-8" style={{ color: '#1e1d37' }} />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="card-zonit p-6 text-center hover-lift transition-elegant">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Home className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-medium mb-4" style={{ color: '#74acd8' }}>Hogares</h3>
-              <p className="text-black leading-relaxed font-light">
+              <h3 className="text-lg font-medium text-textDark mb-3">Hogares</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
                 Música ambiente en toda la casa con control independiente por habitación.
               </p>
             </div>
             
-            <div className="card-zonit p-8 text-center group hover:scale-105 transition-transform duration-200">
-              <div 
-                className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6 border"
-                style={{ 
-                  background: 'linear-gradient(135deg, #02383d15, #74acd815)', 
-                  borderColor: '#02383d20' 
-                }}
-              >
-                <Building2 className="w-8 h-8" style={{ color: '#02383d' }} />
+            <div className="card-zonit p-6 text-center hover-lift transition-elegant">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Building2 className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-medium mb-4" style={{ color: '#74acd8' }}>Oficinas</h3>
-              <p className="text-black leading-relaxed font-light">
+              <h3 className="text-lg font-medium text-textDark mb-3">Oficinas</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
                 Ambientes sonoros que mejoran la productividad y el bienestar laboral.
               </p>
             </div>
             
-            <div className="card-zonit p-8 text-center group hover:scale-105 transition-transform duration-200">
-              <div 
-                className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6 border"
-                style={{ 
-                  background: 'linear-gradient(135deg, #74acd815, #d3d80115)', 
-                  borderColor: '#74acd820' 
-                }}
-              >
-                <ShoppingBag className="w-8 h-8" style={{ color: '#74acd8' }} />
+            <div className="card-zonit p-6 text-center hover-lift transition-elegant">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                <ShoppingBag className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-medium mb-4" style={{ color: '#74acd8' }}>Retail</h3>
-              <p className="text-black leading-relaxed font-light">
+              <h3 className="text-lg font-medium text-textDark mb-3">Retail</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
                 Experiencias de compra mejoradas con audio ambiente personalizado.
               </p>
             </div>
@@ -135,12 +117,12 @@ export default function AudioDistribuido() {
 
       {/* CTA Section */}
       <CTA
-        title="¿Listo para disfrutar del audio perfecto en cada espacio?"
-        text="Contáctanos para una consulta gratuita y descubre cómo podemos transformar tu experiencia auditiva."
+        title="¿Listo para transformar tu experiencia auditiva?"
+        text="Contáctanos para una consulta gratuita y descubre cómo nuestros sistemas de audio distribuido pueden mejorar cada espacio de tu hogar o empresa."
         primaryLabel="Solicitar cotización"
         primaryHref="/contacto"
-        secondaryLabel="Ver proyectos"
-        secondaryHref="/proyectos"
+        secondaryLabel="Ver más servicios"
+        secondaryHref="/automatizacion"
         dark={false}
       />
 

@@ -3,63 +3,63 @@ import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-textLight py-16">
+    <footer className="bg-primary text-textLight py-16 fade-in-on-scroll">
       <div className="container-zonit">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Zonit Info */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">ZONIT</h3>
-            <p className="text-gray-300 mb-4">
+          <div className="slide-in-left">
+            <h3 className="text-2xl font-bold mb-4 gradient-text-animated">ZONIT</h3>
+            <p className="text-gray-300 mb-4 transition-elegant">
               Especialistas en automatización inteligente para hogares y empresas.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-textLight transition-colors duration-150">
+              <a href="#" className="text-gray-300 hover:text-textLight hover-scale-subtle transition-elegant p-2 rounded-lg hover:bg-gray-800">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-textLight transition-colors duration-150">
+              <a href="#" className="text-gray-300 hover:text-textLight hover-scale-subtle transition-elegant p-2 rounded-lg hover:bg-gray-800">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-textLight transition-colors duration-150">
+              <a href="#" className="text-gray-300 hover:text-textLight hover-scale-subtle transition-elegant p-2 rounded-lg hover:bg-gray-800">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
           
           {/* Servicios */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Servicios</h4>
+          <div className="fade-in-on-scroll">
+            <h4 className="text-lg font-semibold mb-4 transition-elegant">Servicios</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><Link href="/automatizacion/control-iluminacion" className="hover:text-textLight transition-colors duration-150">Control e Iluminación</Link></li>
-              <li><Link href="/automatizacion/audio-distribuido" className="hover:text-textLight transition-colors duration-150">Audio Distribuido</Link></li>
-              <li><Link href="/automatizacion/control-accesos-seguridad" className="hover:text-textLight transition-colors duration-150">Control de Accesos</Link></li>
-              <li><Link href="/paneles-solares" className="hover:text-textLight transition-colors duration-150">Paneles Solares</Link></li>
+              <li><Link href="/automatizacion/control-iluminacion" className="hover:text-textLight hover-scale-subtle transition-elegant block py-1 rounded px-2 hover:bg-gray-800">Control e Iluminación</Link></li>
+              <li><Link href="/automatizacion/audio-distribuido" className="hover:text-textLight hover-scale-subtle transition-elegant block py-1 rounded px-2 hover:bg-gray-800">Audio Distribuido</Link></li>
+              <li><Link href="/automatizacion/control-accesos-seguridad" className="hover:text-textLight hover-scale-subtle transition-elegant block py-1 rounded px-2 hover:bg-gray-800">Control de Accesos</Link></li>
+              <li><Link href="/paneles-solares" className="hover:text-textLight hover-scale-subtle transition-elegant block py-1 rounded px-2 hover:bg-gray-800">Paneles Solares</Link></li>
             </ul>
           </div>
           
           {/* Empresa */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Empresa</h4>
+          <div className="fade-in-on-scroll">
+            <h4 className="text-lg font-semibold mb-4 transition-elegant">Empresa</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><Link href="/nosotros" className="hover:text-textLight transition-colors duration-150">Nosotros</Link></li>
-              <li><Link href="/proyectos" className="hover:text-textLight transition-colors duration-150">Proyectos</Link></li>
-              <li><Link href="/blog" className="hover:text-textLight transition-colors duration-150">Blog</Link></li>
-              <li><Link href="/contacto" className="hover:text-textLight transition-colors duration-150">Contacto</Link></li>
+              <li><Link href="/nosotros" className="hover:text-textLight hover-scale-subtle transition-elegant block py-1 rounded px-2 hover:bg-gray-800">Nosotros</Link></li>
+              <li><Link href="/proyectos" className="hover:text-textLight hover-scale-subtle transition-elegant block py-1 rounded px-2 hover:bg-gray-800">Proyectos</Link></li>
+              <li><Link href="/blog" className="hover:text-textLight hover-scale-subtle transition-elegant block py-1 rounded px-2 hover:bg-gray-800">Blog</Link></li>
+              <li><Link href="/contacto" className="hover:text-textLight hover-scale-subtle transition-elegant block py-1 rounded px-2 hover:bg-gray-800">Contacto</Link></li>
             </ul>
           </div>
           
           {/* Contacto */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contacto</h4>
+          <div className="slide-in-right">
+            <h4 className="text-lg font-semibold mb-4 transition-elegant">Contacto</h4>
             <div className="space-y-2 text-gray-300">
-              <div className="flex items-center">
+              <div className="flex items-center hover-scale-subtle transition-elegant p-2 rounded-lg hover:bg-gray-800">
                 <Phone className="w-4 h-4 mr-2" />
                 <span>+52 81 1234 5678</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center hover-scale-subtle transition-elegant p-2 rounded-lg hover:bg-gray-800">
                 <Mail className="w-4 h-4 mr-2" />
                 <span>info@zonit.com</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center hover-scale-subtle transition-elegant p-2 rounded-lg hover:bg-gray-800">
                 <MapPin className="w-4 h-4 mr-2" />
                 <span>Monterrey, N.L.</span>
               </div>
@@ -68,7 +68,7 @@ export default function Footer() {
             <div className="mt-6">
               <Link 
                 href="/contacto" 
-                className="btn-primary px-6 py-3 rounded-xl font-medium transition-smooth inline-block"
+                className="btn-primary px-6 py-3 rounded-xl font-medium transition-bounce-subtle hover-lift hover-glow inline-block"
               >
                 Cotiza ahora
               </Link>
@@ -76,8 +76,32 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zonit. Todos los derechos reservados. | <Link href="/aviso-privacidad" className="hover:text-textLight transition-colors duration-150">Aviso de Privacidad</Link></p>
+        {/* Socio Comercial */}
+        <div className="border-t border-gray-700 mt-12 pt-8 fade-in-on-scroll">
+          <div className="text-center mb-6">
+            <h4 className="text-lg font-semibold text-textLight mb-4 transition-elegant">Nuestro Socio Comercial</h4>
+            <div className="bg-gray-800 rounded-lg p-6 max-w-md mx-auto hover-lift border-animated">
+              <h5 className="text-lg font-semibold text-textLight mb-2 transition-elegant">Tu Casa Inteligente</h5>
+              <p className="text-gray-300 text-sm mb-4 transition-elegant">
+                Especialistas en domótica y tecnología para el hogar en México
+              </p>
+              <a 
+                href="https://tucasainteligente.net/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary hover:text-textLight transition-bounce-subtle hover-scale-subtle font-medium p-2 rounded-lg hover:bg-gray-700"
+              >
+                Visitar sitio web
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-700 pt-8 text-center text-gray-300 fade-in-on-scroll">
+          <p className="transition-elegant">&copy; 2024 Zonit. Todos los derechos reservados. | <Link href="/aviso-privacidad" className="hover:text-textLight hover-scale-subtle transition-elegant">Aviso de Privacidad</Link></p>
         </div>
       </div>
     </footer>

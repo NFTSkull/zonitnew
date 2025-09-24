@@ -35,12 +35,12 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-sm">
+    <header className="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-sm transition-elegant">
       <div className="container-zonit">
         <div className="flex justify-between items-center py-5">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="text-3xl font-light text-black tracking-wider">
+          <Link href="/" className="flex items-center hover-scale-subtle transition-elegant">
+            <div className="text-3xl font-light text-black tracking-wider gradient-text-animated">
               ZONIT
             </div>
           </Link>
@@ -48,33 +48,34 @@ export default function Header() {
           {/* Navegación Desktop */}
           <nav className="hidden lg:flex items-center">
             <div className="flex items-center space-x-1">
-              <Link href="/" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+              <Link href="/" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Inicio
               </Link>
               
               {/* Dropdown Automatización */}
               <div className="relative group">
                 <button 
-                  className="flex items-center space-x-1 px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm"
+                  className="flex items-center space-x-1 px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm"
                   onMouseEnter={handleDropdownEnter}
                   onMouseLeave={handleDropdownLeave}
                 >
                   <span>Automatización</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-150 ${isAutomationDropdownOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 transition-bounce-subtle ${isAutomationDropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
                 {isAutomationDropdownOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-4 z-50"
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-4 z-50 fade-in-on-scroll"
                     onMouseEnter={handleDropdownEnter}
                     onMouseLeave={handleDropdownLeave}
                   >
                     <div className="grid grid-cols-1 gap-1 px-4">
-                      {automationServices.map((service) => (
+                      {automationServices.map((service, index) => (
                         <Link
                           key={service.href}
                           href={service.href}
-                          className="px-4 py-3 rounded-lg hover:bg-primary/10 transition-colors duration-150 text-sm text-black font-medium"
+                          className="px-4 py-3 rounded-lg hover:bg-primary/10 hover-scale-subtle transition-elegant text-sm text-black font-medium"
+                          style={{ animationDelay: `${index * 50}ms` }}
                         >
                           {service.name}
                         </Link>
@@ -84,19 +85,19 @@ export default function Header() {
                 )}
               </div>
 
-              <Link href="/paneles-solares" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+              <Link href="/paneles-solares" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Paneles Solares
               </Link>
-              <Link href="/nosotros" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+              <Link href="/nosotros" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Nosotros
               </Link>
-              <Link href="/proyectos" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+              <Link href="/proyectos" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Proyectos
               </Link>
-              <Link href="/blog" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+              <Link href="/blog" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Blog
               </Link>
-              <Link href="/contacto" className="px-5 py-3 rounded-xl hover:bg-primary/5 transition-colors duration-150 text-black font-medium text-sm">
+              <Link href="/contacto" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Contacto
               </Link>
             </div>
@@ -106,14 +107,14 @@ export default function Header() {
           <div className="flex items-center">
             <Link 
               href="/contacto" 
-              className="btn-primary px-6 py-3 rounded-xl font-medium text-sm transition-smooth"
+              className="btn-primary px-6 py-3 rounded-xl font-medium text-sm transition-bounce-subtle hover-lift hover-glow"
             >
               Cotiza ahora
             </Link>
             
             {/* Botón móvil */}
             <button 
-              className="lg:hidden ml-3 p-3 rounded-xl hover:bg-primary/5 transition-colors"
+              className="lg:hidden ml-3 p-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -123,31 +124,32 @@ export default function Header() {
 
         {/* Menú Móvil */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm">
+          <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm fade-in-on-scroll">
             <div className="flex justify-end p-4">
               <button 
-                className="text-white text-2xl hover:text-gray-300 transition-colors"
+                className="text-white text-2xl hover:text-gray-300 hover-scale-subtle transition-elegant"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <X className="w-8 h-8" />
               </button>
             </div>
             <div className="flex flex-col items-center justify-center h-full -mt-16">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4 hover-lift">
                 <div className="space-y-6">
-                  <Link href="/" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
+                  <Link href="/" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
                     Inicio
                   </Link>
                   
                   <div className="space-y-2">
-                    <div className="text-lg font-medium text-black">Automatización</div>
+                    <div className="text-lg font-medium text-black transition-elegant">Automatización</div>
                     <div className="ml-4 space-y-2">
-                      {automationServices.map((service) => (
+                      {automationServices.map((service, index) => (
                         <Link
                           key={service.href}
                           href={service.href}
-                          className="block text-sm text-gray-600 hover:text-black transition-colors"
+                          className="block text-sm text-gray-600 hover:text-black hover-scale-subtle transition-elegant"
                           onClick={() => setIsMobileMenuOpen(false)}
+                          style={{ animationDelay: `${index * 50}ms` }}
                         >
                           {service.name}
                         </Link>
@@ -155,26 +157,26 @@ export default function Header() {
                     </div>
                   </div>
                   
-                  <Link href="/paneles-solares" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
+                  <Link href="/paneles-solares" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
                     Paneles Solares
                   </Link>
-                  <Link href="/nosotros" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
+                  <Link href="/nosotros" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
                     Nosotros
                   </Link>
-                  <Link href="/proyectos" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
+                  <Link href="/proyectos" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
                     Proyectos
                   </Link>
-                  <Link href="/blog" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
+                  <Link href="/blog" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
                     Blog
                   </Link>
-                  <Link href="/contacto" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors">
+                  <Link href="/contacto" className="block text-lg font-medium text-black hover:text-accentBlue hover-scale-subtle transition-elegant">
                     Contacto
                   </Link>
                   
                   <div className="pt-4 border-t border-gray-200">
                     <Link 
                       href="/contacto" 
-                      className="w-full btn-primary py-3 px-6 rounded-xl font-semibold text-center block"
+                      className="w-full btn-primary py-3 px-6 rounded-xl font-semibold text-center block transition-bounce-subtle hover-lift hover-glow"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Cotiza ahora

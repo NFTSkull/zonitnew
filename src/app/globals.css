@@ -104,6 +104,142 @@ body {
   .animate-fade-in-up-delay-3 {
     animation: fadeInUp 1.4s ease-out 0.6s forwards;
   }
+
+  /* Transiciones minimalistas elegantes */
+  .transition-elegant {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-elegant-slow {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-bounce-subtle {
+    transition: all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Efectos de hover minimalistas */
+  .hover-lift {
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .hover-scale-subtle {
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-scale-subtle:hover {
+    transform: scale(1.02);
+  }
+  
+  .hover-glow {
+    transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(211, 216, 1, 0.3);
+  }
+
+  /* Efectos de entrada suaves */
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Efectos de texto elegantes */
+  .text-reveal {
+    overflow: hidden;
+  }
+  
+  .text-reveal span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1), transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .text-reveal.visible span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Efectos de borde animado */
+  .border-animated {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .border-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(211, 216, 1, 0.2), transparent);
+    transition: left 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .border-animated:hover::before {
+    left: 100%;
+  }
+
+  /* Efectos de pulso sutil */
+  .pulse-subtle {
+    animation: pulseSubtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .pulse-accent {
+    animation: pulseAccent 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Efectos de gradiente animado */
+  .gradient-animated {
+    background: linear-gradient(-45deg, #1e1d37, #02383d, #74acd8, #d3d801);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+  }
+  
+  .gradient-text-animated {
+    background: linear-gradient(-45deg, #1e1d37, #02383d, #74acd8, #d3d801);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 8s ease infinite;
+  }
 }
 
 /* Keyframes para animaciones del Hero */
@@ -115,5 +251,54 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Keyframes para efectos minimalistas */
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulseAccent {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(211, 216, 1, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(211, 216, 1, 0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

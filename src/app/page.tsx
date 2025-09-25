@@ -176,26 +176,143 @@ export default function Home() {
       {/* Beneficios Section */}
       <BenefitsGrid items={benefits} columns={3} />
 
-      {/* Servicios Section */}
-      <section className="py-24 bg-white">
-        <div className="container-zonit">
-          <SectionTitle 
-            title="Servicios" 
-            subtitle="Soluciones inteligentes para tu espacio"
-          />
+      {/* Servicios Section - Masterpiece */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accentBlue rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/5 to-accentBlue/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container-zonit relative z-10">
+          <div className="text-center mb-20">
+            <div className="inline-block relative group">
+              <h2 className="text-5xl md:text-6xl font-light tracking-wide mb-6" style={{color: '#74acd8'}}>
+                Servicios
+              </h2>
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary via-accentBlue to-primary rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></div>
+            </div>
+            <p className="text-xl text-black max-w-2xl mx-auto leading-relaxed font-light">
+              Soluciones inteligentes para tu espacio
+            </p>
+          </div>
           
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {automationServices.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                href={service.href}
-                icon={service.icon}
-                imageSrc={service.imageSrc}
-                description={service.description}
-                features={service.features}
-              />
+          {/* Innovative Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[280px] lg:auto-rows-[320px]">
+            {/* Featured Service - Large Card */}
+            <div className="lg:col-span-2 lg:row-span-2 group cursor-pointer">
+              <a href={automationServices[0].href} className="block h-full">
+                <div className="h-full bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 border border-gray-100/60 shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 hover:scale-[1.02] relative overflow-hidden group-hover:border-primary/20">
+                {/* Background Image */}
+                <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
+                  <img 
+                    src={automationServices[0].imageSrc} 
+                    alt={automationServices[0].title}
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
+                </div>
+                
+                {/* Content */}
+                <div className="relative z-10 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                      {(() => {
+                        const IconComponent = automationServices[0].icon;
+                        return <IconComponent className="w-8 h-8 text-white" />;
+                      })()}
+                    </div>
+                    <h3 className="text-2xl font-medium text-black mb-3 group-hover:text-primary transition-colors duration-300">
+                      {automationServices[0].title}
+                    </h3>
+                    <p className="text-lg text-black mb-4 font-light">
+                      {automationServices[0].description}
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {automationServices[0].features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-3 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500" style={{transitionDelay: `${idx * 100}ms`}}>
+                        <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                        <span className="text-black text-sm font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="absolute bottom-6 right-6 w-12 h-12 bg-accentBlue/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                    <svg className="w-6 h-6 text-accentBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            
+            {/* Regular Services - Smaller Cards */}
+            {automationServices.slice(1, 7).map((service, index) => (
+              <div key={index} className="group cursor-pointer">
+                <a href={service.href} className="block h-full">
+                  <div className="h-full bg-white rounded-2xl p-6 border border-gray-100/60 shadow-md hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.03] relative overflow-hidden group-hover:border-primary/20">
+                  {/* Subtle Background Pattern */}
+                  <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                    <div className="w-full h-full" style={{
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                      backgroundSize: '20px 20px'
+                    }}></div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10 h-full flex flex-col justify-between">
+                    <div>
+                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-400">
+                        {(() => {
+                          const IconComponent = service.icon;
+                          return <IconComponent className="w-6 h-6 text-white" />;
+                        })()}
+                      </div>
+                      <h4 className="text-lg font-medium text-black mb-2 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h4>
+                      <p className="text-black text-sm font-light mb-3">
+                        {service.description}
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      {service.features.slice(0, 2).map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-400" style={{transitionDelay: `${idx * 80}ms`}}>
+                          <div className="w-1.5 h-1.5 bg-accentBlue rounded-full"></div>
+                          <span className="text-black text-xs font-medium">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="absolute bottom-4 right-4 w-8 h-8 bg-accentBlue/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-400">
+                      <svg className="w-4 h-4 text-accentBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
             ))}
+          </div>
+          
+          {/* Floating Action Elements */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center space-x-4 bg-white/80 backdrop-blur-sm rounded-full px-8 py-4 shadow-lg border border-gray-100/60">
+              <div className="flex space-x-2">
+                <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-accentBlue rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                <div className="w-3 h-3 bg-primary rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+              </div>
+              <span className="text-black font-medium">Explora todas nuestras soluciones</span>
+              <svg className="w-5 h-5 text-accentBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>

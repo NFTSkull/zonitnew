@@ -203,9 +203,9 @@ export default function Home() {
             {/* Featured Service - Large Card */}
             <div className="lg:col-span-2 lg:row-span-2 group cursor-pointer">
               <a href={automationServices[0].href} className="block h-full">
-                <div className="h-full bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 border border-gray-100/60 shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 hover:scale-[1.02] relative overflow-hidden group-hover:border-primary/20">
+                <div className="h-full bg-gradient-to-br from-white/95 via-gray-50/90 to-white/95 rounded-3xl p-8 border border-gray-100/60 shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 hover:scale-[1.02] relative overflow-hidden group-hover:border-primary/20">
                 {/* Background Image */}
-                <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
+                <div className="absolute inset-0 opacity-25 group-hover:opacity-35 transition-opacity duration-700">
                   <img 
                     src={automationServices[0].imageSrc} 
                     alt={automationServices[0].title}
@@ -222,10 +222,10 @@ export default function Home() {
                         return <IconComponent className="w-8 h-8 text-white" />;
                       })()}
                     </div>
-                    <h3 className="text-2xl font-medium text-black mb-3 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-2xl font-medium text-black mb-3 group-hover:text-primary transition-colors duration-300 drop-shadow-sm">
                       {automationServices[0].title}
                     </h3>
-                    <p className="text-lg text-black mb-4 font-light">
+                    <p className="text-lg text-black mb-4 font-light drop-shadow-sm">
                       {automationServices[0].description}
                     </p>
                   </div>
@@ -234,7 +234,7 @@ export default function Home() {
                     {automationServices[0].features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500" style={{transitionDelay: `${idx * 100}ms`}}>
                         <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
-                        <span className="text-black text-sm font-medium">{feature}</span>
+                        <span className="text-black text-sm font-medium drop-shadow-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -253,13 +253,14 @@ export default function Home() {
             {automationServices.slice(1, 7).map((service, index) => (
               <div key={index} className="group cursor-pointer">
                 <a href={service.href} className="block h-full">
-                  <div className="h-full bg-white rounded-2xl p-6 border border-gray-100/60 shadow-md hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.03] relative overflow-hidden group-hover:border-primary/20">
-                  {/* Subtle Background Pattern */}
-                  <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                    <div className="w-full h-full" style={{
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                      backgroundSize: '20px 20px'
-                    }}></div>
+                  <div className="h-full bg-white/95 rounded-2xl p-6 border border-gray-100/60 shadow-md hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.03] relative overflow-hidden group-hover:border-primary/20">
+                  {/* Background Image */}
+                  <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+                    <img 
+                      src={service.imageSrc} 
+                      alt={service.title}
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
                   </div>
                   
                   {/* Content */}
@@ -271,10 +272,10 @@ export default function Home() {
                           return <IconComponent className="w-6 h-6 text-white" />;
                         })()}
                       </div>
-                      <h4 className="text-lg font-medium text-black mb-2 group-hover:text-primary transition-colors duration-300">
+                      <h4 className="text-lg font-medium text-black mb-2 group-hover:text-primary transition-colors duration-300 drop-shadow-sm">
                         {service.title}
                       </h4>
-                      <p className="text-black text-sm font-light mb-3">
+                      <p className="text-black text-sm font-light mb-3 drop-shadow-sm">
                         {service.description}
                       </p>
                     </div>
@@ -283,7 +284,7 @@ export default function Home() {
                       {service.features.slice(0, 2).map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-400" style={{transitionDelay: `${idx * 80}ms`}}>
                           <div className="w-1.5 h-1.5 bg-accentBlue rounded-full"></div>
-                          <span className="text-black text-xs font-medium">{feature}</span>
+                          <span className="text-black text-xs font-medium drop-shadow-sm">{feature}</span>
                         </div>
                       ))}
                     </div>

@@ -203,9 +203,9 @@ export default function Home() {
             {/* Featured Service - Large Card */}
             <div className="lg:col-span-2 lg:row-span-2 group cursor-pointer">
               <a href={automationServices[0].href} className="block h-full">
-                <div className="h-full bg-gradient-to-br from-white/95 via-gray-50/90 to-white/95 rounded-3xl p-8 border border-gray-100/60 shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 hover:scale-[1.02] relative overflow-hidden group-hover:border-primary/20">
+                <div className="h-full bg-gradient-to-br from-white/80 via-gray-50/70 to-white/80 rounded-3xl p-8 border border-gray-100/60 shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 hover:scale-[1.02] relative overflow-hidden group-hover:border-primary/20">
                 {/* Background Image */}
-                <div className="absolute inset-0 opacity-25 group-hover:opacity-35 transition-opacity duration-700">
+                <div className="absolute inset-0 opacity-35 group-hover:opacity-45 transition-opacity duration-700">
                   <img 
                     src={automationServices[0].imageSrc} 
                     alt={automationServices[0].title}
@@ -253,9 +253,9 @@ export default function Home() {
             {automationServices.slice(1, 7).map((service, index) => (
               <div key={index} className="group cursor-pointer">
                 <a href={service.href} className="block h-full">
-                  <div className="h-full bg-white/95 rounded-2xl p-6 border border-gray-100/60 shadow-md hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.03] relative overflow-hidden group-hover:border-primary/20">
+                  <div className="h-full bg-white/80 rounded-2xl p-6 border border-gray-100/60 shadow-md hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.03] relative overflow-hidden group-hover:border-primary/20">
                   {/* Background Image */}
-                  <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+                  <div className="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-500">
                     <img 
                       src={service.imageSrc} 
                       alt={service.title}

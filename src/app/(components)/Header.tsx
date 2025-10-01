@@ -44,10 +44,11 @@ export default function Header() {
             <Image
               src="/zonit-logo.png"
               alt="ZONIT"
-              width={120}
-              height={40}
-              className="h-8 sm:h-10 w-auto"
+              width={80}
+              height={30}
+              className="h-6 sm:h-8 w-auto"
               priority
+              style={{ filter: 'none' }}
             />
           </Link>
 

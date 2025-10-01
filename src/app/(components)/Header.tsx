@@ -42,7 +42,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center hover-scale-subtle transition-elegant">
             <Image
-              src="/zonit-logo.png"
+              src="/zonit-logo-new.png"
               alt="ZONIT"
               width={60}
               height={24}

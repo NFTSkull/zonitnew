@@ -83,18 +83,18 @@ export default function Automatizacion() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary py-24">
+      <section className="bg-primary py-16 sm:py-20 md:py-24">
         <div className="container-zonit text-center">
-          <h1 className="text-4xl md:text-5xl font-light text-textLight mb-8 tracking-wide">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-textLight mb-6 sm:mb-8 tracking-wide px-4">
             Automatización Inteligente
           </h1>
-          <p className="text-lg text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-200 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             Transformamos espacios en entornos inteligentes donde la tecnología se fusiona 
             con la elegancia para crear experiencias únicas.
           </p>
           <a 
             href="/contacto" 
-            className="btn-primary px-10 py-5 rounded-2xl text-lg font-medium transition-smooth inline-block"
+            className="btn-primary px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-medium transition-smooth inline-block"
           >
             Solicitar cotización
           </a>
@@ -102,18 +102,18 @@ export default function Automatizacion() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container-zonit">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-light text-textDark mb-8 tracking-wide">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-textDark mb-6 sm:mb-8 tracking-wide">
               Soluciones que se adaptan a tu estilo de vida
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
               Nuestros sistemas de automatización están diseñados para mejorar la eficiencia, 
               seguridad y comodidad de tu hogar o empresa. Cada solución se personaliza 
               según tus necesidades específicas.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               Desde el control de iluminación hasta sistemas de audio profesional, 
               ofrecemos tecnología de vanguardia que se integra perfectamente con tu espacio.
             </p>
@@ -122,14 +122,14 @@ export default function Automatizacion() {
       </section>
 
       {/* Servicios Grid */}
-      <section className="py-20 bg-bgLight">
+      <section className="py-12 sm:py-16 md:py-20 bg-bgLight">
         <div className="container-zonit">
           <SectionTitle 
             title="Nuestros Servicios" 
             subtitle="Descubre todas las posibilidades de la automatización inteligente"
           />
           
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
             {automationServices.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -146,25 +146,25 @@ export default function Automatizacion() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container-zonit text-center">
-          <h2 className="text-3xl md:text-4xl font-light text-textDark mb-8 tracking-wide">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="container-zonit text-center px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-textDark mb-6 sm:mb-8 tracking-wide">
             ¿Listo para automatizar tu espacio?
           </h2>
-          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
             Contáctanos para una consulta gratuita y descubre cómo podemos 
             transformar tu hogar o empresa.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <a 
               href="/contacto" 
-              className="btn-primary px-10 py-5 rounded-2xl text-lg font-medium transition-smooth"
+              className="btn-primary px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-medium transition-smooth w-full sm:w-auto"
             >
               Solicitar cotización
             </a>
             <a 
               href="/proyectos" 
-              className="btn-secondary px-10 py-5 rounded-2xl text-lg font-medium transition-smooth"
+              className="btn-secondary px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-medium transition-smooth w-full sm:w-auto"
             >
               Ver proyectos
             </a>

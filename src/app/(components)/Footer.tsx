@@ -3,12 +3,12 @@ import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-textLight py-16">
+    <footer className="bg-primary text-textLight py-12 sm:py-16">
       <div className="container-zonit">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Zonit Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-textLight">ZONIT</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-textLight">ZONIT</h3>
             <p className="text-gray-300 mb-4">
               Especialistas en automatización inteligente para hogares y empresas.
             </p>
@@ -27,7 +27,7 @@ export default function Footer() {
           
           {/* Servicios */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-textLight">Servicios</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-textLight">Servicios</h4>
             <ul className="space-y-2 text-gray-300">
               <li><Link href="/automatizacion/control-iluminacion" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Control e Iluminación</Link></li>
               <li><Link href="/automatizacion/audio-distribuido" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Audio Distribuido</Link></li>
@@ -38,7 +38,7 @@ export default function Footer() {
           
           {/* Empresa */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-textLight">Empresa</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-textLight">Empresa</h4>
             <ul className="space-y-2 text-gray-300">
               <li><Link href="/nosotros" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Nosotros</Link></li>
               <li><Link href="/proyectos" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Proyectos</Link></li>
@@ -49,7 +49,7 @@ export default function Footer() {
           
           {/* Contacto */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-textLight">Contacto</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-textLight">Contacto</h4>
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <Phone className="w-4 h-4 mr-2" />
@@ -65,10 +65,10 @@ export default function Footer() {
               </div>
             </div>
             
-            <div className="mt-6">
+            <div className="mt-4 sm:mt-6">
               <Link 
                 href="/contacto" 
-                className="btn-primary px-6 py-3 rounded-xl font-medium transition-smooth inline-block"
+                className="btn-primary px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-medium text-sm sm:text-base transition-smooth inline-block"
               >
                 Cotiza ahora
               </Link>

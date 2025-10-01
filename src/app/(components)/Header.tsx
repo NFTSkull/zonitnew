@@ -37,10 +37,10 @@ export default function Header() {
   return (
     <header className="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-sm transition-elegant">
       <div className="container-zonit">
-        <div className="flex justify-between items-center py-5">
+        <div className="flex justify-between items-center py-3 sm:py-4 md:py-5">
           {/* Logo */}
           <Link href="/" className="flex items-center hover-scale-subtle transition-elegant">
-            <div className="text-3xl font-light text-black tracking-wider gradient-text-animated">
+            <div className="text-2xl sm:text-3xl font-light text-black tracking-wider gradient-text-animated">
               ZONIT
             </div>
           </Link>
@@ -107,17 +107,17 @@ export default function Header() {
           <div className="flex items-center">
             <Link 
               href="/contacto" 
-              className="btn-primary px-6 py-3 rounded-xl font-medium text-sm transition-bounce-subtle hover-lift hover-glow"
+              className="btn-primary px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-medium text-xs sm:text-sm transition-bounce-subtle hover-lift hover-glow hidden sm:block"
             >
               Cotiza ahora
             </Link>
             
             {/* Botón móvil */}
             <button 
-              className="lg:hidden ml-3 p-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant"
+              className="lg:hidden ml-2 sm:ml-3 p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
@@ -133,8 +133,8 @@ export default function Header() {
                 <X className="w-8 h-8" />
               </button>
             </div>
-            <div className="flex flex-col items-center justify-center h-full -mt-16">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full mx-4">
+            <div className="flex flex-col items-center justify-center h-full -mt-16 px-4">
+              <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 max-w-sm w-full mx-2 sm:mx-4">
                 <div className="space-y-6">
                   <Link href="/" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors duration-150">
                     Inicio

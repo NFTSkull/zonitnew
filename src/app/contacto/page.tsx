@@ -14,12 +14,12 @@ export default function Contacto() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary py-24">
+      <section className="bg-primary py-16 sm:py-20 md:py-24">
         <div className="container-zonit text-center">
-          <h1 className="text-4xl md:text-5xl font-light text-textLight mb-8 tracking-wide">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-textLight mb-6 sm:mb-8 tracking-wide px-4">
             Contacto
           </h1>
-          <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
             ¿Listo para transformar tu espacio? Contáctanos para una consulta gratuita 
             y descubre cómo podemos ayudarte.
           </p>
@@ -27,16 +27,16 @@ export default function Contacto() {
       </section>
 
       {/* Formulario y Información */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container-zonit">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Formulario */}
-            <div>
-              <h2 className="text-3xl font-light text-textDark mb-8 tracking-wide">
+            <div className="order-2 lg:order-1 px-4 lg:px-0">
+              <h2 className="text-2xl sm:text-3xl font-light text-textDark mb-6 sm:mb-8 tracking-wide">
                 Solicita tu cotización
               </h2>
               <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-2">
                       Nombre *
@@ -46,7 +46,7 @@ export default function Contacto() {
                       id="nombre"
                       name="nombre"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
                       placeholder="Tu nombre completo"
                     />
                   </div>
@@ -58,13 +58,13 @@ export default function Contacto() {
                       type="text"
                       id="empresa"
                       name="empresa"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
                       placeholder="Nombre de tu empresa"
                     />
                   </div>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email *
@@ -74,7 +74,7 @@ export default function Contacto() {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
                       placeholder="tu@email.com"
                     />
                   </div>
@@ -87,7 +87,7 @@ export default function Contacto() {
                       id="telefono"
                       name="telefono"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
                       placeholder="+52 81 1234 5678"
                     />
                   </div>
@@ -101,7 +101,7 @@ export default function Contacto() {
                     id="interes"
                     name="interes"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
                   >
                     <option value="">Selecciona una opción</option>
                     <option value="automatizacion">Automatización</option>
@@ -117,16 +117,16 @@ export default function Contacto() {
                   <textarea
                     id="mensaje"
                     name="mensaje"
-                    rows={5}
+                    rows={4}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth resize-none"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth resize-none"
                     placeholder="Cuéntanos sobre tu proyecto..."
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full btn-primary py-4 rounded-xl text-lg font-medium transition-smooth"
+                  className="w-full btn-primary py-3 sm:py-4 rounded-lg sm:rounded-xl text-base sm:text-lg font-medium transition-smooth"
                 >
                   Enviar mensaje
                 </button>
@@ -134,20 +134,20 @@ export default function Contacto() {
             </div>
             
             {/* Información de contacto */}
-            <div>
-              <h2 className="text-3xl font-light text-textDark mb-8 tracking-wide">
+            <div className="order-1 lg:order-2 px-4 lg:px-0">
+              <h2 className="text-2xl sm:text-3xl font-light text-textDark mb-6 sm:mb-8 tracking-wide">
                 Información de contacto
               </h2>
               
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg sm:rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-textDark mb-2">Teléfono</h3>
-                    <p className="text-gray-600">+52 81 1234 5678</p>
-                    <p className="text-gray-600">+52 81 9876 5432</p>
+                    <h3 className="text-base sm:text-lg font-medium text-textDark mb-1 sm:mb-2">Teléfono</h3>
+                    <p className="text-sm sm:text-base text-gray-600">+52 81 1234 5678</p>
+                    <p className="text-sm sm:text-base text-gray-600">+52 81 9876 5432</p>
                   </div>
                 </div>
                 

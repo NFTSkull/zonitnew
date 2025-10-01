@@ -110,3 +110,4 @@ export function TextReveal({ children, className = '', delay = 0 }: TextRevealPr
     </div>
   );
 }
+

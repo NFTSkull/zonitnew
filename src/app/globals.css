@@ -52,7 +52,7 @@ body {
   
   /* Contenedores */
   .container-zonit {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8;
   }
   
   /* Botones */
@@ -60,10 +60,16 @@ body {
     background-color: #d3d801;
     color: #1e1d37;
     transition: opacity 150ms ease-in-out;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   
   .btn-primary:hover {
     opacity: 0.9;
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.98);
   }
   
   .btn-secondary {
@@ -71,11 +77,17 @@ body {
     color: #1e1d37;
     background-color: transparent;
     transition: all 150ms ease-in-out;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   
   .btn-secondary:hover {
     background-color: #1e1d37;
     color: #efeeed;
+  }
+  
+  .btn-secondary:active {
+    transform: scale(0.98);
   }
   
   /* Cards */
@@ -300,5 +312,46 @@ body {
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+/* Optimizaciones específicas para móvil */
+@media (max-width: 768px) {
+  /* Mejorar la legibilidad del texto en móvil */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Optimizar espaciado en móvil */
+  .container-zonit {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Mejorar la experiencia táctil */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Optimizar imágenes para móvil */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Mejorar el scroll en móvil */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Optimizar animaciones para móvil */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

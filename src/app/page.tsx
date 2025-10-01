@@ -133,26 +133,26 @@ export default function Home() {
       />
 
       {/* Nosotros Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container-zonit">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
+            <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light tracking-wide px-4 lg:px-0" style={{color: '#74acd8'}}>
                 Nosotros
               </h2>
-              <p className="text-lg text-black leading-relaxed">
+              <p className="text-base sm:text-lg text-black leading-relaxed px-4 lg:px-0">
                 Somos especialistas en integración domótica y automatización inteligente. 
                 Nuestro enfoque se centra en crear soluciones que mejoren el confort, 
                 la seguridad y la eficiencia energética de tu espacio.
               </p>
-              <p className="text-lg text-black leading-relaxed">
+              <p className="text-base sm:text-lg text-black leading-relaxed px-4 lg:px-0">
                 Con años de experiencia en el sector, ofrecemos control centralizado 
                 y sistemas que se adaptan a tu estilo de vida, proporcionando valor 
                 agregado a tu propiedad.
               </p>
               <a 
                 href="/nosotros" 
-                className="inline-flex items-center text-black font-medium hover:text-accentBlue transition-colors duration-150"
+                className="inline-flex items-center text-black font-medium hover:text-accentBlue transition-colors duration-150 px-4 lg:px-0"
               >
                 Saber más
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -160,13 +160,13 @@ export default function Home() {
                 </svg>
               </a>
             </div>
-            <div className="relative">
+            <div className="relative order-1 lg:order-2 px-4 lg:px-0">
               <Image 
                 src="/placeholders/automation-placeholder.png" 
                 alt="Equipo Zonit" 
                 width={600}
                 height={400}
-                className="rounded-xl shadow-lg ring-1 ring-gray-200"
+                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
               />
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function Home() {
       <BenefitsGrid items={benefits} columns={3} />
 
       {/* Servicios Section - Masterpiece */}
-      <section className="py-16 md:py-32 bg-white relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
@@ -186,22 +186,22 @@ export default function Home() {
         </div>
         
         <div className="container-zonit relative z-10">
-          <div className="text-center mb-12 md:mb-20">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
             <div className="inline-block relative group">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-wide mb-4 md:mb-6" style={{color: '#74acd8'}}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-wide mb-3 sm:mb-4 md:mb-6" style={{color: '#74acd8'}}>
                 Servicios
               </h2>
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary via-accentBlue to-primary rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></div>
             </div>
-            <p className="text-lg md:text-xl text-black max-w-2xl mx-auto leading-relaxed font-light px-4">
+            <p className="text-base sm:text-lg md:text-xl text-black max-w-2xl mx-auto leading-relaxed font-light">
               Soluciones inteligentes para tu espacio
             </p>
           </div>
           
-          {/* Innovative Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[240px] md:auto-rows-[280px] lg:auto-rows-[320px]">
-            {/* Featured Service - Large Card */}
-            <div className="lg:col-span-2 lg:row-span-2 group cursor-pointer">
+          {/* Innovative Grid Layout - Optimizado para móvil */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 auto-rows-[280px] sm:auto-rows-[300px] md:auto-rows-[320px] lg:auto-rows-[340px]">
+            {/* Featured Service - Large Card - Solo en desktop */}
+            <div className="hidden lg:block lg:col-span-2 lg:row-span-2 group cursor-pointer">
               <a href={automationServices[0].href} className="block h-full">
                 <div className="h-full bg-gradient-to-br from-white/80 via-gray-50/70 to-white/80 rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-100/60 shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-1 md:hover:-translate-y-2 hover:scale-[1.01] md:hover:scale-[1.02] relative overflow-hidden group-hover:border-primary/20">
                 {/* Background Image */}
@@ -249,8 +249,8 @@ export default function Home() {
               </a>
             </div>
             
-            {/* Regular Services - Smaller Cards */}
-            {automationServices.slice(1, 7).map((service, index) => (
+            {/* Todos los servicios en móvil, servicios regulares en desktop */}
+            {automationServices.slice(0, 7).map((service, index) => (
               <div key={index} className="group cursor-pointer">
                 <a href={service.href} className="block h-full">
                   <div className="h-full bg-white/80 rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-100/60 shadow-md hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] md:hover:scale-[1.03] relative overflow-hidden group-hover:border-primary/20">
@@ -319,25 +319,25 @@ export default function Home() {
       </section>
 
       {/* Teaser Paneles Solares */}
-      <section className="py-20" style={{ backgroundColor: '#2d5a3d' }}>
+      <section className="py-12 sm:py-16 md:py-20" style={{ backgroundColor: '#2d5a3d' }}>
         <div className="container-zonit">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl font-light text-white mb-8 tracking-wide">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
+            <div className="text-center lg:text-left order-2 lg:order-1 px-4 lg:px-0">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white mb-6 sm:mb-8 tracking-wide">
                 Paneles Solares
               </h2>
-              <p className="text-lg text-green-200 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-base sm:text-lg text-green-200 mb-8 sm:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Descubre el poder de la energía solar. Sistemas fotovoltaicos que te permiten 
                 ahorrar hasta 99% en tu recibo de CFE y recuperar tu inversión en 2-5 años.
               </p>
               <a 
                 href="/paneles-solares" 
-                className="btn-primary px-10 py-5 rounded-2xl text-lg font-medium transition-smooth inline-block"
+                className="btn-primary px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-medium transition-smooth inline-block w-full sm:w-auto"
               >
                 Descúbrelo
               </a>
             </div>
-            <div className="relative order-first lg:order-last">
+            <div className="relative order-1 lg:order-2 px-4 lg:px-0">
               <Image 
                 src="/placeholders/solar-placeholder.png" 
                 alt="Paneles Solares Zonit" 

@@ -23,20 +23,20 @@ export default function CTA({
   const textClass = dark ? 'text-textLight' : 'text-textDark';
 
   return (
-    <section className={`${bgClass} py-20`}>
+    <section className={`${bgClass} py-12 sm:py-16 md:py-20`}>
       <div className="container-zonit text-center">
-        <h2 className={`text-3xl md:text-4xl font-light mb-8 tracking-wide ${textClass}`}>
+        <h2 className={`text-2xl sm:text-3xl md:text-4xl font-light mb-6 sm:mb-8 tracking-wide px-4 ${textClass}`}>
           {title}
         </h2>
         
-        <p className={`text-lg mb-12 max-w-2xl mx-auto leading-relaxed ${dark ? 'text-gray-200' : 'text-gray-600'}`}>
+        <p className={`text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4 ${dark ? 'text-gray-200' : 'text-gray-600'}`}>
           {text}
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
           <Link 
             href={primaryHref} 
-            className="btn-primary px-10 py-5 rounded-2xl text-lg font-medium transition-smooth"
+            className="btn-primary px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-medium transition-smooth w-full sm:w-auto"
           >
             {primaryLabel}
           </Link>
@@ -45,7 +45,7 @@ export default function CTA({
             <Link 
               href={secondaryHref} 
               className={`
-                px-10 py-5 rounded-2xl text-lg font-medium transition-smooth
+                px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl text-base sm:text-lg font-medium transition-smooth w-full sm:w-auto
                 ${dark 
                   ? 'border border-zonit-text-light text-textLight hover:bg-zonit-text-light hover:text-zonit-primary' 
                   : 'btn-secondary'

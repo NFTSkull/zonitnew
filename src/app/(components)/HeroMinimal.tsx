@@ -21,7 +21,7 @@ export default function HeroMinimal({
 }: HeroMinimalProps) {
   return (
     <section 
-      className="relative pt-32 pb-20 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center"
+      className="relative pt-24 pb-16 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24 xl:pt-48 xl:pb-32 overflow-hidden min-h-screen flex items-center"
       style={{
         backgroundImage: `url('/placeholders/hero-section.png')`,
         backgroundSize: 'cover',
@@ -43,24 +43,24 @@ export default function HeroMinimal({
             </span>
           </div>
           
-          {/* Título principal con animación escalonada */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight text-white tracking-wide leading-tight mb-10 animate-fade-in-up-delay-1 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+          {/* Título principal con animación escalonada - Optimizado para móvil */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extralight text-white tracking-wide leading-tight mb-6 sm:mb-8 md:mb-10 animate-fade-in-up-delay-1 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] px-4">
             {title}
           </h1>
           
-          {/* Subtítulo con animación */}
-          <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-16 animate-fade-in-up-delay-2 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
+          {/* Subtítulo con animación - Optimizado para móvil */}
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 animate-fade-in-up-delay-2 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] px-4">
             {subtitle}
           </p>
           
-          {/* Botones CTA con animación */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center animate-fade-in-up-delay-3">
+          {/* Botones CTA con animación - Optimizados para móvil */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center animate-fade-in-up-delay-3 px-4">
             {ctas.map((cta, index) => (
               <Link
                 key={index}
                 href={cta.href}
                 className={`
-                  px-12 py-6 rounded-2xl font-bold transition-all duration-500 text-center text-lg relative overflow-hidden group
+                  px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 rounded-xl sm:rounded-2xl font-bold transition-all duration-500 text-center text-sm sm:text-base md:text-lg relative overflow-hidden group w-full sm:w-auto
                   ${cta.primary 
                     ? 'text-primary hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1' 
                     : 'border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1'

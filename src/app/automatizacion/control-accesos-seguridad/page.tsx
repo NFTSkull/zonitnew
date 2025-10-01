@@ -67,52 +67,52 @@ export default function ControlAccesosSeguridad() {
         ]}
       />
 
-      {/* Sección 3: Aplicaciones */}
-      <section className="py-20 bg-bgLight">
+      {/* Sección de Aplicaciones */}
+      <section className="py-20 bg-white">
         <div className="container-zonit">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-textDark mb-8 tracking-wide">
-              Soluciones Especializadas
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+              Aplicaciones Especializadas
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-black max-w-3xl mx-auto leading-relaxed">
               Nuestros sistemas de seguridad se adaptan a diferentes entornos 
               y niveles de protección requeridos.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card-zonit p-8 text-center">
+            <div className="card-zonit p-8 text-center hover-lift transition-elegant">
               <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-medium text-textDark mb-4">Residencial</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-medium text-black mb-4">Residencial</h3>
+              <p className="text-black leading-relaxed">
                 Protección completa del hogar con sistemas discretos y eficientes.
               </p>
             </div>
             
-            <div className="card-zonit p-8 text-center">
+            <div className="card-zonit p-8 text-center hover-lift transition-elegant">
               <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-medium text-textDark mb-4">Empresarial</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-medium text-black mb-4">Empresarial</h3>
+              <p className="text-black leading-relaxed">
                 Seguridad corporativa con control de accesos y monitoreo avanzado.
               </p>
             </div>
             
-            <div className="card-zonit p-8 text-center">
+            <div className="card-zonit p-8 text-center hover-lift transition-elegant">
               <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-medium text-textDark mb-4">Industrial</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-medium text-black mb-4">Industrial</h3>
+              <p className="text-black leading-relaxed">
                 Protección de instalaciones industriales con sistemas robustos y confiables.
               </p>
             </div>

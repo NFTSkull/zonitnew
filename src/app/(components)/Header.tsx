@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Header() {
@@ -40,9 +41,14 @@ export default function Header() {
         <div className="flex justify-between items-center py-3 sm:py-4 md:py-5">
           {/* Logo */}
           <Link href="/" className="flex items-center hover-scale-subtle transition-elegant">
-            <div className="text-2xl sm:text-3xl font-light text-black tracking-wider gradient-text-animated">
-              ZONIT
-            </div>
+            <Image
+              src="/zonit-logo.png"
+              alt="ZONIT"
+              width={120}
+              height={40}
+              className="h-8 sm:h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Navegación Desktop */}

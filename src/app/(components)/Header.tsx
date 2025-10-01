@@ -36,32 +36,20 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-md transition-elegant">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-14 sm:h-16 items-center justify-between">
+    <header className="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-md transition-elegant h-14 sm:h-20">
+      <div className="container-zonit h-full">
+        <div className="flex justify-between items-center h-full px-4 sm:px-6">
           {/* Logo */}
-          <Link href="/" className="flex items-center hover-scale-subtle transition-elegant" aria-label="Zonit">
-            <div
-              className="
-                relative
-                h-7 w-[120px]
-                sm:h-8 sm:w-[150px]
-                md:h-9 md:w-[180px]
-                lg:h-10 lg:w-[200px]
-              "
-            >
-              <Image
-                src="/zonit-logo-black.png"
-                alt="Zonit"
-                fill
-                className="object-contain"
-                sizes="(max-width: 640px) 120px,
-                       (max-width: 768px) 150px,
-                       (max-width: 1024px) 180px,
-                       200px"
-                priority
-              />
-            </div>
+          <Link href="/" className="flex items-center hover-scale-subtle transition-elegant max-w-[40%] sm:max-w-none">
+            <Image
+              src="/zonit-logo-black.png?v=2"
+              alt="ZONIT"
+              width={60}
+              height={24}
+              className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto max-h-14 object-contain"
+              priority
+              style={{ filter: 'none' }}
+            />
           </Link>
 
           {/* Navegación Desktop */}
@@ -123,36 +111,21 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="flex items-center gap-3">
-            {/* Botón hamburguesa en móvil */}
-            <button 
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-black/10 sm:hidden hover:bg-primary/5 hover-scale-subtle transition-elegant text-black"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Abrir menú"
+          <div className="flex items-center">
+            <Link 
+              href="/contacto" 
+              className="btn-primary px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-medium text-xs sm:text-sm transition-bounce-subtle hover-lift hover-glow hidden sm:block"
             >
-              <span className="sr-only">Abrir menú</span>
+              Cotiza ahora
+            </Link>
+            
+            {/* Botón móvil */}
+            <button 
+              className="lg:hidden p-2 rounded-lg hover:bg-primary/5 hover-scale-subtle transition-elegant text-black flex items-center justify-center"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
-            
-            {/* Nav + CTA en desktop */}
-            <nav className="hidden sm:flex items-center gap-8">
-              <Link href="/" className="text-sm font-medium text-neutral-900 hover:opacity-80">Inicio</Link>
-              <div className="relative group">
-                <button className="text-sm font-medium text-neutral-900 hover:opacity-80 flex items-center gap-1">
-                  Automatización
-                  <ChevronDown className="w-3.5 h-3.5 opacity-70" />
-                </button>
-              </div>
-              <Link href="/paneles-solares" className="text-sm font-medium text-neutral-900 hover:opacity-80">Paneles Solares</Link>
-              <Link href="/blog" className="text-sm font-medium text-neutral-900 hover:opacity-80">Blog</Link>
-              <Link href="/contacto" className="text-sm font-medium text-neutral-900 hover:opacity-80">Contacto</Link>
-              <Link
-                href="/contacto"
-                className="rounded-full bg-[#d3d801] px-4 py-2 text-sm font-semibold text-[#1e1d37] hover:opacity-90"
-              >
-                Cotiza ahora
-              </Link>
-            </nav>
           </div>
         </div>
 

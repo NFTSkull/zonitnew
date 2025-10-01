@@ -42,7 +42,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center hover-scale-subtle transition-elegant">
             <Image
-              src="/zonit-logo-black.png"
+              src="/zonit-logo.png"
               alt="ZONIT"
               width={60}
               height={24}
@@ -121,7 +121,7 @@ export default function Header() {
             
             {/* Botón móvil */}
             <button 
-              className="lg:hidden ml-2 p-2 rounded-lg hover:bg-primary/5 hover-scale-subtle transition-elegant"
+              className="lg:hidden ml-2 p-2 rounded-lg hover:bg-primary/5 hover-scale-subtle transition-elegant text-black"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

@@ -145,7 +145,7 @@ export default function Contacto() {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
                   <div className="flex items-center p-4 bg-gray-50 rounded-lg">
                     <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <Phone className="w-5 h-5 text-white" />
+                      <Phone className="w-5 h-5" style={{color: '#74acd8'}} />
                     </div>
                     <div>
                       <h3 className="font-medium text-black">Teléfono</h3>
@@ -155,7 +155,7 @@ export default function Contacto() {
                   
                   <div className="flex items-center p-4 bg-gray-50 rounded-lg">
                     <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <Mail className="w-5 h-5 text-white" />
+                      <Mail className="w-5 h-5" style={{color: '#74acd8'}} />
                     </div>
                     <div>
                       <h3 className="font-medium text-black">Email</h3>
@@ -165,7 +165,7 @@ export default function Contacto() {
                   
                   <div className="flex items-center p-4 bg-gray-50 rounded-lg">
                     <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-white" />
+                      <MapPin className="w-5 h-5" style={{color: '#74acd8'}} />
                     </div>
                     <div>
                       <h3 className="font-medium text-black">Ubicación</h3>
@@ -175,7 +175,7 @@ export default function Contacto() {
                   
                   <div className="flex items-center p-4 bg-gray-50 rounded-lg">
                     <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <Clock className="w-5 h-5 text-white" />
+                      <Clock className="w-5 h-5" style={{color: '#74acd8'}} />
                     </div>
                     <div>
                       <h3 className="font-medium text-black">Horarios</h3>

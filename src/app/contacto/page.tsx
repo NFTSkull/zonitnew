@@ -1,8 +1,9 @@
 import Header from '../(components)/Header';
 import Footer from '../(components)/Footer';
 import WhatsAppButton from '../(components)/WhatsAppButton';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import Link from 'next/link';
 import Image from 'next/image';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export const metadata = {
   title: 'Contacto - Zonit',
@@ -19,7 +20,7 @@ export default function Contacto() {
         <div className="container-zonit">
           <div className="text-center">
             <nav className="text-sm text-gray-300 mb-6">
-              <a href="/" className="hover:text-textLight transition-colors duration-150">Inicio</a>
+              <Link href="/" className="hover:text-textLight transition-colors duration-150">Inicio</Link>
               <span className="mx-2">/</span>
               <span className="text-textLight">Contacto</span>
             </nav>

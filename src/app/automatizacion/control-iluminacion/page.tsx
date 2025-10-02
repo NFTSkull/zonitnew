@@ -1,6 +1,5 @@
 import Header from '../../(components)/Header';
 import Footer from '../../(components)/Footer';
-import SplitSection from '../../(components)/SplitSection';
 import CTA from '../../(components)/CTA';
 import WhatsAppButton from '../../(components)/WhatsAppButton';
 import Link from 'next/link';

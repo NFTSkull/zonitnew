@@ -38,6 +38,96 @@ export default function Contacto() {
       <section className="py-8 sm:py-12 md:py-16 bg-white">
         <div className="container-zonit">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+            {/* Formulario */}
+            <div className="order-2 lg:order-1">
+              <div className="bg-white rounded-xl shadow-md p-4 sm:p-6">
+                <h2 className="text-xl sm:text-2xl font-light tracking-wide mb-4" style={{color: '#74acd8'}}>
+                  Envíanos un mensaje
+                </h2>
+                
+                <form className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">
+                        Nombre completo
+                      </label>
+                      <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm text-black"
+                        placeholder="Tu nombre"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="telefono" className="block text-sm font-medium text-gray-700 mb-1">
+                        Teléfono
+                      </label>
+                      <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm text-black"
+                        placeholder="+52 81 1170 2405"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      Correo electrónico
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm text-black"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="servicio" className="block text-sm font-medium text-gray-700 mb-1">
+                      Servicio de interés
+                    </label>
+                    <select
+                      id="servicio"
+                      name="servicio"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm text-black"
+                    >
+                      <option value="">Selecciona un servicio</option>
+                      <option value="automatizacion">Automatización Inteligente</option>
+                      <option value="paneles-solares">Paneles Solares</option>
+                      <option value="ambos">Ambos servicios</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700 mb-1">
+                      Mensaje
+                    </label>
+                    <textarea
+                      id="mensaje"
+                      name="mensaje"
+                      rows={3}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 resize-none text-sm text-black"
+                      placeholder="Cuéntanos sobre tu proyecto..."
+                    ></textarea>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    className="w-full btn-primary py-2 rounded-lg text-base font-medium transition-smooth"
+                  >
+                    Enviar mensaje
+                  </button>
+                </form>
+              </div>
+            </div>
+
             {/* Información de contacto */}
             <div className="order-1 lg:order-2">
               <div className="space-y-4">
@@ -45,14 +135,14 @@ export default function Contacto() {
                   <h2 className="text-xl sm:text-2xl font-light tracking-wide mb-4" style={{color: '#74acd8'}}>
                     Información de contacto
                   </h2>
-                  <p className="text-base text-black leading-relaxed mb-6">
+                  <p className="text-base text-black leading-relaxed mb-6 hidden lg:block">
                     En Zonit, nos especializamos en crear soluciones inteligentes que transforman 
                     espacios en entornos tecnológicos avanzados. Nuestro equipo de expertos te guiará 
                     desde la consulta inicial hasta la implementación completa.
                   </p>
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-3">
                   <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                       <Phone className="w-4 h-4" style={{color: '#74acd8'}} />
@@ -93,96 +183,6 @@ export default function Contacto() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Formulario */}
-            <div className="order-2 lg:order-1">
-              <div className="bg-white rounded-xl shadow-md p-4 sm:p-6">
-                <h2 className="text-xl sm:text-2xl font-light tracking-wide mb-4" style={{color: '#74acd8'}}>
-                  Envíanos un mensaje
-                </h2>
-                
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">
-                        Nombre completo
-                      </label>
-                      <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm"
-                        placeholder="Tu nombre"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="telefono" className="block text-sm font-medium text-gray-700 mb-1">
-                        Teléfono
-                      </label>
-                      <input
-                        type="tel"
-                        id="telefono"
-                        name="telefono"
-                        required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm"
-                        placeholder="+52 81 1170 2405"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Correo electrónico
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm"
-                      placeholder="tu@email.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="servicio" className="block text-sm font-medium text-gray-700 mb-1">
-                      Servicio de interés
-                    </label>
-                    <select
-                      id="servicio"
-                      name="servicio"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm"
-                    >
-                      <option value="">Selecciona un servicio</option>
-                      <option value="automatizacion">Automatización Inteligente</option>
-                      <option value="paneles-solares">Paneles Solares</option>
-                      <option value="ambos">Ambos servicios</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700 mb-1">
-                      Mensaje
-                    </label>
-                    <textarea
-                      id="mensaje"
-                      name="mensaje"
-                      rows={3}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 resize-none text-sm"
-                      placeholder="Cuéntanos sobre tu proyecto..."
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full btn-primary py-2 rounded-lg text-base font-medium transition-smooth"
-                  >
-                    Enviar mensaje
-                  </button>
-                </form>
               </div>
             </div>
           </div>

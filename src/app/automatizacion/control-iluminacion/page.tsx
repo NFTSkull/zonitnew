@@ -4,6 +4,7 @@ import SplitSection from '../../(components)/SplitSection';
 import CTA from '../../(components)/CTA';
 import WhatsAppButton from '../../(components)/WhatsAppButton';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Control e Iluminación - Zonit | Automatización Inteligente',
@@ -73,10 +74,15 @@ export default function ControlIluminacion() {
               </div>
             </div>
             <div className="relative">
-              <img 
+              <Image 
                 src="/placeholders/control-lighting.png" 
                 alt="Control e Iluminación Inteligente" 
-                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full"
+                width={600}
+                height={400}
+                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
+                loading="lazy"
+                quality={80}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
               />
             </div>
           </div>

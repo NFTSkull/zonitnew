@@ -4,6 +4,7 @@ import SplitSection from '../../(components)/SplitSection';
 import CTA from '../../(components)/CTA';
 import WhatsAppButton from '../../(components)/WhatsAppButton';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Home, Building2, ShoppingBag } from 'lucide-react';
 
 export const metadata = {
@@ -74,10 +75,15 @@ export default function AudioDistribuido() {
               </div>
             </div>
             <div className="relative">
-              <img 
+              <Image 
                 src="/placeholders/audio-distributed.png" 
                 alt="Audio Distribuido Inteligente" 
-                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full"
+                width={600}
+                height={400}
+                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
+                loading="lazy"
+                quality={80}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
               />
             </div>
           </div>

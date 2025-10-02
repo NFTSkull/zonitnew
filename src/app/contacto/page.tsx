@@ -2,10 +2,11 @@ import Header from '../(components)/Header';
 import Footer from '../(components)/Footer';
 import WhatsAppButton from '../(components)/WhatsAppButton';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Contacto - Zonit',
-  description: 'Contáctanos para una consulta gratuita sobre automatización inteligente y sistemas solares. Estamos aquí para ayudarte.',
+  description: 'Contáctanos para una consulta gratuita sobre automatización inteligente y sistemas solares. Transformamos tu espacio con tecnología de vanguardia.',
 };
 
 export default function Contacto() {
@@ -14,119 +15,163 @@ export default function Contacto() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary py-16 sm:py-20 md:py-24">
-        <div className="container-zonit text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-textLight mb-6 sm:mb-8 tracking-wide px-4">
-            Contacto
-          </h1>
-          <p className="text-base sm:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed px-4">
-            ¿Listo para transformar tu espacio? Contáctanos para una consulta gratuita 
-            y descubre cómo podemos ayudarte.
-          </p>
+      <section className="bg-primary pt-24 pb-16">
+        <div className="container-zonit">
+          <div className="text-center">
+            <nav className="text-sm text-gray-300 mb-6">
+              <a href="/" className="hover:text-textLight transition-colors duration-150">Inicio</a>
+              <span className="mx-2">/</span>
+              <span className="text-textLight">Contacto</span>
+            </nav>
+            <h1 className="text-4xl md:text-5xl font-light text-textLight mb-6 tracking-wide">
+              Contacto
+            </h1>
+            <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              ¿Listo para transformar tu espacio? Contáctanos para una consulta gratuita 
+              y descubre cómo podemos ayudarte con automatización inteligente y energía solar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección Principal */}
+      <section className="py-20 bg-white">
+        <div className="container-zonit">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+                Contáctanos para tu Proyecto
+              </h2>
+              <p className="text-lg text-black leading-relaxed">
+                En Zonit, nos especializamos en crear soluciones inteligentes que transforman 
+                espacios en entornos tecnológicos avanzados. Desde automatización de hogares hasta 
+                sistemas de energía solar, ofrecemos tecnología de vanguardia adaptada a tus necesidades.
+              </p>
+              <p className="text-lg text-black leading-relaxed">
+                Nuestro equipo de expertos te guiará desde la consulta inicial hasta la implementación 
+                completa, garantizando resultados que superen tus expectativas.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                  <span className="text-black">Consulta gratuita y personalizada</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                  <span className="text-black">Análisis técnico completo de tu espacio</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                  <span className="text-black">Cotización detallada sin compromiso</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                  <span className="text-black">Instalación profesional garantizada</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <Image 
+                src="/placeholders/contact-hero.png" 
+                alt="Contacto Zonit" 
+                width={600}
+                height={400}
+                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
+                loading="lazy"
+                quality={80}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Formulario y Información */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="container-zonit">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Formulario */}
-            <div className="order-2 lg:order-1 px-4 lg:px-0">
+            <div className="order-2 lg:order-1">
               <h2 className="text-2xl sm:text-3xl font-light text-textDark mb-6 sm:mb-8 tracking-wide">
-                Solicita tu cotización
+                Envíanos un mensaje
               </h2>
+              
               <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-2">
-                      Nombre *
+                      Nombre completo
                     </label>
                     <input
                       type="text"
                       id="nombre"
                       name="nombre"
                       required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
-                      placeholder="Tu nombre completo"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="empresa" className="block text-sm font-medium text-gray-700 mb-2">
-                      Empresa
-                    </label>
-                    <input
-                      type="text"
-                      id="empresa"
-                      name="empresa"
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
-                      placeholder="Nombre de tu empresa"
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
-                      placeholder="tu@email.com"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150"
+                      placeholder="Tu nombre"
                     />
                   </div>
                   <div>
                     <label htmlFor="telefono" className="block text-sm font-medium text-gray-700 mb-2">
-                      Teléfono *
+                      Teléfono
                     </label>
                     <input
                       type="tel"
                       id="telefono"
                       name="telefono"
                       required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150"
                       placeholder="+52 81 1234 5678"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="interes" className="block text-sm font-medium text-gray-700 mb-2">
-                    Interés *
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Correo electrónico
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150"
+                    placeholder="tu@email.com"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="servicio" className="block text-sm font-medium text-gray-700 mb-2">
+                    Servicio de interés
                   </label>
                   <select
-                    id="interes"
-                    name="interes"
-                    required
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                    id="servicio"
+                    name="servicio"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150"
                   >
-                    <option value="">Selecciona una opción</option>
-                    <option value="automatizacion">Automatización</option>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="automatizacion">Automatización Inteligente</option>
                     <option value="paneles-solares">Paneles Solares</option>
-                    <option value="ambos">Ambos</option>
+                    <option value="ambos">Ambos servicios</option>
                   </select>
                 </div>
                 
                 <div>
                   <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaje *
+                    Mensaje
                   </label>
                   <textarea
                     id="mensaje"
                     name="mensaje"
-                    rows={4}
-                    required
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth resize-none"
+                    rows={5}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 resize-none"
                     placeholder="Cuéntanos sobre tu proyecto..."
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full btn-primary py-3 sm:py-4 rounded-lg sm:rounded-xl text-base sm:text-lg font-medium transition-smooth"
+                  className="w-full btn-primary py-4 rounded-xl text-lg font-medium transition-smooth"
                 >
                   Enviar mensaje
                 </button>
@@ -178,17 +223,9 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-textDark mb-2">Horarios</h3>
-                    <p className="text-gray-600">Lunes - Viernes: 9:00 AM - 6:00 PM</p>
+                    <p className="text-gray-600">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
                     <p className="text-gray-600">Sábados: 9:00 AM - 2:00 PM</p>
                   </div>
-                </div>
-              </div>
-              
-              {/* Mapa placeholder */}
-              <div className="mt-12">
-                <h3 className="text-lg font-medium text-textDark mb-4">Ubicación</h3>
-                <div className="w-full h-64 bg-gray-200 rounded-xl flex items-center justify-center">
-                  <span className="text-gray-500">Mapa interactivo</span>
                 </div>
               </div>
             </div>
@@ -224,4 +261,3 @@ export default function Contacto() {
     </main>
   );
 }
-

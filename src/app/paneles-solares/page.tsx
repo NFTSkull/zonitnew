@@ -77,15 +77,15 @@ export default function PanelesSolares() {
       <section className="py-20 bg-white">
         <div className="container-zonit">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-light text-textDark mb-8 tracking-wide">
+            <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
               Energía Solar para tu Hogar o Empresa
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            <p className="text-lg text-black leading-relaxed mb-8">
               Los sistemas fotovoltaicos de Zonit te permiten generar tu propia energía eléctrica 
               utilizando la radiación solar, reduciendo significativamente tus costos de electricidad 
               y contribuyendo al cuidado del medio ambiente.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-12">
+            <p className="text-lg text-black leading-relaxed mb-12">
               Con tecnología de vanguardia y instalación profesional, puedes ahorrar hasta 99% 
               en tu recibo de CFE y recuperar tu inversión en un promedio de 2 a 5 años.
             </p>
@@ -120,8 +120,8 @@ export default function PanelesSolares() {
                 <div className="w-16 h-16 bg-accentLime rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Zap className="w-8 h-8 text-textDark" />
                 </div>
-                <h3 className="text-xl font-medium text-textDark mb-4">ROI Promedio</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-medium text-black mb-4">ROI Promedio</h3>
+                <p className="text-black leading-relaxed">
                   Recupera tu inversión en un promedio de 2 a 5 años, dependiendo del tamaño 
                   del sistema y tu consumo actual.
                 </p>
@@ -131,8 +131,8 @@ export default function PanelesSolares() {
                 <div className="w-16 h-16 bg-accentLime rounded-xl flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="w-8 h-8 text-textDark" />
                 </div>
-                <h3 className="text-xl font-medium text-textDark mb-4">Ahorro Garantizado</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-medium text-black mb-4">Ahorro Garantizado</h3>
+                <p className="text-black leading-relaxed">
                   Reduce hasta 99% tu recibo de CFE con sistemas diseñados específicamente 
                   para tu consumo energético.
                 </p>

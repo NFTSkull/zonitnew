@@ -46,7 +46,7 @@ export default function Header() {
               alt="ZONIT"
               width={60}
               height={24}
-              className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto max-h-14 object-contain"
+              className="h-8 sm:h-10 md:h-16 lg:h-20 w-auto object-contain"
               priority
               style={{ filter: 'none' }}
             />

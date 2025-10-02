@@ -69,7 +69,7 @@ export default function PanelesSolares() {
         ctas={[
           { label: 'Cotiza ahora', href: '/contacto', primary: true }
         ]}
-        imageSrc="/placeholders/solar-placeholder.svg"
+        imageSrc="/placeholders/solar-placeholder.png"
         dark={false}
       />
 
@@ -159,31 +159,6 @@ export default function PanelesSolares() {
         </div>
       </section>
 
-      {/* Nuestras marcas */}
-      <section className="py-20 bg-bgLight">
-        <div className="container-zonit">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-textDark mb-8 tracking-wide">
-              Nuestras Marcas
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Trabajamos con los mejores fabricantes del mundo para garantizar 
-              la calidad y durabilidad de tu sistema solar.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="card-zonit p-8 text-center">
-                <div className="w-24 h-24 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Logo {item}</span>
-                </div>
-                <p className="text-sm text-gray-600">Marca {item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Final */}
       <CTA

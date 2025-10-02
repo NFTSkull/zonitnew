@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface HeroMinimalProps {
   title: string;
@@ -20,16 +21,20 @@ export default function HeroMinimal({
   dark = false 
 }: HeroMinimalProps) {
   return (
-    <section 
-      className="relative pt-24 pb-16 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24 xl:pt-48 xl:pb-32 overflow-hidden min-h-screen flex items-center"
-      style={{
-        backgroundImage: `url('/placeholders/hero-section.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+    <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24 xl:pt-48 xl:pb-32 overflow-hidden min-h-screen flex items-center">
+      {/* Background Image optimizado */}
+      <div className="absolute inset-0">
+        <Image
+          src="/placeholders/hero-section.png"
+          alt="Hero background"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+          quality={85}
+        />
+      </div>
+      
       {/* Overlay profesional con opacidad */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/50 to-black/60"></div>
       

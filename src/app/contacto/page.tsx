@@ -93,7 +93,7 @@ export default function Contacto() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Formulario */}
             <div className="order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl font-light text-textDark mb-6 sm:mb-8 tracking-wide">
+              <h2 className="text-2xl sm:text-3xl font-light tracking-wide mb-6 sm:mb-8" style={{color: '#74acd8'}}>
                 Envíanos un mensaje
               </h2>
               
@@ -181,7 +181,7 @@ export default function Contacto() {
             
             {/* Información de contacto */}
             <div className="order-1 lg:order-2 px-4 lg:px-0">
-              <h2 className="text-2xl sm:text-3xl font-light text-textDark mb-6 sm:mb-8 tracking-wide">
+              <h2 className="text-2xl sm:text-3xl font-light tracking-wide mb-6 sm:mb-8" style={{color: '#74acd8'}}>
                 Información de contacto
               </h2>
               
@@ -191,8 +191,8 @@ export default function Contacto() {
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-medium text-textDark mb-1 sm:mb-2">Teléfono</h3>
-                    <p className="text-sm sm:text-base text-gray-600">+52 81 1170 2405</p>
+                    <h3 className="text-base sm:text-lg font-medium text-black mb-1 sm:mb-2">Teléfono</h3>
+                    <p className="text-sm sm:text-base text-black">+52 81 1170 2405</p>
                   </div>
                 </div>
                 
@@ -201,9 +201,9 @@ export default function Contacto() {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-textDark mb-2">Email</h3>
-                    <p className="text-gray-600">info@zonit.com</p>
-                    <p className="text-gray-600">ventas@zonit.com</p>
+                    <h3 className="text-lg font-medium text-black mb-2">Email</h3>
+                    <p className="text-black">info@zonit.com</p>
+                    <p className="text-black">ventas@zonit.com</p>
                   </div>
                 </div>
                 
@@ -212,9 +212,9 @@ export default function Contacto() {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-textDark mb-2">Ubicación</h3>
-                    <p className="text-gray-600">Monterrey, Nuevo León</p>
-                    <p className="text-gray-600">México</p>
+                    <h3 className="text-lg font-medium text-black mb-2">Ubicación</h3>
+                    <p className="text-black">Monterrey, Nuevo León</p>
+                    <p className="text-black">México</p>
                   </div>
                 </div>
                 
@@ -223,9 +223,9 @@ export default function Contacto() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-textDark mb-2">Horarios</h3>
-                    <p className="text-gray-600">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Sábados: 9:00 AM - 2:00 PM</p>
+                    <h3 className="text-lg font-medium text-black mb-2">Horarios</h3>
+                    <p className="text-black">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    <p className="text-black">Sábados: 9:00 AM - 2:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -237,10 +237,10 @@ export default function Contacto() {
       {/* CTA adicional */}
       <section className="py-20 bg-bgLight">
         <div className="container-zonit text-center">
-          <h2 className="text-3xl md:text-4xl font-light text-textDark mb-8 tracking-wide">
+          <h2 className="text-3xl md:text-4xl font-light tracking-wide mb-8" style={{color: '#74acd8'}}>
             ¿Prefieres WhatsApp?
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-black mb-8 max-w-2xl mx-auto leading-relaxed">
             También puedes contactarnos directamente por WhatsApp para una respuesta más rápida.
           </p>
           <a 

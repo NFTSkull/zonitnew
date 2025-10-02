@@ -167,6 +167,9 @@ export default function Home() {
                 width={600}
                 height={400}
                 className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
+                loading="lazy"
+                quality={80}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
               />
             </div>
           </div>
@@ -206,10 +209,14 @@ export default function Home() {
                 <div className="h-full bg-gradient-to-br from-white/80 via-gray-50/70 to-white/80 rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-100/60 shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-1 md:hover:-translate-y-2 hover:scale-[1.01] md:hover:scale-[1.02] relative overflow-hidden group-hover:border-primary/20">
                 {/* Background Image */}
                 <div className="absolute inset-0 opacity-35 group-hover:opacity-45 transition-opacity duration-700">
-                  <img 
+                  <Image 
                     src={automationServices[0].imageSrc} 
                     alt={automationServices[0].title}
-                    className="w-full h-full object-cover rounded-3xl"
+                    fill
+                    className="object-cover rounded-3xl"
+                    loading="lazy"
+                    quality={70}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
                 
@@ -256,10 +263,14 @@ export default function Home() {
                   <div className="h-full bg-white/80 rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-100/60 shadow-md hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] md:hover:scale-[1.03] relative overflow-hidden group-hover:border-primary/20">
                   {/* Background Image */}
                   <div className="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-500">
-                    <img 
+                    <Image 
                       src={service.imageSrc} 
                       alt={service.title}
-                      className="w-full h-full object-cover rounded-2xl"
+                      fill
+                      className="object-cover rounded-2xl"
+                      loading="lazy"
+                      quality={70}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                     />
                   </div>
                   

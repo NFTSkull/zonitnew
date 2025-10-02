@@ -42,7 +42,6 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li><Link href="/nosotros" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Nosotros</Link></li>
               <li><Link href="/proyectos" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Proyectos</Link></li>
-              <li><Link href="/blog" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Blog</Link></li>
               <li><Link href="/contacto" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Contacto</Link></li>
             </ul>
           </div>

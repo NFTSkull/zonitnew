@@ -101,9 +101,6 @@ export default function Header() {
               <Link href="/paneles-solares" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Paneles Solares
               </Link>
-              <Link href="/blog" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
-                Blog
-              </Link>
               <Link href="/contacto" className="px-5 py-3 rounded-xl hover:bg-primary/5 hover-scale-subtle transition-elegant text-black font-medium text-sm">
                 Contacto
               </Link>
@@ -166,9 +163,6 @@ export default function Header() {
                   
                   <Link href="/paneles-solares" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors duration-150">
                     Paneles Solares
-                  </Link>
-                  <Link href="/blog" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors duration-150">
-                    Blog
                   </Link>
                   <Link href="/contacto" className="block text-lg font-medium text-black hover:text-accentBlue transition-colors duration-150">
                     Contacto

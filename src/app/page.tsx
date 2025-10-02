@@ -123,7 +123,7 @@ export default function Home() {
         title="SOLUCIONES INTELIGENTES"
         subtitle="Conectamos tu hogar y empresa con el futuro"
         ctas={[
-          { label: 'Conoce nuestras soluciones', href: '/automatizacion', primary: true },
+          { label: 'Conoce nuestras soluciones', href: '#servicios', primary: true },
           { label: 'Cotiza ahora', href: '/contacto', primary: false }
         ]}
         imageSrc="/placeholders/hero-placeholder.png"
@@ -178,7 +178,7 @@ export default function Home() {
       <BenefitsGrid items={benefits} columns={3} />
 
       {/* Servicios Section - Masterpiece */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white relative overflow-hidden">
+      <section id="servicios" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>

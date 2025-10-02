@@ -146,8 +146,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h3 className="text-base sm:text-lg font-medium text-textDark mb-1 sm:mb-2">Teléfono</h3>
-                    <p className="text-sm sm:text-base text-gray-600">+52 81 1234 5678</p>
-                    <p className="text-sm sm:text-base text-gray-600">+52 81 9876 5432</p>
+                    <p className="text-sm sm:text-base text-gray-600">+52 81 1170 2405</p>
                   </div>
                 </div>
                 
@@ -207,7 +206,7 @@ export default function Contacto() {
             También puedes contactarnos directamente por WhatsApp para una respuesta más rápida.
           </p>
           <a 
-            href="https://wa.me/528112345678" 
+            href="https://wa.me/528111702405" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-medium transition-smooth"

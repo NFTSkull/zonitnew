@@ -53,7 +53,7 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+52 81 1234 5678</span>
+                <span>+52 81 1170 2405</span>
               </div>
               <div className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <Mail className="w-4 h-4 mr-2" />

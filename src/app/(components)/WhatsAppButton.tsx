@@ -42,16 +42,16 @@ export default function WhatsAppButton({
         <Phone className="absolute w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-1 translate-y-1" />
         
         {/* Efecto de pulso */}
-        <div className="absolute inset-0 rounded-2xl bg-green-400 opacity-0 group-hover:opacity-20 group-hover:animate-ping"></div>
+        <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-green-400 opacity-0 group-hover:opacity-20 group-hover:animate-ping"></div>
+        
+        {/* Efecto de ondas */}
+        <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-green-500 opacity-0 group-hover:opacity-30 group-hover:animate-ping animation-delay-75"></div>
         
         {/* Indicador de notificación */}
         <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
           <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
         </div>
       </a>
-
-      {/* Efecto de ondas */}
-      <div className="absolute inset-0 rounded-2xl bg-green-500 opacity-0 group-hover:opacity-30 group-hover:animate-ping animation-delay-75"></div>
     </div>
   );
 }

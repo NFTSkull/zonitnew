@@ -38,50 +38,36 @@ export default function Contacto() {
       {/* Sección Principal */}
       <section className="py-20 bg-white">
         <div className="container-zonit">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
-                Contáctanos para tu Proyecto
-              </h2>
-              <p className="text-lg text-black leading-relaxed">
-                En Zonit, nos especializamos en crear soluciones inteligentes que transforman 
-                espacios en entornos tecnológicos avanzados. Desde automatización de hogares hasta 
-                sistemas de energía solar, ofrecemos tecnología de vanguardia adaptada a tus necesidades.
-              </p>
-              <p className="text-lg text-black leading-relaxed">
-                Nuestro equipo de expertos te guiará desde la consulta inicial hasta la implementación 
-                completa, garantizando resultados que superen tus expectativas.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
-                  <span className="text-black">Consulta gratuita y personalizada</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
-                  <span className="text-black">Análisis técnico completo de tu espacio</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
-                  <span className="text-black">Cotización detallada sin compromiso</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
-                  <span className="text-black">Instalación profesional garantizada</span>
-                </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-light tracking-wide mb-8" style={{color: '#74acd8'}}>
+              Contáctanos para tu Proyecto
+            </h2>
+            <p className="text-lg text-black leading-relaxed mb-8">
+              En Zonit, nos especializamos en crear soluciones inteligentes que transforman 
+              espacios en entornos tecnológicos avanzados. Desde automatización de hogares hasta 
+              sistemas de energía solar, ofrecemos tecnología de vanguardia adaptada a tus necesidades.
+            </p>
+            <p className="text-lg text-black leading-relaxed mb-12">
+              Nuestro equipo de expertos te guiará desde la consulta inicial hasta la implementación 
+              completa, garantizando resultados que superen tus expectativas.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                <span className="text-black">Consulta gratuita y personalizada</span>
               </div>
-            </div>
-            <div className="relative">
-              <Image 
-                src="/placeholders/contact-hero.png" 
-                alt="Contacto Zonit" 
-                width={600}
-                height={400}
-                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
-                loading="lazy"
-                quality={80}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-              />
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                <span className="text-black">Análisis técnico completo de tu espacio</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                <span className="text-black">Cotización detallada sin compromiso</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accentBlue rounded-full"></div>
+                <span className="text-black">Instalación profesional garantizada</span>
+              </div>
             </div>
           </div>
         </div>

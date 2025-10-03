@@ -70,7 +70,7 @@ export default function Contacto() {
                         name="telefono"
                         required
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm text-black"
-                        placeholder="+52 81 1170 2405"
+                        placeholder="+52 81 1234 5678"
                       />
                     </div>
                   </div>
@@ -85,7 +85,7 @@ export default function Contacto() {
                       name="email"
                       required
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-150 text-sm text-black"
-                      placeholder="tu@email.com"
+                      placeholder="contacto@zonit.com.mx"
                     />
                   </div>
                   
@@ -159,7 +159,7 @@ export default function Contacto() {
                     </div>
                     <div>
                       <h3 className="font-medium text-black text-sm">Email</h3>
-                      <p className="text-xs text-gray-600">info@zonit.com</p>
+                      <p className="text-xs text-gray-600">contacto@zonit.com.mx</p>
                     </div>
                   </div>
                   

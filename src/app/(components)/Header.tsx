@@ -36,17 +36,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
-      <div className="container-zonit h-14 sm:h-16">
-        <div className="flex justify-between items-center h-full px-3 sm:px-6 py-2 sm:py-0">
+      <div className="container-zonit h-14 sm:h-16 overflow-hidden">
+        <div className="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-6 py-0">
           {/* Logo */}
           <Link href="/" className="flex items-center hover-scale-subtle transition-elegant flex-shrink-0">
-            <img src="/zonit-logo-black.png?v=2"
-              alt="ZONIT"
-              width={40}
-              height={16}
-              className="h-4 sm:h-6 md:h-8 lg:h-10 w-auto object-contain" 
-              style={{ filter: 'none' }}
-            />
+            <img src="/zonit-logo-black.png"
+              alt="Zonit"
+              className="h-8 w-auto sm:h-10 md:h-12 lg:h-14 shrink-0" />
           </Link>
 
           {/* Navegación Desktop */}

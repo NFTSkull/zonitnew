@@ -34,28 +34,28 @@ export default function HeroMinimal({
       {/* Overlay profesional con opacidad */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/50 to-black/60"></div>
       
-      {/* Contenido centrado con animaciones */}
-      <div className="container-zonit relative z-10">
+      {/* Contenido centrado */}
+      <div className="container-zonit relative z-20">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Badge superior con animación */}
-          <div className="inline-flex items-center px-8 py-4 bg-black/70 backdrop-blur-md rounded-full border border-white/80 mb-12 animate-fade-in-up">
+          {/* Badge superior */}
+          <div className="inline-flex items-center px-8 py-4 bg-black/70 backdrop-blur-md rounded-full border border-white/80 mb-12">
             <span className="text-white text-sm font-semibold tracking-wider uppercase">
               Tecnología Inteligente
             </span>
           </div>
           
-          {/* Título principal con animación escalonada - Optimizado para móvil */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extralight text-white tracking-wide leading-tight mb-6 sm:mb-8 md:mb-10 animate-fade-in-up-delay-1 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] px-4">
+          {/* Título principal - Optimizado para móvil */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extralight text-white tracking-wide leading-tight mb-6 sm:mb-8 md:mb-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] px-4">
             {title}
           </h1>
           
-          {/* Subtítulo con animación - Optimizado para móvil */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 animate-fade-in-up-delay-2 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] px-4">
+          {/* Subtítulo - Optimizado para móvil */}
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] px-4">
             {subtitle}
           </p>
           
-          {/* Botones CTA con animación - Optimizados para móvil */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center animate-fade-in-up-delay-3 px-4">
+          {/* Botones CTA - Optimizados para móvil */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center px-4">
             {ctas.map((cta, index) => (
               <Link
                 key={index}

@@ -13,26 +13,13 @@ export default function Footer() {
               Especialistas en automatización inteligente para hogares y empresas.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://www.facebook.com/share/1A2X5LVmwB/?mibextid=wwXIfr" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-textLight transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800"
-              >
+              <a href="#" className="text-gray-300 hover:text-textLight transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
-                className="text-gray-300 hover:text-textLight transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800"
-              >
+              <a href="#" className="text-gray-300 hover:text-textLight transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="https://www.instagram.com/zonit.solucionesinteligentes?igsh=NXJ2dXRleGNzaTNh" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-textLight transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800"
-              >
+              <a href="#" className="text-gray-300 hover:text-textLight transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -53,6 +40,7 @@ export default function Footer() {
           <div>
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-textLight">Empresa</h4>
             <ul className="space-y-2 text-gray-300">
+              <li><Link href="/nosotros" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Nosotros</Link></li>
               <li><Link href="/proyectos" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Proyectos</Link></li>
               <li><Link href="/contacto" className="hover:text-textLight transition-colors duration-150 block py-1 rounded px-2 hover:bg-gray-800">Contacto</Link></li>
             </ul>
@@ -62,29 +50,18 @@ export default function Footer() {
           <div>
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-textLight">Contacto</h4>
             <div className="space-y-2 text-gray-300">
-              <a 
-                href="tel:+528111702405" 
-                className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800 hover:text-textLight"
-              >
+              <div className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <Phone className="w-4 h-4 mr-2" />
                 <span>+52 81 1170 2405</span>
-              </a>
-              <a 
-                href="mailto:info@zonit.com" 
-                className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800 hover:text-textLight"
-              >
+              </div>
+              <div className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <Mail className="w-4 h-4 mr-2" />
                 <span>info@zonit.com</span>
-              </a>
-              <a 
-                href="https://maps.google.com/?q=Monterrey,NL,Mexico" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800 hover:text-textLight"
-              >
+              </div>
+              <div className="flex items-center transition-colors duration-150 p-2 rounded-lg hover:bg-gray-800">
                 <MapPin className="w-4 h-4 mr-2" />
                 <span>Monterrey, N.L.</span>
-              </a>
+              </div>
             </div>
             
             <div className="mt-4 sm:mt-6">

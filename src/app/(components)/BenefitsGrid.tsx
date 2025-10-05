@@ -41,7 +41,7 @@ export default function BenefitsGrid({ items, columns = 3 }: BenefitsGridProps) 
                 >
                   <Icon className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: getIconColor() }} />
                 </div>
-                <h3 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4 tracking-wide" className="text-textDark">
+                <h3 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4 tracking-wide text-textDark">
                   {item.title}
                 </h3>
                 <p className="text-black leading-relaxed font-light">

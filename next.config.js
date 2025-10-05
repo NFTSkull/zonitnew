@@ -1,5 +1,6 @@
 const nextConfig = {
-  output: 'export',
+  // Solo usar export cuando se especifique BUILD_STATIC=true
+  ...(process.env.BUILD_STATIC === 'true' && { output: 'export' }),
   images: { 
     unoptimized: true 
   },

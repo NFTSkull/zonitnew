@@ -114,7 +114,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="pt-14 sm:pt-16">
       <Header />
       
       {/* Hero Section */}
@@ -147,15 +147,6 @@ export default function Home() {
                 y sistemas que se adaptan a tu estilo de vida, proporcionando valor 
                 agregado a tu propiedad.
               </p>
-              <a 
-                href="/nosotros" 
-                className="inline-flex items-center text-black font-medium hover:text-accentBlue transition-colors duration-150 px-4 lg:px-0"
-              >
-                Saber más
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
             </div>
             <div className="relative order-1 lg:order-2 px-4 lg:px-0">
               <img src="/placeholders/automation-placeholder.png" 

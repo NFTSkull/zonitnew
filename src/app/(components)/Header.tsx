@@ -35,9 +35,10 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-xl border-b border-gray-100/60 fixed w-full top-0 z-50 shadow-md transition-elegant min-h-[56px] sm:min-h-[80px]">
-      <div className="container-zonit h-full">
-        <div className="flex justify-between items-center h-full px-3 sm:px-6 py-2 sm:py-0">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
+      <div className="h-14 sm:h-16 flex items-center">
+        <div className="container-zonit h-full">
+          <div className="flex justify-between items-center h-full px-3 sm:px-6 py-2 sm:py-0">
           {/* Logo */}
           <Link href="/" className="flex items-center hover-scale-subtle transition-elegant flex-shrink-0">
             <img src="/zonit-logo-black.png?v=2"
@@ -194,6 +195,7 @@ export default function Header() {
             </div>
           </div>
         )}
+        </div>
       </div>
     </header>
   );

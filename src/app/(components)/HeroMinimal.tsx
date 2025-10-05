@@ -20,7 +20,7 @@ export default function HeroMinimal({
   dark = false 
 }: HeroMinimalProps) {
   return (
-    <section className="relative min-h-[85svh] sm:min-h-[80vh] flex items-center">
+    <section className="relative min-h-[85svh] sm:min-h-[80vh] bg-neutral-100 flex items-center">
       {/* Background Image optimizado */}
       <div className="absolute inset-0 -z-10">
         <img 

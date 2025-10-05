@@ -114,7 +114,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="pt-14 sm:pt-16">
       <Header />
       
       {/* Hero Section */}

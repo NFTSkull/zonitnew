@@ -42,9 +42,9 @@ export default function Header() {
           <Link href="/" className="flex items-center hover-scale-subtle transition-elegant flex-shrink-0">
             <img src="/zonit-logo-black.png?v=2"
               alt="ZONIT"
-              width={80}
-              height={32}
-              className="h-8 sm:h-10 md:h-12 lg:h-16 w-auto object-contain" 
+              width={60}
+              height={24}
+              className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto object-contain" 
               style={{ filter: 'none' }}
             />
           </Link>

@@ -18,9 +18,9 @@ const config: Config = {
         textLight: '#efeeed',
         textDark: '#1e1d37',
         
-        // Colores del sistema - fijos para evitar problemas en móvil
-        background: '#ffffff',
-        foreground: '#1e1d37',
+        // Colores del sistema
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

@@ -36,16 +36,15 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
-      <div className="h-14 sm:h-16 flex items-center">
-        <div className="container-zonit h-full">
-          <div className="flex justify-between items-center h-full px-3 sm:px-6 py-2 sm:py-0">
+      <div className="container-zonit h-14 sm:h-16">
+        <div className="flex justify-between items-center h-full px-3 sm:px-6 py-2 sm:py-0">
           {/* Logo */}
           <Link href="/" className="flex items-center hover-scale-subtle transition-elegant flex-shrink-0">
             <img src="/zonit-logo-black.png?v=2"
               alt="ZONIT"
-              width={60}
-              height={24}
-              className="h-6 sm:h-8 md:h-12 lg:h-16 w-auto object-contain" 
+              width={80}
+              height={32}
+              className="h-8 sm:h-10 md:h-12 lg:h-16 w-auto object-contain" 
               style={{ filter: 'none' }}
             />
           </Link>
@@ -116,11 +115,11 @@ export default function Header() {
             
             {/* Botón móvil */}
             <button 
-              className="lg:hidden p-2 rounded-lg hover:bg-primary/5 hover-scale-subtle transition-elegant text-black flex items-center justify-center flex-shrink-0"
+              className="lg:hidden p-3 rounded-lg hover:bg-primary/5 hover-scale-subtle transition-elegant text-black flex items-center justify-center flex-shrink-0"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Abrir menú"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
             </button>
           </div>
         </div>
@@ -195,7 +194,6 @@ export default function Header() {
             </div>
           </div>
         )}
-        </div>
       </div>
     </header>
   );

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 
 interface SplitSectionProps {
   title: string;
@@ -47,8 +46,7 @@ export default function SplitSection({
           
           {/* Imagen */}
           <div className={`${imageOrder} relative`}>
-            <Image
-              src={imageSrc}
+            <img src={imageSrc}
               alt={title}
               width={600}
               height={400}

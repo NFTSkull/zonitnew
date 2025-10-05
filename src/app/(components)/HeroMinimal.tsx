@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface HeroMinimalProps {
   title: string;
@@ -24,14 +23,11 @@ export default function HeroMinimal({
     <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24 xl:pt-48 xl:pb-32 overflow-hidden min-h-screen flex items-center">
       {/* Background Image optimizado */}
       <div className="absolute inset-0">
-        <Image
+        <img 
           src="/placeholders/hero-section.png"
-          alt="Hero background"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-          quality={85}
+          alt="Hero background" 
+          className="w-full h-full object-cover object-center"
+          style={{ minHeight: '100vh' }}
         />
       </div>
       
@@ -67,7 +63,7 @@ export default function HeroMinimal({
                 className={`
                   px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 rounded-xl sm:rounded-2xl font-bold transition-all duration-500 text-center text-sm sm:text-base md:text-lg relative overflow-hidden group w-full sm:w-auto
                   ${cta.primary 
-                    ? 'text-primary hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1' 
+                    ? 'text-black hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1' 
                     : 'border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1'
                   }
                 `}

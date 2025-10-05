@@ -4,7 +4,6 @@ import HeroMinimal from './(components)/HeroMinimal';
 import BenefitsGrid from './(components)/BenefitsGrid';
 import CTA from './(components)/CTA';
 import WhatsAppButton from './(components)/WhatsAppButton';
-import Image from 'next/image';
 import { 
   Lightbulb, 
   Volume2, 
@@ -135,7 +134,7 @@ export default function Home() {
         <div className="container-zonit">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light tracking-wide px-4 lg:px-0" style={{color: '#74acd8'}}>
+              <h2 className="text-textDark">
                 Nosotros
               </h2>
               <p className="text-base sm:text-lg text-black leading-relaxed px-4 lg:px-0">
@@ -148,27 +147,13 @@ export default function Home() {
                 y sistemas que se adaptan a tu estilo de vida, proporcionando valor 
                 agregado a tu propiedad.
               </p>
-              <a 
-                href="/nosotros" 
-                className="inline-flex items-center text-black font-medium hover:text-accentBlue transition-colors duration-150 px-4 lg:px-0"
-              >
-                Saber más
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
             </div>
             <div className="relative order-1 lg:order-2 px-4 lg:px-0">
-              <Image 
-                src="/placeholders/automation-placeholder.png" 
+              <img src="/placeholders/automation-placeholder.png" 
                 alt="Equipo Zonit" 
                 width={600}
                 height={400}
-                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
-                loading="lazy"
-                quality={80}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-              />
+                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto" />
             </div>
           </div>
         </div>
@@ -189,7 +174,7 @@ export default function Home() {
         <div className="container-zonit relative z-10">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
             <div className="inline-block relative group">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-wide mb-3 sm:mb-4 md:mb-6" style={{color: '#74acd8'}}>
+              <h2 className="text-textDark">
                 Servicios
               </h2>
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-primary via-accentBlue to-primary rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out"></div>
@@ -207,15 +192,8 @@ export default function Home() {
                 <div className="h-full bg-gradient-to-br from-white/80 via-gray-50/70 to-white/80 rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-100/60 shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-1 md:hover:-translate-y-2 hover:scale-[1.01] md:hover:scale-[1.02] relative overflow-hidden group-hover:border-primary/20">
                 {/* Background Image */}
                 <div className="absolute inset-0 opacity-35 group-hover:opacity-45 transition-opacity duration-700">
-                  <Image 
-                    src={automationServices[0].imageSrc} 
-                    alt={automationServices[0].title}
-                    fill
-                    className="object-cover rounded-3xl"
-                    loading="lazy"
-                    quality={70}
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
+                  <img src={automationServices[0].imageSrc} 
+                    alt={automationServices[0].title} className="object-cover rounded-3xl" />
                 </div>
                 
                 {/* Content */}
@@ -261,15 +239,8 @@ export default function Home() {
                   <div className="h-full bg-white/80 rounded-xl md:rounded-2xl p-4 md:p-6 border border-gray-100/60 shadow-md hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] md:hover:scale-[1.03] relative overflow-hidden group-hover:border-primary/20">
                   {/* Background Image */}
                   <div className="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-500">
-                    <Image 
-                      src={service.imageSrc} 
-                      alt={service.title}
-                      fill
-                      className="object-cover rounded-2xl"
-                      loading="lazy"
-                      quality={70}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    />
+                    <img src={service.imageSrc} 
+                      alt={service.title} className="object-cover rounded-2xl" />
                   </div>
                   
                   {/* Content */}
@@ -347,8 +318,7 @@ export default function Home() {
               </a>
             </div>
             <div className="relative order-1 lg:order-2 px-4 lg:px-0">
-              <Image 
-                src="/placeholders/solar-placeholder.png" 
+              <img src="/placeholders/solar-placeholder.png" 
                 alt="Paneles Solares Zonit" 
                 width={600}
                 height={400}

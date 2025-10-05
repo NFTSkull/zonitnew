@@ -71,7 +71,7 @@ export default function ControlAccesosSeguridad() {
       <section className="py-20 bg-white">
         <div className="container-zonit">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+            <h2 className="text-3xl md:text-4xl font-light tracking-wide text-textDark">
               Aplicaciones Especializadas
             </h2>
             <p className="text-lg text-black max-w-3xl mx-auto leading-relaxed">

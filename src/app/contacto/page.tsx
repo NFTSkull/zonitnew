@@ -41,7 +41,7 @@ export default function Contacto() {
             {/* Formulario */}
             <div className="order-2 lg:order-1">
               <div className="bg-white rounded-xl shadow-md p-4 sm:p-6">
-                <h2 className="text-xl sm:text-2xl font-light tracking-wide mb-4" style={{color: '#74acd8'}}>
+                <h2 className="text-textDark">
                   Envíanos un mensaje
                 </h2>
                 
@@ -132,7 +132,7 @@ export default function Contacto() {
             <div className="order-1 lg:order-2">
               <div className="space-y-4">
                 <div>
-                  <h2 className="text-xl sm:text-2xl font-light tracking-wide mb-4" style={{color: '#74acd8'}}>
+                  <h2 className="text-textDark">
                     Información de contacto
                   </h2>
                   <p className="text-base text-black leading-relaxed mb-6 hidden lg:block">
@@ -145,7 +145,7 @@ export default function Contacto() {
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-3">
                   <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                      <Phone className="w-4 h-4" style={{color: '#74acd8'}} />
+                      <Phone className="text-textDark" />
                     </div>
                     <div>
                       <h3 className="font-medium text-black text-sm">Teléfono</h3>
@@ -155,7 +155,7 @@ export default function Contacto() {
                   
                   <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                      <Mail className="w-4 h-4" style={{color: '#74acd8'}} />
+                      <Mail className="text-textDark" />
                     </div>
                     <div>
                       <h3 className="font-medium text-black text-sm">Email</h3>
@@ -165,7 +165,7 @@ export default function Contacto() {
                   
                   <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                      <MapPin className="w-4 h-4" style={{color: '#74acd8'}} />
+                      <MapPin className="text-textDark" />
                     </div>
                     <div>
                       <h3 className="font-medium text-black text-sm">Ubicación</h3>
@@ -175,7 +175,7 @@ export default function Contacto() {
                   
                   <div className="flex items-center p-3 bg-gray-50 rounded-lg">
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                      <Clock className="w-4 h-4" style={{color: '#74acd8'}} />
+                      <Clock className="text-textDark" />
                     </div>
                     <div>
                       <h3 className="font-medium text-black text-sm">Horarios</h3>
@@ -192,7 +192,7 @@ export default function Contacto() {
       {/* CTA WhatsApp */}
       <section className="py-12 sm:py-16 bg-bgLight">
         <div className="container-zonit text-center">
-          <h2 className="text-2xl sm:text-3xl font-light tracking-wide mb-4" style={{color: '#74acd8'}}>
+          <h2 className="text-textDark">
             ¿Prefieres WhatsApp?
           </h2>
           <p className="text-lg text-black mb-6 max-w-xl mx-auto leading-relaxed">

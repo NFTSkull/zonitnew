@@ -3,7 +3,6 @@ import Footer from '../(components)/Footer';
 import CTA from '../(components)/CTA';
 import WhatsAppButton from '../(components)/WhatsAppButton';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Sun, DollarSign, TrendingUp, CheckCircle, Calculator, Wrench, Zap } from 'lucide-react';
 
 export const metadata = {
@@ -38,15 +37,8 @@ export default function PanelesSolares() {
       <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24 xl:pt-48 xl:pb-32 overflow-hidden min-h-screen flex items-center">
         {/* Background Image optimizado */}
         <div className="absolute inset-0">
-          <Image
-            src="/placeholders/solar-placeholder.png"
-            alt="Paneles Solares"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-            quality={85}
-          />
+          <img src="/placeholders/solar-placeholder.png"
+            alt="Paneles Solares" className="object-cover" />
         </div>
         {/* Overlay profesional con opacidad */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/50 to-black/60"></div>
@@ -74,7 +66,7 @@ export default function PanelesSolares() {
         <div className="container-zonit">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+              <h2 className="text-3xl md:text-4xl font-light tracking-wide text-textDark">
                 Sistemas Fotovoltaicos Inteligentes
               </h2>
               <p className="text-lg text-black leading-relaxed">
@@ -106,16 +98,11 @@ export default function PanelesSolares() {
               </div>
             </div>
             <div className="relative">
-              <Image 
-                src="/placeholders/solar-placeholder.png" 
+              <img src="/placeholders/solar-placeholder.png" 
                 alt="Sistemas Fotovoltaicos Zonit" 
                 width={600}
                 height={400}
-                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
-                loading="lazy"
-                quality={80}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-              />
+                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto" />
             </div>
           </div>
         </div>
@@ -125,7 +112,7 @@ export default function PanelesSolares() {
       <section className="py-20 bg-white">
         <div className="container-zonit">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+            <h2 className="text-3xl md:text-4xl font-light tracking-wide text-textDark">
               Beneficios de la Energía Solar
             </h2>
             <p className="text-lg text-black max-w-3xl mx-auto leading-relaxed">
@@ -218,7 +205,7 @@ export default function PanelesSolares() {
       <section className="py-20 bg-white">
         <div className="container-zonit">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+            <h2 className="text-3xl md:text-4xl font-light tracking-wide text-textDark">
               Pasos para comenzar
             </h2>
             <p className="text-lg text-black max-w-3xl mx-auto leading-relaxed">

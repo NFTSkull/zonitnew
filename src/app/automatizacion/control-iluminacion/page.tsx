@@ -3,7 +3,6 @@ import Footer from '../../(components)/Footer';
 import CTA from '../../(components)/CTA';
 import WhatsAppButton from '../../(components)/WhatsAppButton';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'Control e Iluminación - Zonit | Automatización Inteligente',
@@ -42,7 +41,7 @@ export default function ControlIluminacion() {
         <div className="container-zonit">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+              <h2 className="text-3xl md:text-4xl font-light tracking-wide text-textDark">
                 Control e Iluminación Inteligente
               </h2>
               <p className="text-lg text-black leading-relaxed">
@@ -73,16 +72,11 @@ export default function ControlIluminacion() {
               </div>
             </div>
             <div className="relative">
-              <Image 
-                src="/placeholders/control-lighting.png" 
+              <img src="/placeholders/control-lighting.png" 
                 alt="Control e Iluminación Inteligente" 
                 width={600}
                 height={400}
-                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto"
-                loading="lazy"
-                quality={80}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-              />
+                className="rounded-xl shadow-lg ring-1 ring-gray-200 w-full h-auto" />
             </div>
           </div>
         </div>
@@ -92,7 +86,7 @@ export default function ControlIluminacion() {
       <section className="py-20 bg-white">
         <div className="container-zonit">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light tracking-wide" style={{color: '#74acd8'}}>
+            <h2 className="text-3xl md:text-4xl font-light tracking-wide text-textDark">
               Aplicaciones y Beneficios
             </h2>
             <p className="text-lg text-black max-w-3xl mx-auto leading-relaxed">

@@ -2,7 +2,6 @@ import Header from '../(components)/Header';
 import Footer from '../(components)/Footer';
 import SectionTitle from '../(components)/SectionTitle';
 import WhatsAppButton from '../(components)/WhatsAppButton';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'Proyectos - Zonit',
@@ -95,8 +94,7 @@ export default function Proyectos() {
             {projects.map((project, index) => (
               <div key={index} className="card-zonit overflow-hidden group hover:scale-105 transition-transform duration-150">
                 <div className="relative">
-                  <Image
-                    src={project.image}
+                  <img src={project.image}
                     alt={project.title}
                     width={400}
                     height={250}

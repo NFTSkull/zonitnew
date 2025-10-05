@@ -20,14 +20,14 @@ export default function HeroMinimal({
   dark = false 
 }: HeroMinimalProps) {
   return (
-    <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24 xl:pt-48 xl:pb-32 overflow-hidden min-h-screen flex items-center">
+    <section className="relative min-h-[85svh] sm:min-h-[80vh] flex items-center">
       {/* Background Image optimizado */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 -z-10">
         <img 
           src="/placeholders/hero-section.png"
           alt="Hero background" 
-          className="w-full h-full object-cover object-center"
-          style={{ minHeight: '100vh' }}
+          className="w-full h-full object-cover"
+          sizes="100vw"
         />
       </div>
       
